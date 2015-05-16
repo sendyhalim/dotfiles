@@ -49,7 +49,9 @@ plugins=(git vi-mode theme)
 
 # User configuration
 
-export PATH="/Users/sendyhalim/.gvm/bin:/Users/sendyhalim/.pyenv/shims:/Users/sendyhalim/.rvm/gems/ruby-2.2.2/bin:/Users/sendyhalim/.rvm/gems/ruby-2.2.2@global/bin:/Users/sendyhalim/.rvm/rubies/ruby-2.2.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/sendyhalim/.rvm/bin:/Users/sendyhalim/.rvm/bin:/Users/sendyhalim/.rvm/bin:/Users/sendyhalim/development/tools/arc/arcanist/bin"
+# http://stackoverflow.com/questions/27784961/received-warning-message-path-set-to-rvm-after-updating-ruby-version-using-rvm
+# https://github.com/rvm/rvm/issues/3212
+export PATH="$PATH:/Users/sendyhalim/.gvm/bin:/Users/sendyhalim/.pyenv/shims:/Users/sendyhalim/.rvm/gems/ruby-2.2.2/bin:/Users/sendyhalim/.rvm/gems/ruby-2.2.2@global/bin:/Users/sendyhalim/.rvm/rubies/ruby-2.2.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/sendyhalim/.rvm/bin:/Users/sendyhalim/.rvm/bin:/Users/sendyhalim/.rvm/bin:/Users/sendyhalim/development/tools/arc/arcanist/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
