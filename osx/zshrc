@@ -72,6 +72,10 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+
+# Set Variables
+export HOMEBREW_PREFIX=$(brew --prefix)
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -85,6 +89,7 @@ source $ZSH/oh-my-zsh.sh
 alias start-mongodb="mongod --config /usr/local/etc/mongod.conf"
 
 export PATH="$PATH:$HOME/development/tools/arc/arcanist/bin"
+export PATH="$PATH:/usr/local/opt/php56/bin"
 export EDITOR="/usr/local/bin/vim"
 
 
@@ -92,6 +97,12 @@ export EDITOR="/usr/local/bin/vim"
 # source $(brew --prefix nvm)/nvm.sh
 export NVM_DIR="/Users/sendyhalim/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Rust Version Manager
+[[ -s /Users/sendyhalim/.rsvm/rsvm.sh ]] && . /Users/sendyhalim/.rsvm/rsvm.sh # This loads RSVM
+
+# For vim-racer
+export RUST_SRC_PATH="/Users/sendyhalim/development/git-repos/rust/src"
 
 # Do not share history between terminals
 setopt no_share_history
