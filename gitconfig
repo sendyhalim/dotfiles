@@ -3,3 +3,4 @@
     email = sendyhalim93@gmail.com
 [core]
     editor = vim
+    excludesfile = ./gitignore
