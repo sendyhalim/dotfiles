@@ -1,17 +1,37 @@
 [user]
     name = Sendy Halim
     email = sendyhalim93@gmail.com
+
 [core]
     editor = vim
     excludesfile = ~/.gitignore
+
 [color]
     ui = true
+
+[color "branch"]
+    current = blue
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = green
+    changed = cyan
+    untracked = yellow
+
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+
 [alias]
     a    = add
     b    = branch
