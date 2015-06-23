@@ -4,6 +4,8 @@
 [core]
     editor = vim
     excludesfile = ~/.gitignore
+[color]
+    ui = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
