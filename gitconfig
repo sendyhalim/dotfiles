@@ -5,8 +5,26 @@
     editor = vim
     excludesfile = ~/.gitignore
 [difftool "sourcetree"]
-    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-    path =
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
 [mergetool "sourcetree"]
-    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-    trustExitCode = true
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[alias]
+    a    = add
+    c    = commit -m
+    ca   = commit -am
+    cam  = commit --amend
+    co   = checkout
+    cob  = checkout -b
+    d    = diff
+    dc   = diff --cached
+    l    = log --oneline --decorate --color --graph
+    lg   = log --stat --max-count=10
+    lgg  = log --graph --max-count=10
+    lgga = log --graph --decorate --all
+    lo   = log --oneline --decorate --color
+    p    = push
+    pl   = pull
+    s    = status
+    ss   = status -s
