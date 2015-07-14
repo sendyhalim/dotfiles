@@ -1,6 +1,9 @@
 # Mac OSX
 *.DS_STORE
 
+# Jetbrains IDE
+.idea/
+
 # Xcode
 # https://github.com/github/gitignore/blob/master/Swift.gitignore
 #
