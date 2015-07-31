@@ -8,6 +8,7 @@ else
   echo "Creating links on OSX"
   ln -s $PWD/osx/slate ~/.slate
   ln -s $PWD/osx/tmux.conf ~/.tmux.conf
+  ln -s $PWD/osx/zshrc ~/.zshrc
 fi
 
 ln -s $PWD/gitignore ~/.gitignore
