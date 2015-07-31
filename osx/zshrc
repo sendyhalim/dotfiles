@@ -1,5 +1,9 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/sendyhalim/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
+
+# If created using .create_ln.sh $(pwd) will be relative
+# to .create_ln.sh directory
+export ZSH_CUSTOM=$(pwd)/zsh-custom
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
