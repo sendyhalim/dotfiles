@@ -50,7 +50,7 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(vi-mode theme)
+plugins=(theme)
 
 # User configuration
 
@@ -92,6 +92,9 @@ export HOMEBREW_PREFIX=$(brew --prefix)
 
 # Alias for starting mongodb
 alias start-mongodb="mongod --config /usr/local/etc/mongod.conf"
+
+# Alias for printing out current IP Address
+alias my-ip="dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | sed -e 's/\"//g'"
 
 export PATH="$PATH:$HOME/development/tools/arc/arcanist/bin"
 export PATH="$PATH:/usr/local/opt/php56/bin"
