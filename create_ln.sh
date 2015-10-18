@@ -7,7 +7,7 @@ ZSH_CUSTOM_DIR=~/.zsh-custom
 if [[ $(uname) == "Linux" ]]; then
   echo "Creating links on Linux"
   ln -s $PWD/linux/tmux.conf ~/.tmux.conf
-  OS_DIR=linux
+  ln -s $PWD/linux/zshrc ~/.zshrc
 else
   echo "Creating links on OSX"
   ln -s $PWD/osx/slate ~/.slate
