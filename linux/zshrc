@@ -77,10 +77,6 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-
-# Set Variables
-export HOMEBREW_PREFIX=$(brew --prefix)
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -89,9 +85,6 @@ export HOMEBREW_PREFIX=$(brew --prefix)
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Alias for starting mongodb
-alias start-mongodb="mongod --config /usr/local/etc/mongod.conf"
 
 # Alias for printing out current IP Address
 alias my-ip="dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | sed -e 's/\"//g'"
