@@ -110,3 +110,5 @@ export RUST_SRC_PATH="/Users/sendyhalim/development/git-repos/rust/src"
 
 # Do not share history between terminals
 setopt no_share_history
+
+source $HOME/.customrc
