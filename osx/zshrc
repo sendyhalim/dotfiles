@@ -123,3 +123,5 @@ stty -ixon
 
 # Do not share history between terminals
 setopt no_share_history
+
+source $HOME/.customrc
