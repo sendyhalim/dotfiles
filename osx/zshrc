@@ -98,6 +98,9 @@ alias my-ip="dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | sed -e 's/
 
 export PATH="$PATH:$HOME/development/tools/arc/arcanist/bin"
 export PATH="$PATH:/usr/local/opt/php56/bin"
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="$PATH:$HOME/.cabal/bin"
 export EDITOR="/usr/local/bin/vim"
 
 
@@ -114,6 +117,9 @@ export NVM_DIR="/Users/sendyhalim/.nvm"
 
 # For vim-racer
 export RUST_SRC_PATH="/Users/sendyhalim/development/git-repos/rust/src"
+
+# Reclaim ctrl + s in zsh
+stty -ixon
 
 # Do not share history between terminals
 setopt no_share_history
