@@ -52,71 +52,13 @@ CASE_SENSITIVE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(theme last-working-dir)
 
-# User configuration
-
-# http://stackoverflow.com/questions/27784961/received-warning-message-path-set-to-rvm-after-updating-ruby-version-using-rvm
-# https://github.com/rvm/rvm/issues/3212
-export PATH="$PATH:/Users/sendyhalim/.gvm/bin:/Users/sendyhalim/.pyenv/shims:/Users/sendyhalim/.rvm/gems/ruby-2.2.2/bin:/Users/sendyhalim/.rvm/gems/ruby-2.2.2@global/bin:/Users/sendyhalim/.rvm/rubies/ruby-2.2.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/sendyhalim/.rvm/bin:/Users/sendyhalim/.rvm/bin:/Users/sendyhalim/.rvm/bin:/Users/sendyhalim/development/tools/arc/arcanist/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
-
 source $ZSH/oh-my-zsh.sh
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
 
 # Set Variables
 export HOMEBREW_PREFIX=$(brew --prefix)
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Alias for starting mongodb
-alias start-mongodb="mongod --config /usr/local/etc/mongod.conf"
-
 # Alias for printing out current IP Address
 alias my-ip="dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | sed -e 's/\"//g'"
-
-export PATH="$PATH:$HOME/development/tools/arc/arcanist/bin"
-export PATH="$PATH:/usr/local/opt/php56/bin"
-export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/local/bin:$PATH"
-export PATH="$PATH:$HOME/.cabal/bin"
-export EDITOR="/usr/local/bin/vim"
-
-
-# Node Version Manager
-# source $(brew --prefix nvm)/nvm.sh
-export NVM_DIR="/Users/sendyhalim/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-# Rust Version Manager
-[[ -s /Users/sendyhalim/.rsvm/rsvm.sh ]] && . /Users/sendyhalim/.rsvm/rsvm.sh # This loads RSVM
-
-# Go Version Manager
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-
-# For vim-racer
-export RUST_SRC_PATH="/Users/sendyhalim/development/git-repos/rust/src"
 
 # Reclaim ctrl + s in zsh
 stty -ixon
@@ -124,4 +66,5 @@ stty -ixon
 # Do not share history between terminals
 setopt no_share_history
 
+# Load additional setup
 source $HOME/.customrc
