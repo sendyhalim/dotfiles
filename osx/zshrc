@@ -54,9 +54,6 @@ plugins=(theme last-working-dir)
 
 source $ZSH/oh-my-zsh.sh
 
-# Set Variables
-export HOMEBREW_PREFIX=$(brew --prefix)
-
 # Alias for printing out current IP Address
 alias my-ip="dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | sed -e 's/\"//g'"
 
