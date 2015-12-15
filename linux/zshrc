@@ -96,7 +96,7 @@ export EDITOR="/usr/local/bin/vim"
 
 # Node Version Manager
 # source $(brew --prefix nvm)/nvm.sh
-export NVM_DIR="/Users/sendyhalim/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Rust Version Manager
@@ -106,7 +106,7 @@ export NVM_DIR="/Users/sendyhalim/.nvm"
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 # For vim-racer
-export RUST_SRC_PATH="/Users/sendyhalim/development/git-repos/rust/src"
+export RUST_SRC_PATH="$USER/development/git-repos/rust/src"
 
 # Do not share history between terminals
 setopt no_share_history
