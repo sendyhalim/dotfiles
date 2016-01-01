@@ -34,6 +34,7 @@ values."
      haskell
      ;; markdown
      org
+     vim-powerline
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -245,8 +246,6 @@ layers configuration. You are free to put any user code."
   (global-company-mode)
   (editorconfig-mode 1)
   (linum-relative-global-mode)
-
-  (setq powerline-default-separator 'arrow)
 
   (simpleclip-mode)
 
