@@ -65,3 +65,5 @@ setopt no_share_history
 
 # Load additional setup
 source $HOME/.customrc
+
+alias emacs-mac="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
