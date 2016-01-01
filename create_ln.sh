@@ -13,7 +13,7 @@ else
   ln -s $PWD/osx/slate ~/.slate
   ln -s $PWD/osx/tmux.conf ~/.tmux.conf
   ln -s $PWD/osx/zshrc ~/.zshrc
-  ln -s $PWD/osx/spaceemacs ~/.spaceemacs
+  ln -s $PWD/osx/spacemacs ~/.spacemacs
 fi
 
 if [ ! -d $ZSH_CUSTOM_DIR ]; then
