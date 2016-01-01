@@ -262,6 +262,7 @@ layers configuration. You are free to put any user code."
 
   ;; Keybindings
   (global-set-key [f8] 'neotree-toggle)
+  (setq neo-theme 'nerd)
 
   ;; Evil keybindings
   (define-key evil-normal-state-map (kbd "QQ") 'kill-this-buffer)
