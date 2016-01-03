@@ -32,6 +32,7 @@ values."
      themes-megapack
      html
      haskell
+     php
      ;; markdown
      org
      vim-powerline
@@ -102,7 +103,7 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(noctilux)
+   dotspacemacs-themes '(ample)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
@@ -251,6 +252,9 @@ layers configuration. You are free to put any user code."
 
   (setq-default line-spacing 1)
 
+  ;; Disable line-wrapping
+  (add-hook 'hack-local-variables-hook (lambda () (setq truncate-lines t)))
+
   (setq mac-option-modifier 'meta)
   (setq mac-command-modifier 'super) ;; This is needed to support simpleclip
   (setq js2-basic-offset 2
@@ -265,6 +269,7 @@ layers configuration. You are free to put any user code."
 
   ;; Evil keybindings
   (define-key evil-normal-state-map (kbd "QQ") 'kill-this-buffer)
+  (define-key evil-normal-state-map (kbd "C-s") 'evil-write)
   (define-key evil-normal-state-map (kbd "H") 'evil-beginning-of-line)
   (define-key evil-visual-state-map (kbd "H") 'evil-beginning-of-line)
   (define-key evil-normal-state-map (kbd "L") 'evil-end-of-line)
