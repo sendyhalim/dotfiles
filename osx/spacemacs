@@ -255,6 +255,8 @@ layers configuration. You are free to put any user code."
   ;; Disable line-wrapping
   (add-hook 'hack-local-variables-hook (lambda () (setq truncate-lines t)))
 
+  (setq tern-command '("/usr/local/opt/nvm/versions/node/v5.0.0/bin/tern" "--no-port-file"))
+
   (setq mac-option-modifier 'meta)
   (setq mac-command-modifier 'super) ;; This is needed to support simpleclip
   (setq js2-basic-offset 2
@@ -266,6 +268,10 @@ layers configuration. You are free to put any user code."
   ;; Keybindings
   (global-set-key [f8] 'neotree-toggle)
   (setq neo-theme 'nerd)
+
+  ;; Turn on 80 column indicator
+  (setq fci-rule-color "#8DB5D3")
+  (add-hook 'after-change-major-mode-hook 'fci-mode)
 
   ;; Evil keybindings
   (define-key evil-normal-state-map (kbd "QQ") 'kill-this-buffer)
