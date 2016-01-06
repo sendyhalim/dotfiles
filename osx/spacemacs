@@ -36,6 +36,7 @@ values."
      ;; markdown
      org
      vim-powerline
+     unimpaired
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -108,7 +109,7 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Fura Powerline"
+   dotspacemacs-default-font '("Hack"
                                :size 13
                                :weight normal
                                :width normal
@@ -249,6 +250,7 @@ layers configuration. You are free to put any user code."
   (linum-relative-global-mode)
 
   (simpleclip-mode)
+  (global-evil-mc-mode)
 
   (setq-default line-spacing 1)
 
@@ -270,8 +272,14 @@ layers configuration. You are free to put any user code."
   (setq neo-theme 'nerd)
 
   ;; Turn on 80 column indicator
-  (setq fci-rule-color "#8DB5D3")
+  (setq fci-rule-color "lightgrey")
   (add-hook 'after-change-major-mode-hook 'fci-mode)
+
+  ;; Helm keybindings
+  (define-key helm-map (kbd "C-w") 'backward-kill-word)
+  (define-key helm-find-files-map (kbd "C-w") 'backward-kill-word)
+  (define-key helm-map (kbd "C-u") 'kill-whole-line)
+  (define-key helm-find-files-map (kbd "C-u") 'kill-whole-line)
 
   ;; Evil keybindings
   (define-key evil-normal-state-map (kbd "QQ") 'kill-this-buffer)
@@ -288,9 +296,13 @@ layers configuration. You are free to put any user code."
       (interactive)
       (evil-delete (point-at-bol) (point))))
 
+  (define-key evil-visual-state-map (kbd "C-K") ":move'<--1")
+  (define-key evil-visual-state-map (kbd "C-J") ":move'>+1")
+
   (define-key evil-normal-state-map (kbd "C-a") 'evil-numbers/inc-at-pt)
   (define-key evil-normal-state-map (kbd "C-x") 'evil-numbers/dec-at-pt)
-  (define-key evil-normal-state-map (kbd "C-p") 'helm-projectile-find-file)
+
+  (define-key evil-normal-state-map (kbd "C-q") 'helm-projectile-find-file)
 
   (define-key evil-visual-state-map (kbd "C-c") 'evilnc-comment-or-uncomment-lines)
   )
