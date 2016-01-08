@@ -278,13 +278,21 @@ layers configuration. You are free to put any user code."
   (setq fci-rule-color "lightgrey")
   (add-hook 'after-change-major-mode-hook 'fci-mode)
 
+  (defun sendy/dot-spacemacs/add-local-node-modules-to-exec-path ()
+    "Append current working directory `node_modules/.bin' to emacs `exec-path'"
+    (let ((node-modules-path (concat (projectile-project-root) "node_modules/.bin")))
+      (if (file-exists-p node-modules-path)
+          (add-to-list 'exec-path node-modules-path))))
+
+  (add-hook 'projectile-after-switch-project-hook 'sendy/dot-spacemacs/add-local-node-modules-to-exec-path)
+
   ;; Helm keybindings
   (add-hook 'helm-after-initialize-hook
-    (lambda ()
-      (define-key helm-map (kbd "C-w") 'backward-kill-word)
-      (define-key helm-find-files-map (kbd "C-w") 'backward-kill-word)
-      (define-key helm-map (kbd "C-u") 'kill-whole-line)
-      (define-key helm-find-files-map (kbd "C-u") 'kill-whole-line)))
+            (lambda ()
+              (define-key helm-map (kbd "C-w") 'backward-kill-word)
+              (define-key helm-find-files-map (kbd "C-w") 'backward-kill-word)
+              (define-key helm-map (kbd "C-u") 'kill-whole-line)
+              (define-key helm-find-files-map (kbd "C-u") 'kill-whole-line)))
 
   ;; Evil keybindings
   (define-key evil-normal-state-map (kbd "QQ") 'kill-this-buffer)
