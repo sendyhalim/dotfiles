@@ -28,21 +28,23 @@ values."
      emacs-lisp
      git
      osx
-     javascript
      themes-megapack
-     html
+     swift
      haskell
+     javascript
+     html
      php
-     ;; markdown
+     yaml
+     markdown
      org
      vim-powerline
      unimpaired
+     syntax-checking
+     ;; version-control
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; spell-checking
-     ;; syntax-checking
-     ;; version-control
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -104,7 +106,7 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(ample)
+   dotspacemacs-themes '(flatland)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
@@ -258,6 +260,8 @@ layers configuration. You are free to put any user code."
   (add-hook 'hack-local-variables-hook (lambda () (setq truncate-lines t)))
 
   (setq tern-command '("/usr/local/opt/nvm/versions/node/v5.0.0/bin/tern" "--no-port-file"))
+
+  (setq powerline-default-separator 'slant)
 
   (setq mac-option-modifier 'meta)
   (setq mac-command-modifier 'super) ;; This is needed to support simpleclip
