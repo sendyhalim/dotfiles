@@ -279,10 +279,12 @@ layers configuration. You are free to put any user code."
   (add-hook 'after-change-major-mode-hook 'fci-mode)
 
   ;; Helm keybindings
-  (define-key helm-map (kbd "C-w") 'backward-kill-word)
-  (define-key helm-find-files-map (kbd "C-w") 'backward-kill-word)
-  (define-key helm-map (kbd "C-u") 'kill-whole-line)
-  (define-key helm-find-files-map (kbd "C-u") 'kill-whole-line)
+  (add-hook 'helm-after-initialize-hook
+    (lambda ()
+      (define-key helm-map (kbd "C-w") 'backward-kill-word)
+      (define-key helm-find-files-map (kbd "C-w") 'backward-kill-word)
+      (define-key helm-map (kbd "C-u") 'kill-whole-line)
+      (define-key helm-find-files-map (kbd "C-u") 'kill-whole-line)))
 
   ;; Evil keybindings
   (define-key evil-normal-state-map (kbd "QQ") 'kill-this-buffer)
