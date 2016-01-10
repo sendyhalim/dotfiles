@@ -40,7 +40,7 @@ values."
      vim-powerline
      unimpaired
      syntax-checking
-     ;; version-control
+     version-control
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
