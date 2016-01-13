@@ -320,7 +320,7 @@ layers configuration. You are free to put any user code."
 
   (define-key evil-visual-state-map (kbd "C-c") 'simpleclip-copy)
   (define-key evil-visual-state-map (kbd "C-x") 'simpleclip-cut)
-  (define-key evil-visual-state-map (kbd "C-v") 'simpleclip-paste)
+  (define-key evil-insert-state-map (kbd "C-v") 'simpleclip-paste)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
