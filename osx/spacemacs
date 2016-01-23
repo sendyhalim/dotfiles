@@ -32,7 +32,6 @@ values."
      swift
      haskell
      javascript
-     react
      html
      php
      yaml
@@ -41,6 +40,7 @@ values."
      vim-powerline
      unimpaired
      syntax-checking
+     react
      version-control
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -112,7 +112,7 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Hack"
+   dotspacemacs-default-font '("DejaVu Sans Mono for Powerline"
                                :size 13
                                :weight normal
                                :width normal
