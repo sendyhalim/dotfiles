@@ -8,6 +8,7 @@ if [[ $(uname) == "Linux" ]]; then
   echo "Creating links on Linux"
   ln -s $PWD/linux/tmux.conf ~/.tmux.conf
   ln -s $PWD/linux/zshrc ~/.zshrc
+  ln -s $PWD/linux/spacemacs ~/.spacemacs
 else
   echo "Creating links on OSX"
   ln -s $PWD/osx/slate ~/.slate
