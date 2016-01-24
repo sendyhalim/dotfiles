@@ -27,7 +27,6 @@ values."
      ;; better-defaults
      emacs-lisp
      git
-     osx
      themes-megapack
      swift
      haskell
