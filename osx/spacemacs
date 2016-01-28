@@ -273,7 +273,7 @@ layers configuration. You are free to put any user code."
 
   ;; Turn on 80 column indicator
   (setq fci-rule-color "lightgrey")
-  (add-hook 'after-change-major-mode-hook 'fci-mode)
+  ; (add-hook 'after-change-major-mode-hook 'fci-mode)
 
   (defun sendy/dot-spacemacs/add-local-node-modules-to-exec-path ()
     "Append current working directory `node_modules/.bin' to emacs `exec-path'"
