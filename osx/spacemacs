@@ -33,6 +33,7 @@ values."
      swift
      syntax-checking
      themes-megapack
+     theming
      unimpaired
      version-control
      vim-powerline
@@ -107,11 +108,11 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("DejaVu Sans Mono for Powerline"
+   dotspacemacs-default-font '("Menlo Regular for Powerline"
                                :size 13
                                :weight normal
                                :width normal
-                               :powerline-scale 1.3)
+                               :powerline-scale 1.4)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The leader key accessible in `emacs state' and `insert state'
@@ -256,7 +257,7 @@ layers configuration. You are free to put any user code."
 
   (setq tern-command '("/usr/local/opt/nvm/versions/node/v5.0.0/bin/tern" "--no-port-file"))
 
-  (setq powerline-default-separator 'arrow)
+  (setq powerline-default-separator 'slant)
 
   (setq mac-option-modifier 'meta)
   (setq mac-command-modifier 'super) ;; This is needed to support simpleclip
@@ -267,7 +268,7 @@ layers configuration. You are free to put any user code."
         web-mode-code-indent-offset)
 
   ;; Keybindings
-  (global-set-key [f8] 'neotree-toggle)
+  (global-set-key [f8] 'neotree-find-project-root)
   (setq neo-theme 'nerd)
 
   ;; Turn on 80 column indicator
@@ -318,6 +319,18 @@ layers configuration. You are free to put any user code."
   (define-key evil-insert-state-map (kbd "C-v") 'simpleclip-paste)
 
   (define-key evil-insert-state-map (kbd "C-e") 'emmet-expand-line)
+
+  ;; Theming
+  (custom-theme-set-faces
+   'flatland
+   '(cursor ((t (:background "#9bc8e5" ))))
+   '(font-lock-variable-name-face ((t (:foreground "#54adda" ))))
+   '(font-lock-builtin-face ((t (:foreground "#63d7f7" ))))
+   '(font-lock-comment-face ((t (:foreground "#7c6f64" ))))
+   '(font-lock-keyword-face ((t (:foreground "#84ff92" ))))
+   '(font-lock-constant-face ((t (:foreground "#d3869b" ))))
+   '(font-lock-string-face ((t (:foreground "#aac551" ))))
+   )
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
