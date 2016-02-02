@@ -36,6 +36,7 @@ values."
      theming
      unimpaired
      version-control
+     vim-empty-lines
      vim-powerline
      yaml
      ;; (shell :variables
@@ -273,7 +274,7 @@ layers configuration. You are free to put any user code."
 
   ;; Turn on 80 column indicator
   (setq fci-rule-color "lightgrey")
-  ; (add-hook 'after-change-major-mode-hook 'fci-mode)
+                                        ; (add-hook 'after-change-major-mode-hook 'fci-mode)
 
   (defun sendy/dot-spacemacs/add-local-node-modules-to-exec-path ()
     "Append current working directory `node_modules/.bin' to emacs `exec-path'"
@@ -323,13 +324,14 @@ layers configuration. You are free to put any user code."
   ;; Theming
   (custom-theme-set-faces
    'flatland
-   '(cursor ((t (:background "#9bc8e5" ))))
-   '(font-lock-variable-name-face ((t (:foreground "#54adda" ))))
-   '(font-lock-builtin-face ((t (:foreground "#63d7f7" ))))
-   '(font-lock-comment-face ((t (:foreground "#7c6f64" ))))
-   '(font-lock-keyword-face ((t (:foreground "#84ff92" ))))
-   '(font-lock-constant-face ((t (:foreground "#d3869b" ))))
-   '(font-lock-string-face ((t (:foreground "#aac551" ))))
+   '(default ((t (:background "#1c1c1c"))))
+   '(cursor ((t (:background "#9bc8e5"))))
+   '(font-lock-variable-name-face ((t (:foreground "#54adda"))))
+   '(font-lock-builtin-face ((t (:foreground "#63d7f7"))))
+   '(font-lock-comment-face ((t (:foreground "#7c6f64"))))
+   '(font-lock-keyword-face ((t (:foreground "#84ff92"))))
+   '(font-lock-constant-face ((t (:foreground "#d3869b"))))
+   '(font-lock-string-face ((t (:foreground "#aac551"))))
    )
   )
 
