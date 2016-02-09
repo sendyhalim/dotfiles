@@ -5,13 +5,13 @@ OS_DIR=osx
 ZSH_CUSTOM_DIR=~/.zsh-custom
 
 dotfiles=()
-base_dir="osx"
+os="osx"
 
 # OS Specific files
 # ------------------------------------------------------------------------------
 if [[ $(uname) == "Linux" ]]; then
     echo "Creating links on Linux"
-    base_dir="linux"
+    os="linux"
     dotfiles=(
         "tmux.conf"
         "zshrc"
@@ -28,7 +28,7 @@ else
 fi
 
 for i in "${dotfiles[@]}"; do
-    ln -s $PWD/$base_dir/$i ~/.$i
+    ln -s $PWD/$os/$i ~/.$i
 done
 
 # General files
