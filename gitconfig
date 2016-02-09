@@ -17,8 +17,8 @@
 [color "diff"]
     meta = yellow bold
     frag = magenta bold
-    old = red bold
-    new = green bold
+    old = white bold
+    new = blue bold
 
 [color "status"]
     added = green
@@ -27,7 +27,7 @@
 
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
