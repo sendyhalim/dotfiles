@@ -4,21 +4,37 @@ OS_DIR=osx
 
 ZSH_CUSTOM_DIR=~/.zsh-custom
 
+dotfiles=()
+base_dir="osx"
+
+# OS Specific files
+# ------------------------------------------------------------------------------
 if [[ $(uname) == "Linux" ]]; then
-  echo "Creating links on Linux"
-  ln -s $PWD/linux/tmux.conf ~/.tmux.conf
-  ln -s $PWD/linux/zshrc ~/.zshrc
-  ln -s $PWD/linux/spacemacs ~/.spacemacs
+    echo "Creating links on Linux"
+    base_dir="linux"
+    dotfiles=(
+        "tmux.conf"
+        "zshrc"
+        "spacemacs"
+    )
 else
-  echo "Creating links on OSX"
-  ln -s $PWD/osx/slate ~/.slate
-  ln -s $PWD/osx/tmux.conf ~/.tmux.conf
-  ln -s $PWD/osx/zshrc ~/.zshrc
-  ln -s $PWD/osx/spacemacs ~/.spacemacs
+    echo "Creating links on OSX"
+    dotfiles=(
+        "slate"
+        "tmux.conf"
+        "zshrc"
+        "spacemacs"
+    )
 fi
 
+for i in "${dotfiles[@]}"; do
+    ln -s $PWD/$base_dir/$i ~/.$i
+done
+
+# General files
+# ------------------------------------------------------------------------------
 if [ ! -d $ZSH_CUSTOM_DIR ]; then
-  ln -s $PWD/$OS_DIR/zsh-custom $ZSH_CUSTOM_DIR
+    ln -s $PWD/$OS_DIR/zsh-custom $ZSH_CUSTOM_DIR
 fi
 
 ln -s $PWD/gitignore ~/.gitignore
