@@ -37,5 +37,11 @@ if [ ! -d $ZSH_CUSTOM_DIR ]; then
     ln -s $PWD/$OS_DIR/zsh-custom $ZSH_CUSTOM_DIR
 fi
 
-ln -s $PWD/gitignore ~/.gitignore
-ln -s $PWD/gitconfig ~/.gitconfig
+general_dotfiles=(
+    "gitignore"
+    "gitconfig"
+)
+
+for i in "${general_dotfiles[@]}"; do
+    ln -s $PWD/$i ~/.$i
+done
