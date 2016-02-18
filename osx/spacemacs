@@ -324,15 +324,19 @@ layers configuration. You are free to put any user code."
   ;; Theming
   (custom-theme-set-faces
    'flatland
-   '(default ((t (:background "#1c1c1c" :foreground "#eeeeee"))))
+   '(default ((t (:background "#1c1c1c"))))
    '(cursor ((t (:background "#9bc8e5"))))
    '(font-lock-variable-name-face ((t (:foreground "#fff6de"))))
-   '(font-lock-builtin-face ((t (:foreground "#63d7f7"))))
+   '(font-lock-builtin-face ((t (:foreground "#df9970"))))
    '(font-lock-comment-face ((t (:foreground "#7c6f64"))))
-   '(font-lock-keyword-face ((t (:foreground "#47e78a"))))
+   '(font-lock-keyword-face ((t (:foreground "#73afda"))))
    '(font-lock-constant-face ((t (:foreground "#d3869b"))))
-   '(font-lock-string-face ((t (:foreground "#aac551"))))
-   '(font-lock-function-name-face ((t (:foreground "#a5798d"))))
+   '(font-lock-string-face ((t (:foreground "#b5af55"))))
+   '(font-lock-function-name-face ((t (:foreground "#df9970"))))
+   '(font-lock-type-face ((t (:foreground "#87af5f"))))
+   '(web-mode-html-tag-face ((t (:foreground "#73afda"))))
+   '(web-mode-html-tag-bracket-face ((t (:foreground "#73afda"))))
+   '(powerline-state_indicator-normal ((t (:background "#1c1c1c" :foreground "#73afda"))))
    )
 
   ; Disable bold font
