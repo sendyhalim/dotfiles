@@ -325,6 +325,7 @@ layers configuration. You are free to put any user code."
   (custom-theme-set-faces
    'flatland
    '(default ((t (:background "#1c1c1c"))))
+   '(vertical-border ((t (:foreground "#1c1c1c"))))
    '(cursor ((t (:background "#9bc8e5"))))
    '(font-lock-variable-name-face ((t (:foreground "#fff6de"))))
    '(font-lock-builtin-face ((t (:foreground "#df9970"))))
@@ -341,6 +342,28 @@ layers configuration. You are free to put any user code."
 
   ; Disable bold font
   (set-face-bold-p 'bold nil)
+  ; (defvar my-linum-format-string "%3d")
+
+  ; (add-hook 'linum-before-numbering-hook 'my-linum-get-format-string)
+
+  ; (defun my-linum-get-format-string ()
+  ;   (let* ((width (1+ (length (number-to-string
+  ;                             (count-lines (point-min) (point-max))))))
+  ;         (format (concat "%" (number-to-string width) "d ")))
+  ;     (setq my-linum-format-string format)))
+
+  (defvar my-linum-current-line-number 0)
+
+  (setq linum-format 'my-linum-relative-line-numbers)
+
+  (defun my-linum-relative-line-numbers (line-number)
+    (let ((offset (abs(- line-number my-linum-current-line-number))))
+      (propertize (format "%3d " offset) 'face 'linum)))
+
+  (defadvice linum-update (around my-linum-update)
+    (let ((my-linum-current-line-number (line-number-at-pos)))
+      ad-do-it))
+  (ad-activate 'linum-update)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
