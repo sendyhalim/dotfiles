@@ -18,29 +18,26 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
-     ;; ----------------------------------------------------------------
-     ;; Example of useful layers you may want to use right away.
-     ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
-     ;; <M-m f e R> (Emacs style) to install them.
-     ;; ----------------------------------------------------------------
      auto-completion
-     ;; better-defaults
      emacs-lisp
      git
-     themes-megapack
-     swift
      haskell
-     javascript
      html
-     php
-     yaml
+     javascript
      markdown
      org
-     vim-powerline
-     unimpaired
-     syntax-checking
+     php
      react
+     restclient
+     swift
+     syntax-checking
+     themes-megapack
+     theming
+     unimpaired
      version-control
+     vim-empty-lines
+     vim-powerline
+     yaml
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -111,11 +108,11 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Menlo for Powerline"
+   dotspacemacs-default-font '("Menlo Regular for Powerline"
                                :size 13
                                :weight normal
                                :width normal
-                               :powerline-scale 1.3)
+                               :powerline-scale 1.4)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The leader key accessible in `emacs state' and `insert state'
@@ -258,8 +255,6 @@ layers configuration. You are free to put any user code."
   ;; Disable line-wrapping
   (add-hook 'hack-local-variables-hook (lambda () (setq truncate-lines t)))
 
-  (setq tern-command '("/usr/local/opt/nvm/versions/node/v5.0.0/bin/tern" "--no-port-file"))
-
   (setq powerline-default-separator 'slant)
 
   (setq js2-basic-offset 2
@@ -269,12 +264,12 @@ layers configuration. You are free to put any user code."
         web-mode-code-indent-offset)
 
   ;; Keybindings
-  (global-set-key [f8] 'neotree-toggle)
+  (global-set-key [f8] 'neotree-find-project-root)
   (setq neo-theme 'nerd)
 
   ;; Turn on 80 column indicator
-  (setq fci-rule-color "lightgrey")
-  (add-hook 'after-change-major-mode-hook 'fci-mode)
+  ; (setq fci-rule-color "lightgrey")
+  ; (add-hook 'after-change-major-mode-hook 'fci-mode)
 
   (defun sendy/dot-spacemacs/add-local-node-modules-to-exec-path ()
     "Append current working directory `node_modules/.bin' to emacs `exec-path'"
@@ -320,6 +315,51 @@ layers configuration. You are free to put any user code."
   (define-key evil-insert-state-map (kbd "C-v") 'simpleclip-paste)
 
   (define-key evil-insert-state-map (kbd "C-e") 'emmet-expand-line)
+
+  ;; Theming
+  (custom-theme-set-faces
+   'flatland
+   '(default ((t (:background "#1c1c1c"))))
+   '(vertical-border ((t (:foreground "#1c1c1c"))))
+   '(cursor ((t (:background "#9bc8e5"))))
+   '(font-lock-variable-name-face ((t (:foreground "#fff6de"))))
+   '(font-lock-builtin-face ((t (:foreground "#df9970"))))
+   '(font-lock-comment-face ((t (:foreground "#393939"))))
+   '(font-lock-comment-delimiter-face ((t (:foreground "#393939"))))
+   '(font-lock-keyword-face ((t (:foreground "#73afda"))))
+   '(font-lock-constant-face ((t (:foreground "#d3869b"))))
+   '(font-lock-string-face ((t (:foreground "#777777"))))
+   '(font-lock-function-name-face ((t (:foreground "#df9970"))))
+   '(font-lock-type-face ((t (:foreground "#4acb68"))))
+   '(web-mode-html-tag-face ((t (:foreground "#73afda"))))
+   '(web-mode-html-tag-bracket-face ((t (:foreground "#73afda"))))
+   '(powerline-state_indicator-normal ((t (:background "#1c1c1c" :foreground "#73afda"))))
+   )
+
+  ; Disable bold font
+  (set-face-bold-p 'bold nil)
+  ; (defvar my-linum-format-string "%3d")
+
+  ; (add-hook 'linum-before-numbering-hook 'my-linum-get-format-string)
+
+  ; (defun my-linum-get-format-string ()
+  ;   (let* ((width (1+ (length (number-to-string
+  ;                             (count-lines (point-min) (point-max))))))
+  ;         (format (concat "%" (number-to-string width) "d ")))
+  ;     (setq my-linum-format-string format)))
+
+  (defvar my-linum-current-line-number 0)
+
+  (setq linum-format 'my-linum-relative-line-numbers)
+
+  (defun my-linum-relative-line-numbers (line-number)
+    (let ((offset (abs(- line-number my-linum-current-line-number))))
+      (propertize (format "%3d " offset) 'face 'linum)))
+
+  (defadvice linum-update (around my-linum-update)
+    (let ((my-linum-current-line-number (line-number-at-pos)))
+      ad-do-it))
+  (ad-activate 'linum-update)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -339,3 +379,4 @@ layers configuration. You are free to put any user code."
  '(default ((t (:background nil))))
  '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
  '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
+
