@@ -19,6 +19,7 @@ values."
    dotspacemacs-configuration-layers
    '(
      auto-completion
+     elm
      emacs-lisp
      git
      haskell
@@ -256,7 +257,7 @@ layers configuration. You are free to put any user code."
   ;; Disable line-wrapping
   (add-hook 'hack-local-variables-hook (lambda () (setq truncate-lines t)))
 
-  (setq tern-command '("/usr/local/opt/nvm/versions/node/v5.0.0/bin/tern" "--no-port-file"))
+  (setq tern-command '("~/.nvm/versions/node/v5.7.1/bin/tern" "--no-port-file"))
 
   (setq powerline-default-separator 'arrow)
 
@@ -339,7 +340,13 @@ layers configuration. You are free to put any user code."
    '(web-mode-html-tag-face ((t (:foreground "#73afda"))))
    '(web-mode-html-tag-bracket-face ((t (:foreground "#73afda"))))
    '(powerline-state_indicator-normal ((t (:background "#1c1c1c" :foreground "#73afda"))))
+   '(evil-search-highlight-persist-highlight-face ((t (:underline t :background "#222222"))))
    )
+
+  ; (set-display-table-slot standard-display-table 'vertical-border (make-glyph-code ?│))
+  (let ((display-table (or standard-display-table (make-display-table))))
+  (set-display-table-slot display-table 'vertical-border (make-glyph-code ?│))
+  (setq standard-display-table display-table))
 
   ; Disable bold font
   (set-face-bold-p 'bold nil)
