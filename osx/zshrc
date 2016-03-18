@@ -57,6 +57,8 @@ source $ZSH/oh-my-zsh.sh
 # Alias for printing out current IP Address
 alias my-ip="dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | sed -e 's/\"//g'"
 
+alias lockscreen='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
+
 # Reclaim ctrl + s in zsh
 stty -ixon
 
@@ -65,3 +67,7 @@ setopt no_share_history
 
 # Load additional setup
 source $HOME/.customrc
+
+# http://hoppsjots.org/?p=177
+# Fix Underline + Color in TMUX (TERM=screen-256color)
+$({ infocmp -x screen-256color; printf '\t%s\n' 'ncv@,'; } > /tmp/t && tic -x /tmp/t)
