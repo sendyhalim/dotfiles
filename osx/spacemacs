@@ -252,7 +252,7 @@ layers configuration. You are free to put any user code."
   (simpleclip-mode)
   (global-evil-mc-mode)
 
-  (setq-default line-spacing 1)
+  (setq-default line-spacing 2)
 
   ;; Disable line-wrapping
   (add-hook 'hack-local-variables-hook (lambda () (setq truncate-lines t)))
@@ -325,31 +325,34 @@ layers configuration. You are free to put any user code."
   ;; Theming
   (custom-theme-set-faces
    'flatland
-   '(default ((t (:background "#1c1c1c"))))
-   '(vertical-border ((t (:foreground "#1c1c1c"))))
+   '(default ((t (:background "#222222"))))
+   '(linum ((t (:background "#222222" :foreground "#444444"))))
+   '(vertical-border ((t (:foreground "#333333"))))
    '(cursor ((t (:background "#9bc8e5"))))
    '(font-lock-variable-name-face ((t (:foreground "#fff6de"))))
    '(font-lock-builtin-face ((t (:foreground "#df9970"))))
-   '(font-lock-comment-face ((t (:foreground "#393939"))))
-   '(font-lock-comment-delimiter-face ((t (:foreground "#393939"))))
+   '(font-lock-comment-face ((t (:foreground "#555555"))))
+   '(font-lock-comment-delimiter-face ((t (:foreground "#555555"))))
    '(font-lock-keyword-face ((t (:foreground "#73afda"))))
    '(font-lock-constant-face ((t (:foreground "#d3869b"))))
-   '(font-lock-string-face ((t (:foreground "#777777"))))
+   '(font-lock-string-face ((t (:foreground "#90a555"))))
    '(font-lock-function-name-face ((t (:foreground "#df9970"))))
    '(font-lock-type-face ((t (:foreground "#4acb68"))))
+   '(sp-pair-overlay-face ((t (:background nil))))
    '(web-mode-html-tag-face ((t (:foreground "#73afda"))))
    '(web-mode-html-tag-bracket-face ((t (:foreground "#73afda"))))
    '(powerline-state_indicator-normal ((t (:background "#1c1c1c" :foreground "#73afda"))))
    '(evil-search-highlight-persist-highlight-face ((t (:underline t :background "#222222"))))
    )
 
-  ; (set-display-table-slot standard-display-table 'vertical-border (make-glyph-code ?│))
+ ; (set-display-table-slot standard-display-table 'vertical-border (make-glyph-code ?│))
   (let ((display-table (or standard-display-table (make-display-table))))
-  (set-display-table-slot display-table 'vertical-border (make-glyph-code ?│))
-  (setq standard-display-table display-table))
+    (set-display-table-slot display-table 'vertical-border (make-glyph-code ?│))
+    (setq standard-display-table display-table))
 
   ; Disable bold font
   (set-face-bold-p 'bold nil)
+
   ; (defvar my-linum-format-string "%3d")
 
   ; (add-hook 'linum-before-numbering-hook 'my-linum-get-format-string)
