@@ -57,7 +57,11 @@ source $ZSH/oh-my-zsh.sh
 # Alias for printing out current IP Address
 alias my-ip="dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | sed -e 's/\"//g'"
 
+# Alias for locking screen on osx
 alias lockscreen='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
+
+# Alias for fixing alcatraz plugin
+alias fix-alcatraz='find ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins -name Info.plist -maxdepth 3 | xargs -I{} defaults write {} DVTPlugInCompatibilityUUIDs -array-add `defaults read /Applications/Xcode.app/Contents/Info DVTPlugInCompatibilityUUID`'
 
 # Reclaim ctrl + s in zsh
 stty -ixon
