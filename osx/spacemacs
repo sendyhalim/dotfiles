@@ -52,6 +52,7 @@ values."
    dotspacemacs-additional-packages
    '(simpleclip
      editorconfig
+     company-sourcekit
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
@@ -251,6 +252,10 @@ layers configuration. You are free to put any user code."
 
   (simpleclip-mode)
   (global-evil-mc-mode)
+
+  ;; Swift autocompletion
+  (require 'company-sourcekit)
+  (add-to-list 'company-backends 'company-sourcekit)
 
   (setq-default line-spacing 2)
 
