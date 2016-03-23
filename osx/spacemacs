@@ -274,8 +274,15 @@ layers configuration. You are free to put any user code."
         web-mode-markup-indent-offset 2
         web-mode-code-indent-offset)
 
+  (defun sendy/dot-spacemacs/show-file-path ()
+    "Show fullpath name of the current buffer"
+    (interactive)
+    (message (buffer-file-name)))
+
   ;; Keybindings
   (global-set-key [f8] 'neotree-find-project-root)
+  (global-set-key [f9] 'sendy/dot-spacemacs/show-file-path)
+
   (setq neo-theme 'nerd)
 
   ;; Turn on 80 column indicator
