@@ -111,7 +111,7 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Menlo Regular for Powerline"
+   dotspacemacs-default-font '("Meslo LG M for Powerline"
                                :size 13
                                :weight normal
                                :width normal
@@ -265,6 +265,9 @@ layers configuration. You are free to put any user code."
   (setq tern-command '("~/.nvm/versions/node/v5.7.1/bin/tern" "--no-port-file"))
 
   (setq powerline-default-separator 'arrow)
+  ;; more readable :)
+  (when (display-graphic-p)
+    (setq powerline-default-separator 'slant))
 
   (setq mac-option-modifier 'meta)
   (setq mac-command-modifier 'super) ;; This is needed to support simpleclip
@@ -285,6 +288,7 @@ layers configuration. You are free to put any user code."
 
   (setq neo-theme 'nerd)
 
+  (spacemacs/toggle-fringe-off)
   ;; Turn on 80 column indicator
   ; (setq fci-rule-color "lightgrey")
   ; (add-hook 'after-change-major-mode-hook 'fci-mode)
@@ -337,8 +341,8 @@ layers configuration. You are free to put any user code."
   ;; Theming
   (custom-theme-set-faces
    'flatland
-   '(default ((t (:background "#222222"))))
-   '(linum ((t (:background "#222222" :foreground "#444444"))))
+   '(default ((t (:background "#262626"))))
+   '(linum ((t (:background "#262626" :foreground "#444444"))))
    '(vertical-border ((t (:foreground "#333333"))))
    '(cursor ((t (:background "#9bc8e5"))))
    '(font-lock-variable-name-face ((t (:foreground "#fff6de"))))
@@ -354,7 +358,7 @@ layers configuration. You are free to put any user code."
    '(web-mode-html-tag-face ((t (:foreground "#73afda"))))
    '(web-mode-html-tag-bracket-face ((t (:foreground "#73afda"))))
    '(powerline-state_indicator-normal ((t (:background "#1c1c1c" :foreground "#73afda"))))
-   '(evil-search-highlight-persist-highlight-face ((t (:underline t :background "#222222"))))
+   '(evil-search-highlight-persist-highlight-face ((t (:underline t :background "#262626"))))
    )
 
  ; (set-display-table-slot standard-display-table 'vertical-border (make-glyph-code ?│))
@@ -396,8 +400,11 @@ layers configuration. You are free to put any user code."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(blink-cursor-mode nil)
+ '(column-number-mode t)
  '(magit-am-arguments (quote ("--3way")))
- '(magit-commit-arguments nil))
+ '(magit-commit-arguments nil)
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
