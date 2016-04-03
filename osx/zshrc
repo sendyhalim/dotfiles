@@ -1,9 +1,13 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-
-# If created using .create_ln.sh $(pwd) will be relative
-# to .create_ln.sh directory
 export ZSH_CUSTOM=$HOME/.zsh-custom
+export ZSH_PLUGIN=$ZSH_CUSTOM/plugins
+
+# Install custom plugins if it does not exist
+if [ ! -d $ZSH_PLUGIN/zshmarks ]; then
+  echo "zsh plugin zshmarks does not exist, installing it..."
+  git clone https://github.com/jocelynmallon/zshmarks.git $ZSH_PLUGIN/zshmarks
+fi
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -47,7 +51,9 @@ ZSH_THEME="cloud"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(theme last-working-dir)
+# Custom plugins:
+# - zshmarks https://github.com/jocelynmallon/zshmarks
+plugins=(theme last-working-dir zshmarks)
 
 source $ZSH/oh-my-zsh.sh
 
