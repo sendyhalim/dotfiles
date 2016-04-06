@@ -85,3 +85,10 @@ source $HOME/.customrc
 # http://hoppsjots.org/?p=177
 # Fix Underline + Color in TMUX (TERM=screen-256color)
 $({ infocmp -x screen-256color; printf '\t%s\n' 'ncv@,'; } > /tmp/t && tic -x /tmp/t)
+
+# ZSH Styles
+ZSH_HIGHLIGHT_STYLES[command]=fg=39
+ZSH_HIGHLIGHT_STYLES[builtin]=fg=39
+ZSH_HIGHLIGHT_STYLES[alias]=fg=106
+ZSH_HIGHLIGHT_STYLES[globbing]=fg=140
+ZSH_HIGHLIGHT_STYLES[path]=fg=102
