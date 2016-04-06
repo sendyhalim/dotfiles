@@ -9,6 +9,11 @@ if [ ! -d $ZSH_PLUGIN/zshmarks ]; then
   git clone https://github.com/jocelynmallon/zshmarks.git $ZSH_PLUGIN/zshmarks
 fi
 
+if [ ! -d $ZSH_PLUGIN/zsh-syntax-highlighting ]; then
+  echo "zsh plugin zsh-syntax-highlighting does not exist, installing it..."
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_PLUGIN/zsh-syntax-highlighting
+fi
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -53,7 +58,9 @@ ZSH_THEME="cloud"
 # Add wisely, as too many plugins slow down shell startup.
 # Custom plugins:
 # - zshmarks https://github.com/jocelynmallon/zshmarks
-plugins=(theme last-working-dir zshmarks)
+# - zsh-syntax-highlighting https://github.com/zsh-users/zsh-syntax-highlighting.
+#   Must be the last plugin sourced.
+plugins=(theme last-working-dir zshmarks zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
