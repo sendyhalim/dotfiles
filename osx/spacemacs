@@ -338,6 +338,7 @@ layers configuration. You are free to put any user code."
   (define-key evil-insert-state-map (kbd "C-v") 'simpleclip-paste)
 
   (define-key evil-insert-state-map (kbd "C-e") 'emmet-expand-line)
+  (define-key evil-insert-state-map (kbd "C-s") 'evil-write)
 
   ;; Theming
   (custom-theme-set-faces
