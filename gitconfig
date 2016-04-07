@@ -1,54 +1,55 @@
 [user]
-    name = Sendy Halim
-    email = sendyhalim93@gmail.com
+  name = Sendy Halim
+  email = sendyhalim93@gmail.com
 
 [core]
-    editor = vim
-    excludesfile = ~/.gitignore
+  editor = vim
+  excludesfile = ~/.gitignore
 
 [color]
-    ui = true
+  ui = true
 
 [color "branch"]
-    current = blue
-    local = yellow
-    remote = green
+  current = blue
+  local = yellow
+  remote = green
 
 [color "diff"]
-    meta = yellow bold
-    frag = magenta bold
-    old = white bold
-    new = blue bold
+  meta = yellow bold
+  frag = magenta bold
+  old = white bold
+  new = blue bold
 
 [color "status"]
-    added = green
-    changed = cyan
-    untracked = yellow
+  added = green
+  changed = cyan
+  untracked = yellow
 
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
 
 [alias]
-    a    = add
-    b    = branch
-    c    = commit -m
-    ca   = commit -am
-    cam  = commit --amend
-    co   = checkout
-    cob  = checkout -b
-    d    = diff
-    dc   = diff --cached
-    l    = log --oneline --decorate --color --graph
-    lg   = log --stat --max-count=10
-    lgg  = log --graph --max-count=10
-    lgga = log --graph --decorate --all
-    lo   = log --oneline --decorate --color
-    p    = push
-    pl   = pull
-    s    = status
-    ss   = status -s
+  a    = add
+  b    = branch
+  c    = commit -m
+  ca   = commit -am
+  cam  = commit --amend
+  co   = checkout
+  cob  = checkout -b
+  d    = diff
+  dc   = diff --cached
+  l    = log --oneline --decorate --color --graph
+  lg   = log --stat --max-count=10
+  lgg  = log --graph --max-count=10
+  lgga = log --graph --decorate --all
+  lo   = log --oneline --decorate --color
+  p    = push
+  pl   = pull
+  s    = status
+  ss   = status -s
+  rb   = rebase
