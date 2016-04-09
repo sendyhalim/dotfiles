@@ -14,7 +14,6 @@ if [[ $(uname) == "Linux" ]]; then
     os="linux"
     dotfiles=(
         "tmux.conf"
-        "zshrc"
         "spacemacs"
     )
 else
@@ -22,7 +21,6 @@ else
     dotfiles=(
         "slate"
         "tmux.conf"
-        "zshrc"
         "spacemacs"
     )
 fi
@@ -40,6 +38,7 @@ fi
 general_dotfiles=(
     "gitignore"
     "gitconfig"
+    "zshrc"
 )
 
 for i in "${general_dotfiles[@]}"; do
