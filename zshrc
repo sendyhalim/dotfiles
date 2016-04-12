@@ -92,3 +92,13 @@ ZSH_HIGHLIGHT_STYLES[builtin]=fg=39
 ZSH_HIGHLIGHT_STYLES[alias]=fg=106
 ZSH_HIGHLIGHT_STYLES[globbing]=fg=140
 ZSH_HIGHLIGHT_STYLES[path]=fg=102
+
+# Function to update spacemacs
+function updateSpacemacs {
+  cd ~/.emacs.d
+  echo "Moved to ~/.emacs.d"
+  echo "Pulling the newest code from master branch"
+  git pull origin master
+  echo "Done, please restart your emacs client"
+  cd -1
+}
