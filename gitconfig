@@ -50,6 +50,7 @@
   lo   = log --oneline --decorate --color
   p    = push
   pl   = pull
+  rb   = rebase
   s    = status
   ss   = status -s
-  rb   = rebase
+  st   = stash
