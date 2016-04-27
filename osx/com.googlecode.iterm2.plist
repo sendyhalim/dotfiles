@@ -26687,7 +26687,7 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>-4 413 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1 423 650 452 0 0 1440 877 </string>
+	<string>0 47 1434 830 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>244 262 650 452 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -26705,12 +26705,16 @@
 			<false/>
 			<key>Ansi 0 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.11055871099233627</real>
+				<real>0.20662003755569458</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.08891567587852478</real>
+				<real>0.17888340353965759</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.085491135716438293</real>
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
@@ -27463,13 +27467,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.21772558987140656</real>
+				<real>0.17192137241363525</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.17785057425498962</real>
+				<real>0.13112564384937286</real>
 				<key>Red Component</key>
-				<real>0.057608149945735931</real>
+				<real>0.079393938183784485</real>
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
@@ -27645,13 +27649,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.27442991733551025</real>
+				<real>0.26633197069168091</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.21255776286125183</real>
+				<real>0.21154022216796875</real>
 				<key>Red Component</key>
-				<real>0.079917460680007935</real>
+				<real>0.091233648359775543</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
@@ -28347,7 +28351,7 @@
 	<key>NoSyncHaveShownPromoWithId_4</key>
 	<true/>
 	<key>NoSyncLastTipTime</key>
-	<real>482343448.013291</real>
+	<real>482729800.78644103</real>
 	<key>NoSyncNeverRemindPrefsChangesCopy</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
@@ -28392,6 +28396,10 @@
 		<string>0020</string>
 		<string>0021</string>
 		<string>0022</string>
+		<string>0023</string>
+		<string>0024</string>
+		<string>0025</string>
+		<string>0026</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
@@ -28457,7 +28465,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-04-14T15:51:04Z</date>
+	<date>2016-04-19T03:34:20Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -28465,11 +28473,11 @@
 	<key>ShowFullScreenTabBar</key>
 	<true/>
 	<key>ShowPaneTitles</key>
-	<true/>
+	<false/>
 	<key>SmartPlacement</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.2173001766204834</real>
+	<real>0.13215144230769232</real>
 	<key>SwitchTabModifier</key>
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
