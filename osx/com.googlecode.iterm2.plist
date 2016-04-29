@@ -26658,7 +26658,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>322</string>
+		<string>307</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -26683,11 +26683,13 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>805 261 231 329 0 0 1440 877 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>49 418 1012 77 0 0 1440 877 </string>
+	<string>104 386 1012 77 0 0 1920 1080 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>-4 413 606 456 0 0 1440 877 </string>
+	<string>-4 589 606 456 0 0 1920 1057 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>650 524 620 392 0 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 47 1434 830 0 0 1440 877 </string>
+	<string>0 32 1914 1025 0 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>244 262 650 452 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -28335,7 +28337,7 @@
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Vertical Spacing</key>
-			<real>1.0296322006777108</real>
+			<real>1.0538838949548195</real>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
@@ -28351,7 +28353,7 @@
 	<key>NoSyncHaveShownPromoWithId_4</key>
 	<true/>
 	<key>NoSyncLastTipTime</key>
-	<real>482729800.78644103</real>
+	<real>483517663.47566098</real>
 	<key>NoSyncNeverRemindPrefsChangesCopy</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
@@ -28400,6 +28402,15 @@
 		<string>0024</string>
 		<string>0025</string>
 		<string>0026</string>
+		<string>0027</string>
+		<string>0028</string>
+		<string>0029</string>
+		<string>0030</string>
+		<string>0031</string>
+		<string>0032</string>
+		<string>0033</string>
+		<string>0034</string>
+		<string>0035</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
@@ -28465,7 +28476,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-04-19T03:34:20Z</date>
+	<date>2016-04-28T11:37:50Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
