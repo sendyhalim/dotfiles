@@ -255,6 +255,9 @@ layers configuration. You are free to put any user code."
   ;; Disable line-wrapping
   (add-hook 'hack-local-variables-hook (lambda () (setq truncate-lines t)))
 
+  ;; Turn of fringe by default
+  (spacemacs/toggle-fringe-off)
+
   (setq powerline-default-separator 'slant)
 
   (setq js2-basic-offset 2
