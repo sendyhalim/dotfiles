@@ -26658,7 +26658,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>307</string>
+		<string>322</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -26685,11 +26685,13 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>428 565 1012 94 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>-4 589 606 456 0 0 1920 1057 </string>
+	<string>-4 413 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 371 620 392 0 0 1440 877 </string>
+	<key>NSWindow Frame UKCrashReporter</key>
+	<string>99 293 592 584 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3 424 650 452 0 0 1440 877 </string>
+	<string>0 53 1434 824 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>244 262 650 452 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -27651,13 +27653,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.26633197069168091</real>
+				<real>0.23137254901960785</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.21154022216796875</real>
+				<real>0.17254901960784313</real>
 				<key>Red Component</key>
-				<real>0.091233648359775543</real>
+				<real>0.14509803921568629</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
@@ -27681,13 +27683,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.10980392247438431</real>
+				<real>0.1118292510509491</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.10980392247438431</real>
+				<real>0.11182737350463867</real>
 				<key>Red Component</key>
-				<real>0.10980392247438431</real>
+				<real>0.1118306964635849</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -28355,7 +28357,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>77057167-383D-47CC-8EBF-69EA0E33FC81</string>
 	<key>NoSyncLastTipTime</key>
-	<real>483855908.98612201</real>
+	<real>483942320.77399403</real>
 	<key>NoSyncNeverRemindPrefsChangesCopy</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
@@ -28416,6 +28418,7 @@
 		<string>0036</string>
 		<string>0037</string>
 		<string>0038</string>
+		<string>0039</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
@@ -28481,7 +28484,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-05-02T04:21:14Z</date>
+	<date>2016-05-03T04:21:32Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -28508,6 +28511,8 @@
 	<integer>10</integer>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<false/>
+	<key>UKCrashReporterLastCrashReportDate</key>
+	<real>1462280704</real>
 	<key>URLHandlersByGuid</key>
 	<dict/>
 	<key>UseBorder</key>
