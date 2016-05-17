@@ -276,7 +276,7 @@ layers configuration. You are free to put any user code."
   ;; Disable line-wrapping
   (add-hook 'hack-local-variables-hook (lambda () (setq truncate-lines t)))
 
-  (setq tern-command '("~/.nvm/versions/node/v5.7.1/bin/tern" "--no-port-file"))
+  (setq tern-command '("tern" "--no-port-file"))
 
   (setq powerline-default-separator 'arrow)
   ;; more readable :)
