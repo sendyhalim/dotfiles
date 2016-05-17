@@ -26658,7 +26658,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>322</string>
+		<string>307</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -26687,11 +26687,11 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>-4 413 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>410 371 620 392 0 0 1440 877 </string>
+	<string>410 372 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 293 592 584 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 53 1434 824 0 0 1440 877 </string>
+	<string>0 59 1914 996 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>244 262 650 452 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -27653,13 +27653,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.23137254901960785</real>
+				<real>0.22383269667625427</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.17254901960784313</real>
+				<real>0.17672987282276154</real>
 				<key>Red Component</key>
-				<real>0.14509803921568629</real>
+				<real>0.15437275171279907</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
@@ -27683,13 +27683,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.1118292510509491</real>
+				<real>0.092231146991252899</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.11182737350463867</real>
+				<real>0.092229574918746948</real>
 				<key>Red Component</key>
-				<real>0.1118306964635849</real>
+				<real>0.09223233163356781</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -28357,7 +28357,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>77057167-383D-47CC-8EBF-69EA0E33FC81</string>
 	<key>NoSyncLastTipTime</key>
-	<real>483942320.77399403</real>
+	<real>485022537.08107901</real>
 	<key>NoSyncNeverRemindPrefsChangesCopy</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
@@ -28419,6 +28419,16 @@
 		<string>0037</string>
 		<string>0038</string>
 		<string>0039</string>
+		<string>0040</string>
+		<string>0041</string>
+		<string>0042</string>
+		<string>0043</string>
+		<string>0044</string>
+		<string>0045</string>
+		<string>0046</string>
+		<string>0047</string>
+		<string>0048</string>
+		<string>0049</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
@@ -28484,7 +28494,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-05-03T04:21:32Z</date>
+	<date>2016-05-15T16:28:58Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -28512,7 +28522,7 @@
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<false/>
 	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1462280704</real>
+	<real>1463367552</real>
 	<key>URLHandlersByGuid</key>
 	<dict/>
 	<key>UseBorder</key>
@@ -28536,7 +28546,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.9.20160426</string>
+	<string>2.9.20160510</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

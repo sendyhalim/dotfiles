@@ -354,8 +354,8 @@ layers configuration. You are free to put any user code."
   ;; Theming
   (custom-theme-set-faces
    'flatland
-   '(default ((t (:background "#262626"))))
-   '(linum ((t (:background "#262626" :foreground "#444444"))))
+   '(default ((t (:background "#1f1f1f"))))
+   '(linum ((t (:background "#1f1f1f" :foreground "#444444"))))
    '(vertical-border ((t (:foreground "#333333"))))
    '(cursor ((t (:background "#9bc8e5"))))
    '(font-lock-variable-name-face ((t (:foreground "#fff6de"))))
@@ -371,7 +371,7 @@ layers configuration. You are free to put any user code."
    '(web-mode-html-tag-face ((t (:foreground "#73afda"))))
    '(web-mode-html-tag-bracket-face ((t (:foreground "#73afda"))))
    '(powerline-state_indicator-normal ((t (:background "#1c1c1c" :foreground "#73afda"))))
-   '(evil-search-highlight-persist-highlight-face ((t (:underline t :background "#262626"))))
+   '(evil-search-highlight-persist-highlight-face ((t (:underline t :background "#1f1f1f"))))
    )
 
   ; (set-display-table-slot standard-display-table 'vertical-border (make-glyph-code ?│))
