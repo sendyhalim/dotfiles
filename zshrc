@@ -104,5 +104,9 @@ function updateSpacemacs {
   cd -1
 }
 
+function cleardsstore {
+  find $1 -name '*.DS_Store' -type f -delete && echo 'ALL .DS_STORE FILES RECURSIVELY REMOVED'
+}
+
 # For swiftenv (version manager) https://github.com/kylef/swiftenv
 if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
