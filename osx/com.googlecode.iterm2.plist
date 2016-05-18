@@ -26658,7 +26658,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>307</string>
+		<string>322</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -26691,7 +26691,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 293 592 584 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 59 1914 996 0 0 1920 1057 </string>
+	<string>0 423 650 452 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>244 262 650 452 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -27683,13 +27683,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.092231146991252899</real>
+				<real>0.16078431372549021</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.092229574918746948</real>
+				<real>0.12156862745098039</real>
 				<key>Red Component</key>
-				<real>0.09223233163356781</real>
+				<real>0.11764705882352941</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -28357,7 +28357,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>77057167-383D-47CC-8EBF-69EA0E33FC81</string>
 	<key>NoSyncLastTipTime</key>
-	<real>485022537.08107901</real>
+	<real>485196057.97457802</real>
 	<key>NoSyncNeverRemindPrefsChangesCopy</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
@@ -28429,6 +28429,8 @@
 		<string>0047</string>
 		<string>0048</string>
 		<string>0049</string>
+		<string>0050</string>
+		<string>0051</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
@@ -28494,7 +28496,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-05-15T16:28:58Z</date>
+	<date>2016-05-17T16:29:17Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -28550,6 +28552,8 @@
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
-	<false/>
+	<true/>
+	<key>kCPKUseSystemColorPicker</key>
+	<true/>
 </dict>
 </plist>
