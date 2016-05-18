@@ -364,7 +364,7 @@ layers configuration. You are free to put any user code."
    '(font-lock-comment-delimiter-face ((t (:foreground "#555555"))))
    '(font-lock-keyword-face ((t (:foreground "#73afda"))))
    '(font-lock-constant-face ((t (:foreground "#d3869b"))))
-   '(font-lock-string-face ((t (:foreground "#90a555"))))
+   '(font-lock-string-face ((t (:foreground "#afff87"))))
    '(font-lock-function-name-face ((t (:foreground "#00a6ff"))))
    '(font-lock-type-face ((t (:foreground "#b0d68b"))))
    '(sp-pair-overlay-face ((t (:background nil))))
@@ -372,6 +372,9 @@ layers configuration. You are free to put any user code."
    '(web-mode-html-tag-bracket-face ((t (:foreground "#73afda"))))
    '(powerline-state_indicator-normal ((t (:background "#1c1c1c" :foreground "#73afda"))))
    '(evil-search-highlight-persist-highlight-face ((t (:underline t :background "#222222"))))
+
+   ;; Javascript related colors
+   '(js2-object-property ((t (:foreground "#73afda"))))
    )
 
   ; (set-display-table-slot standard-display-table 'vertical-border (make-glyph-code ?│))
