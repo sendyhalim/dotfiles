@@ -276,12 +276,7 @@ layers configuration. You are free to put any user code."
   ;; Disable line-wrapping
   (add-hook 'hack-local-variables-hook (lambda () (setq truncate-lines t)))
 
-  (setq tern-command '("tern" "--no-port-file"))
-
   (setq powerline-default-separator 'arrow)
-  ;; more readable :)
-  (when (display-graphic-p)
-    (setq powerline-default-separator 'slant))
 
   (setq mac-option-modifier 'meta)
   (setq mac-command-modifier 'super) ;; This is needed to support simpleclip
@@ -372,9 +367,6 @@ layers configuration. You are free to put any user code."
    '(web-mode-html-tag-bracket-face ((t (:foreground "#73afda"))))
    '(powerline-state_indicator-normal ((t (:background "#1c1c1c" :foreground "#73afda"))))
    '(evil-search-highlight-persist-highlight-face ((t (:underline t :background "#222222"))))
-
-   ;; Javascript related colors
-   '(js2-object-property ((t (:foreground "#73afda"))))
    )
 
   ; (set-display-table-slot standard-display-table 'vertical-border (make-glyph-code ?│))
