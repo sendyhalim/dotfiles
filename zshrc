@@ -4,6 +4,7 @@ export ZSH_CUSTOM=$HOME/.zsh-custom
 export ZSH_PLUGIN=$ZSH_CUSTOM/plugins
 
 # Install custom plugins if it does not exist
+# TODO: use loop?
 if [ ! -d $ZSH_PLUGIN/zshmarks ]; then
   echo "zsh plugin zshmarks does not exist, installing it..."
   git clone https://github.com/jocelynmallon/zshmarks.git $ZSH_PLUGIN/zshmarks
@@ -60,7 +61,7 @@ ZSH_THEME="cloud"
 # - zshmarks https://github.com/jocelynmallon/zshmarks
 # - zsh-syntax-highlighting https://github.com/zsh-users/zsh-syntax-highlighting.
 #   Must be the last plugin sourced.
-plugins=(theme last-working-dir zshmarks zsh-syntax-highlighting)
+plugins=(theme last-working-dir zshmarks zsh-syntax-highlighting docker)
 
 source $ZSH/oh-my-zsh.sh
 
