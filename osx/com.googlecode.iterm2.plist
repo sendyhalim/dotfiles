@@ -26658,7 +26658,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>322</string>
+		<string>307</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -26681,17 +26681,17 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>805 261 231 329 0 0 1440 877 </string>
+	<string>1125 154 231 293 0 0 1440 877 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>428 565 1012 94 0 0 1440 877 </string>
+	<string>908 576 1012 77 0 0 1920 1057 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>-4 413 606 456 0 0 1440 877 </string>
+	<string>-4 589 606 456 0 0 1920 1057 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 372 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 293 592 584 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 423 650 452 0 0 1440 877 </string>
+	<string>0 670 570 377 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>244 262 650 452 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -27471,24 +27471,24 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.17192137241363525</real>
+				<real>0.10980392156862745</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.13112564384937286</real>
+				<real>0.10980392156862745</real>
 				<key>Red Component</key>
-				<real>0.079393938183784485</real>
+				<real>0.10980392156862745</real>
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.14145714044570923</real>
+				<real>0.44558846878594266</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.10840655118227005</real>
+				<real>0.46898538192221145</real>
 				<key>Red Component</key>
 				<real>0.81926977634429932</real>
 			</dict>
@@ -27627,13 +27627,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.52502274513244629</real>
+				<real>0.52297019823744084</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.57082360982894897</real>
+				<real>0.57159302270773682</real>
 				<key>Red Component</key>
-				<real>0.14679534733295441</real>
+				<real>0.11523985649007079</real>
 			</dict>
 			<key>Ansi 7 Color</key>
 			<dict>
@@ -27683,13 +27683,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.16078431372549021</real>
+				<real>0.10980392156862745</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.12156862745098039</real>
+				<real>0.10980392156862745</real>
 				<key>Red Component</key>
-				<real>0.11764705882352941</real>
+				<real>0.10980392156862745</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -28157,11 +28157,11 @@
 			<key>Name</key>
 			<string>Sendy</string>
 			<key>Non Ascii Font</key>
-			<string>DroidSansMonoForPowerlinePlusNerdFileTypesMono 13</string>
+			<string>DroidSansMonoForPowerlinePlusNerdFileTypesMono 11</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MenloForPowerline-Regular 13</string>
+			<string>MenloForPowerline-Regular 11</string>
 			<key>Option Key Sends</key>
 			<integer>1</integer>
 			<key>Prompt Before Closing 2</key>
@@ -28440,6 +28440,8 @@
 	<false/>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>0</integer>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PassOnControlClick</key>
 	<false/>
 	<key>PasteFromClipboard</key>
@@ -28479,6 +28481,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/sendyhalim/development/my-repos/dotfiles/osx</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>PromptOnQuit</key>
 	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
