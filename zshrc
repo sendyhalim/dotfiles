@@ -114,5 +114,10 @@ function cleanXcode {
   rm -rf ~/Library/Caches/com.apple.dt.Xcode
 }
 
+function bootDocker {
+  boot2docker start
+  $(boot2docker shellinit)
+}
+
 # For swiftenv (version manager) https://github.com/kylef/swiftenv
 if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
