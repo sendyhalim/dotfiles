@@ -51,6 +51,7 @@
   p    = push
   pl   = pull
   rb   = rebase
+  rbm  = rebase master
   s    = status
   ss   = status -s
   st   = stash
