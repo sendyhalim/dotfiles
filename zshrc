@@ -15,6 +15,9 @@ if [ ! -d $ZSH_PLUGIN/zsh-syntax-highlighting ]; then
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_PLUGIN/zsh-syntax-highlighting
 fi
 
+# Add zsh completions
+fpath=(/usr/local/share/zsh-completions $fpath)
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
