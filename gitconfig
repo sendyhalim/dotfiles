@@ -49,6 +49,8 @@
   lgga = log --graph --decorate --all
   lo   = log --oneline --decorate --color
   p    = push
+  po   = push origin
+  pom  = push origin master
   pl   = pull
   rb   = rebase
   rbm  = rebase master
