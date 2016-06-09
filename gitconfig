@@ -41,6 +41,7 @@
   cam  = commit --amend
   co   = checkout
   cob  = checkout -b
+  com  = checkout master
   d    = diff
   dc   = diff --cached
   l    = log --oneline --decorate --color --graph
