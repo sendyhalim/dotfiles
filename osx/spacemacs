@@ -367,6 +367,11 @@ layers configuration. You are free to put any user code."
    '(web-mode-html-tag-bracket-face ((t (:foreground "#73afda"))))
    '(powerline-state_indicator-normal ((t (:background "#1c1c1c" :foreground "#73afda"))))
    '(evil-search-highlight-persist-highlight-face ((t (:underline t :background "#222222"))))
+   '(company-tooltip ((t (:background "#444444" :foreground "#FFFFFF"))))
+   '(company-tooltip-selection ((t (:background "#1784fd"))))
+   '(company-tooltip-annotation ((t (:foreground "#87ffaf"))))
+   '(company-scrollbar-bg ((t (:background "#1784fd"))))
+   '(company-scrollbar-fg ((t (:background "#bbbbbb"))))
    )
 
   ; (set-display-table-slot standard-display-table 'vertical-border (make-glyph-code ?│))
