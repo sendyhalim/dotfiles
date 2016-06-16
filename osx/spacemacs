@@ -319,10 +319,10 @@ layers configuration. You are free to put any user code."
   ;; Evil keybindings
   (define-key evil-normal-state-map (kbd "QQ") 'kill-this-buffer)
   (define-key evil-normal-state-map (kbd "C-s") 'evil-write)
-  (define-key evil-normal-state-map (kbd "H") 'evil-beginning-of-line)
-  (define-key evil-visual-state-map (kbd "H") 'evil-beginning-of-line)
-  (define-key evil-normal-state-map (kbd "L") 'evil-end-of-line)
-  (define-key evil-visual-state-map (kbd "L") 'evil-end-of-line)
+  (define-key evil-normal-state-map (kbd "H") 'evil-first-non-blank)
+  (define-key evil-visual-state-map (kbd "H") 'evil-first-non-blank)
+  (define-key evil-normal-state-map (kbd "L") 'evil-last-non-blank)
+  (define-key evil-visual-state-map (kbd "L") 'evil-last-non-blank)
 
   (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
   (define-key evil-visual-state-map (kbd "C-u") 'evil-scroll-up)
