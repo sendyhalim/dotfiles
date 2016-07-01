@@ -26,6 +26,7 @@ else
 fi
 
 for i in "${dotfiles[@]}"; do
+    rm ~/.$i
     ln -s $PWD/$os/$i ~/.$i
 done
 
