@@ -43,5 +43,6 @@ general_dotfiles=(
 )
 
 for i in "${general_dotfiles[@]}"; do
+    rm ~/.$i
     ln -s $PWD/$i ~/.$i
 done
