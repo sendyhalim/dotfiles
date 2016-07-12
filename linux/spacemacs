@@ -48,7 +48,7 @@ values."
    ;; packages then consider to create a layer, you can also put the
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages
-   '(simpleclip
+   '(
      editorconfig
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
@@ -247,7 +247,6 @@ layers configuration. You are free to put any user code."
   (global-company-mode)
   (editorconfig-mode 1)
 
-  (simpleclip-mode)
   (global-evil-mc-mode)
 
   (setq-default line-spacing 1)
@@ -313,9 +312,9 @@ layers configuration. You are free to put any user code."
 
   (define-key evil-normal-state-map (kbd "C-q") 'helm-projectile-find-file)
 
-  (define-key evil-visual-state-map (kbd "C-c") 'simpleclip-copy)
-  (define-key evil-visual-state-map (kbd "C-x") 'simpleclip-cut)
-  (define-key evil-insert-state-map (kbd "C-v") 'simpleclip-paste)
+  (define-key evil-visual-state-map (kbd "C-c") 'clipboard-kill-ring-save)
+  (define-key evil-visual-state-map (kbd "C-x") 'clipboard-kill-region)
+  (define-key evil-insert-state-map (kbd "C-v") 'clipboard-yank)
 
   (define-key evil-insert-state-map (kbd "C-e") 'emmet-expand-line)
 
