@@ -238,6 +238,8 @@ values."
 It is called immediately after `dotspacemacs/init'.  You are free to put almost any
 user code here.  The exception is org related code, which should be placed in
 `dotspacemacs/user-config'."
+  (setq tramp-ssh-controlmaster-options
+      "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
   )
 
 (defun dotspacemacs/user-config ()
@@ -321,21 +323,29 @@ layers configuration. You are free to put any user code."
   ;; Theming
   (custom-theme-set-faces
    'flatland
-   '(default ((t (:background "#1c1c1c"))))
-   '(vertical-border ((t (:foreground "#1c1c1c"))))
+   '(default ((t (:background "#222222"))))
+   '(linum ((t (:background "#222222" :foreground "#444444"))))
+   '(vertical-border ((t (:foreground "#333333"))))
    '(cursor ((t (:background "#9bc8e5"))))
    '(font-lock-variable-name-face ((t (:foreground "#fff6de"))))
    '(font-lock-builtin-face ((t (:foreground "#df9970"))))
-   '(font-lock-comment-face ((t (:foreground "#393939"))))
-   '(font-lock-comment-delimiter-face ((t (:foreground "#393939"))))
+   '(font-lock-comment-face ((t (:foreground "#555555"))))
+   '(font-lock-comment-delimiter-face ((t (:foreground "#555555"))))
    '(font-lock-keyword-face ((t (:foreground "#73afda"))))
    '(font-lock-constant-face ((t (:foreground "#d3869b"))))
-   '(font-lock-string-face ((t (:foreground "#777777"))))
-   '(font-lock-function-name-face ((t (:foreground "#df9970"))))
-   '(font-lock-type-face ((t (:foreground "#4acb68"))))
+   '(font-lock-string-face ((t (:foreground "#afff87"))))
+   '(font-lock-function-name-face ((t (:foreground "#00a6ff"))))
+   '(font-lock-type-face ((t (:foreground "#b0d68b"))))
+   '(sp-pair-overlay-face ((t (:background nil))))
    '(web-mode-html-tag-face ((t (:foreground "#73afda"))))
    '(web-mode-html-tag-bracket-face ((t (:foreground "#73afda"))))
    '(powerline-state_indicator-normal ((t (:background "#1c1c1c" :foreground "#73afda"))))
+   '(evil-search-highlight-persist-highlight-face ((t (:underline t :background "#222222"))))
+   '(company-tooltip ((t (:background "#444444" :foreground "#FFFFFF"))))
+   '(company-tooltip-selection ((t (:background "#1784fd"))))
+   '(company-tooltip-annotation ((t (:foreground "#87ffaf"))))
+   '(company-scrollbar-bg ((t (:background "#1784fd"))))
+   '(company-scrollbar-fg ((t (:background "#bbbbbb"))))
    )
 
   ; Disable bold font
