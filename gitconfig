@@ -59,4 +59,4 @@
   s    = status
   ss   = status -s
   st   = stash
-  standup = log --author="sendyhalim93@gmail.com" --oneline --since="yesterday" --all
+  standup = !git log --author="$(git config --global user.email)" --oneline --since="yesterday" --all
