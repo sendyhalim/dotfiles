@@ -40,6 +40,7 @@
   c    = commit -m
   ca   = commit -am
   cam  = commit --amend
+  cv   = commit --verbose
   co   = checkout
   cob  = checkout -b
   com  = checkout master
