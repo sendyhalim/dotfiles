@@ -45,6 +45,7 @@
   cob  = checkout -b
   com  = checkout master
   d    = diff
+  db   = diff HEAD~1..HEAD
   dc   = diff --cached
   l    = log --oneline --decorate --color --graph
   lg   = log --stat --max-count=10
