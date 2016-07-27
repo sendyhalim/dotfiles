@@ -49,6 +49,7 @@ values."
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages
    '(
+     simpleclip
      editorconfig
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
@@ -108,11 +109,10 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Menlo Regular for Powerline"
-                               :size 13
+   dotspacemacs-default-font '("Meslo LG S for Powerline"
                                :weight normal
-                               :width normal
-                               :powerline-scale 1.4)
+                               :size 12
+                               :powerline-scale 1.0)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The leader key accessible in `emacs state' and `insert state'
@@ -250,6 +250,7 @@ layers configuration. You are free to put any user code."
   (editorconfig-mode 1)
 
   (global-evil-mc-mode)
+  (simpleclip-mode)
 
   (setq-default line-spacing 1)
 
@@ -314,9 +315,9 @@ layers configuration. You are free to put any user code."
 
   (define-key evil-normal-state-map (kbd "C-q") 'helm-projectile-find-file)
 
-  (define-key evil-visual-state-map (kbd "C-c") 'clipboard-kill-ring-save)
-  (define-key evil-visual-state-map (kbd "C-x") 'clipboard-kill-region)
-  (define-key evil-insert-state-map (kbd "C-v") 'clipboard-yank)
+  (define-key evil-visual-state-map (kbd "C-c") 'simpleclip-copy)
+  (define-key evil-visual-state-map (kbd "C-x") 'simpleclip-cut)
+  (define-key evil-insert-state-map (kbd "C-v") 'simpleclip-paste)
 
   (define-key evil-insert-state-map (kbd "C-e") 'emmet-expand-line)
 
@@ -350,6 +351,11 @@ layers configuration. You are free to put any user code."
 
   ; Disable bold font
   (set-face-bold-p 'bold nil)
+  (mapc
+   (lambda (face)
+     (set-face-attribute face nil :weight 'normal :underline nil))
+   (face-list))
+
   ; (defvar my-linum-format-string "%3d")
 
   ; (add-hook 'linum-before-numbering-hook 'my-linum-get-format-string)
