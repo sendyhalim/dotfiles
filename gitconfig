@@ -37,7 +37,8 @@
   a    = add
   b    = branch
   bm   = branch --move
-  c    = commit -m
+  c    = commit --verbose
+  cm   = commit -m
   ca   = commit -am
   cam  = commit --amend
   cv   = commit --verbose
