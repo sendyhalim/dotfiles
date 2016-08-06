@@ -301,7 +301,7 @@ layers configuration. You are free to put any user code."
   (spacemacs/toggle-fringe-off)
 
   ;; Org Mode
-  (setq org-bullets-bullet-list '("⚫" "◆" "▲" "▶"))
+  (setq org-bullets-bullet-list '("●" "◆" "▲" "▶"))
 
   (defun sendy/dot-spacemacs/add-local-node-modules-to-exec-path ()
     "Append current working directory `node_modules/.bin' to emacs `exec-path'"
