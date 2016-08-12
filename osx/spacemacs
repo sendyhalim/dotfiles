@@ -303,6 +303,10 @@ layers configuration. You are free to put any user code."
   ;; Org Mode
   (setq org-bullets-bullet-list '("●" "◆" "▲" "▶"))
 
+  ;; Indent guide mode
+  (setq indent-guide-recursive t)
+  (setq indent-guide-char "·")
+
   (defun sendy/dot-spacemacs/add-local-node-modules-to-exec-path ()
     "Append current working directory `node_modules/.bin' to emacs `exec-path'"
     (let ((node-modules-path (concat (projectile-project-root) "node_modules/.bin")))

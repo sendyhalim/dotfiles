@@ -262,8 +262,11 @@ layers configuration. You are free to put any user code."
 
   ;; Org Mode
   (setq org-bullets-bullet-list '("⚫" "◆" "▲" "▶"))
-
   (setq powerline-default-separator 'slant)
+
+  ;; Indent guide mode
+  (setq indent-guide-recursive t)
+  (setq indent-guide-char "·")
 
   (setq js2-basic-offset 2
         js-indent-level 2
@@ -289,11 +292,11 @@ layers configuration. You are free to put any user code."
 
   ;; Helm keybindings
   (add-hook 'helm-after-initialize-hook
-            (lambda ()
-              (define-key helm-map (kbd "C-w") 'backward-kill-word)
-              (define-key helm-find-files-map (kbd "C-w") 'backward-kill-word)
-              (define-key helm-map (kbd "C-u") 'kill-whole-line)
-              (define-key helm-find-files-map (kbd "C-u") 'kill-whole-line)))
+      (lambda ()
+        (define-key helm-map (kbd "C-w") 'backward-kill-word)
+        (define-key helm-find-files-map (kbd "C-w") 'backward-kill-word)
+        (define-key helm-map (kbd "C-u") 'kill-whole-line)
+        (define-key helm-find-files-map (kbd "C-u") 'kill-whole-line)))
 
   ;; Evil keybindings
   (define-key evil-normal-state-map (kbd "QQ") 'kill-this-buffer)
@@ -400,4 +403,3 @@ layers configuration. You are free to put any user code."
  '(default ((t (:background nil))))
  '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
  '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
-
