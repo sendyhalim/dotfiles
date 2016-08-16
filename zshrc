@@ -130,4 +130,9 @@ mkdir -p $HOME/.local/bin
 export PATH=$PATH:$HOME/.local/bin
 
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ -f ~/.fzf.zsh ]; then
+  source ~/.fzf.zsh
+
+  # Setting ag as the default source for fzf
+  export FZF_DEFAULT_COMMAND='ag -g ""'
+fi
