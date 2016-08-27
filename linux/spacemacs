@@ -272,7 +272,8 @@ layers configuration. You are free to put any user code."
         js-indent-level 2
         web-mode-css-indent-offset 2
         web-mode-markup-indent-offset 2
-        web-mode-code-indent-offset)
+        web-mode-code-indent-offset 2
+        css-indent-offset 2)
 
   ;; Keybindings
   (global-set-key [f8] 'neotree-find-project-root)

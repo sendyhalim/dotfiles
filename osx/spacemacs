@@ -259,6 +259,7 @@ layers configuration. You are free to put any user code."
   (setq-default
    ;; js2-mode
    js2-basic-offset 2
+   js-indent-level 2
 
    ;; web-mode
    css-indent-offset 2
@@ -280,11 +281,6 @@ layers configuration. You are free to put any user code."
 
   (setq mac-option-modifier 'meta)
   (setq mac-command-modifier 'super) ;; This is needed to support simpleclip
-  (setq js2-basic-offset 2
-        js-indent-level 2
-        web-mode-css-indent-offset 2
-        web-mode-markup-indent-offset 2
-        web-mode-code-indent-offset)
 
   (defun sendy/dot-spacemacs/show-file-path ()
     "Show fullpath name of the current buffer"
