@@ -134,5 +134,5 @@ if [ -f ~/.fzf.zsh ]; then
   source ~/.fzf.zsh
 
   # Setting ag as the default source for fzf
-  export FZF_DEFAULT_COMMAND='ag -g "" --hidden --ignore=".git/"'
+  export FZF_DEFAULT_COMMAND='ag -g "" --hidden --ignore=".git/" --ignore=".stack-work"'
 fi
