@@ -266,6 +266,7 @@ layers configuration. You are free to put any user code."
 
   ;; Indent guide mode
   (setq indent-guide-recursive t)
+  (setq indent-guide-delay 0)
   (setq indent-guide-char "·")
 
   (setq js2-basic-offset 2
