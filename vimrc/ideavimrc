@@ -1,0 +1,29 @@
+set relativenumber
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+
+" Remap :w<CR> to Ctrl+s
+nnoremap <C-s> :w<CR>
+
+noremap L $
+noremap H ^
+
+" Ctrl+c = copy | Ctrl+v = paste
+" Only works in visual and insert mode to avoid conflict to visual-block key
+" <C-v> in normal mode
+vmap <C-c> "+y
+vmap <C-x> "+d
+vmap <C-v> c<ESC>"+p
+imap <C-v> <ESC>:action $Paste<CR> i
+nnoremap <C-S-v> <ESC>:action SplitVertically<CR>
+nnoremap <C-S-h> <ESC>:action SplitHorizontally<CR>
+nnoremap <C-S-w> <ESC>:action CloseAllEditors<CR>
+
+nnoremap <C-k> :action GotoPreviousError<CR>
+nnoremap <C-j> :action GotoNextError<CR>
+
+nnoremap <S-j> :action EditorJoinLines<CR>
+
+nnoremap QQ :q<CR>

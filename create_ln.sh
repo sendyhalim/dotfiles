@@ -8,7 +8,7 @@ dotfiles=()
 os="osx"
 
 # OS Specific files
-# ------------------------------------------------------------------------------
+# -----------------------------------------------
 if [[ $(uname) == "Linux" ]]; then
     echo "Creating links on Linux"
     os="linux"
@@ -31,9 +31,9 @@ for i in "${dotfiles[@]}"; do
 done
 
 # General files
-# ------------------------------------------------------------------------------
+# -----------------------------------------------
 if [ ! -d $ZSH_CUSTOM_DIR ]; then
-    ln -s $PWD/$OS_DIR/zsh-custom $ZSH_CUSTOM_DIR
+    ln -sh $PWD/$OS_DIR/zsh-custom $ZSH_CUSTOM_DIR
 fi
 
 general_dotfiles=(
@@ -44,5 +44,19 @@ general_dotfiles=(
 
 for i in "${general_dotfiles[@]}"; do
     rm ~/.$i
-    ln -s $PWD/$i ~/.$i
+    ln -sh $PWD/$i ~/.$i
 done
+
+# Vimrc
+# -----------------------------------------------
+NEOVIM_DIR=$HOME/.config/nvim
+VIM_DIR=$HOME/.vim
+mkdir -p "$VIM_DIR"
+
+ln -sh "$VIM_DIR" "$NEOVIM_DIR"
+ln -sh "$(pwd)/vimrc/config" "$VIM_DIR/config"
+ln -sh "$(pwd)/vimrc/vimrc" "$NEOVIM_DIR/init.vim"
+ln -sh "$(pwd)/vimrc/vimrc" ~/.neovimrc
+ln -sh "$(pwd)/vimrc/vimrc" ~/.vimrc
+ln -sh "$(pwd)/vimrc/ideavimrc" ~/.ideavimrc
+ln -sh "$(pwd)/vimrc/xvimrc" ~/.xvimrc

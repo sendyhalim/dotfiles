@@ -1,0 +1,18 @@
+" Wraps paths to make them relative to this directory.
+function! Dot(path)
+  return '~/.vim/config/' . a:path
+endfunction
+
+let configs = [
+  \'variables.vim',
+  \'plugins.vim',
+  \'general.vim',
+  \'mappings.vim',
+  \'filetypes.vim',
+  \'colors.vim'
+\]
+
+" Load all configuration modules.
+for file in configs
+  execute 'source' Dot(file)
+endfor
