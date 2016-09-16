@@ -2,6 +2,7 @@
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_CUSTOM=$HOME/.zsh-custom
 export ZSH_PLUGIN=$ZSH_CUSTOM/plugins
+export EDITOR=vim
 
 # Install custom plugins if it does not exist
 # TODO: use loop?
