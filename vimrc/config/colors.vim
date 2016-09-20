@@ -2,6 +2,10 @@
 hi CursorLineNR guifg=#F2FF5C gui=bold "
 hi SyntasticErrorSign guifg=#6d90d1
 
+
+" Visual selection background color
+hi Visual guibg=#888888 ctermbg=237
+
 " Change cursor color to white
 hi Cursor guibg=#618AFB guifg=white
 
