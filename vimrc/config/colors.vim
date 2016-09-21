@@ -1,7 +1,7 @@
 " Highlight current line number
 hi CursorLineNR guifg=#F2FF5C gui=bold "
-hi SyntasticErrorSign guifg=#6d90d1
-
+hi SyntasticErrorSign ctermbg=235
+hi SignColumn ctermbg=235
 
 " Visual selection background color
 hi Visual guibg=#888888 ctermbg=237
