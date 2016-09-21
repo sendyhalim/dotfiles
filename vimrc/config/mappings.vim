@@ -81,4 +81,5 @@ nnoremap <F9> :TagbarToggle<CR>
 " Fugitive git commit mapping
 nnoremap <leader>gc :Gc<CR>
 nnoremap <leader>gw :Gwrite<CR>
+nnoremap <leader>gb :Gblame<CR>
 
