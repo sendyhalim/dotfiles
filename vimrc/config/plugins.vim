@@ -86,15 +86,16 @@ command -bar -bang -nargs=* Gc :Gcommit<bang> -v <args>
 " Eclim autocomplete with youcompleteme
 let g:EclimCompletionMethod = 'omnifunc'
 
+" YouCompleteMe
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_min_num_of_chars_for_completion = 1
+
 " Neco GHC
 " Haskell autocompletion using youcompleteme
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
 let g:necoghc_enable_detailed_browse = 1
-
-" YouCompleteMe
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_add_preview_to_completeopt = 1
 
 if in_macvim
   let g:ycm_path_to_python_interpreter = '/usr/bin/python'
