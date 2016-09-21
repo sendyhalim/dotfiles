@@ -1,5 +1,5 @@
 augroup filetypedetect
-  au! BufRead,BufNewFile *.hbs,*.handlebars setf handlebars
+  au! BufRead,BufNewFile *.hbs,*.handlebars set filetype=mustache
   au! BufRead,BufNewFile *.blade.php set filetype=html
 augroup END
 
