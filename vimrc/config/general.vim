@@ -20,6 +20,7 @@ filetype plugin indent on
 set background=dark
 set wildmenu
 set wildmode=longest:list,full
+set cursorline                  " Highlight current line
 set autoindent                  " Enables auto indentation
 set colorcolumn=80              " Show vertical ruler that at the 80th column
 set completeopt-=preview        " Remove window information hint (on top of main window) after we use tab when autocomplete pops out
