@@ -24,6 +24,7 @@ Plug 'scrooloose/syntastic'                   " Plugin for error highlighter
 Plug 'Townk/vim-autoclose'                    " Plugin for autoclose brace () {}
 Plug 'terryma/vim-multiple-cursors'           " Multiple selection just like in sublime Ctrl + d selection
 Plug 'pangloss/vim-javascript'                " Javascript indentation + Syntax
+Plug 'elzr/vim-json'
 Plug 'godlygeek/tabular'                      " Automatic alignment
 Plug 'SirVer/ultisnips'                       " Code snippets
 Plug 'honza/vim-snippets'                     " Collection of snippets for ultisnipes
@@ -153,6 +154,9 @@ let g:syntastic_always_populate_loc_list = 1  " Always populate loc list so we c
 let g:syntastic_html_tidy_quiet_messages = { "level" : "warnings" }
 let g:syntastic_error_symbol = '×'
 let g:syntastic_warning_symbol = '!'
+
+" Vim JSON
+let g:vim_json_syntax_conceal = 0 " Disable concealing
 
 " Tmux navigator
 let g:tmux_navigator_no_mappings = 1
