@@ -139,6 +139,6 @@ fi
 export FZF_DEFAULT_COMMAND='ag -g "" --hidden --ignore=".git/" --ignore=".stack-work"'
 
 export FZF_DEFAULT_OPTS='
-  --color fg:188,bg:233,hl:103,fg+:222,bg+:234,hl+:104
+  --color fg:188,bg:235,hl:103,fg+:222,bg+:236,hl+:104
   --color info:183,prompt:110,spinner:107,pointer:167,marker:215
 '
