@@ -133,7 +133,7 @@ let g:NERDSpaceDelims = 1
 " let g:airline_left_sep=''
 " let g:airline_right_sep=''
 let g:tender_airline = 1
-let g:airline_theme = 'tender'
+let g:airline_theme = 'papercolor'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let airline#extensions#tabline#buffer_nr_show = 1
@@ -158,6 +158,9 @@ let g:syntastic_always_populate_loc_list = 1  " Always populate loc list so we c
 let g:syntastic_html_tidy_quiet_messages = { "level" : "warnings" }
 let g:syntastic_error_symbol = '×'
 let g:syntastic_warning_symbol = '!'
+
+" Vim Javascript
+let g:javascript_plugin_jsdoc = 1 " Highlight jsdoc
 
 " Vim JSON
 let g:vim_json_syntax_conceal = 0 " Disable concealing
