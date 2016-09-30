@@ -20,6 +20,7 @@ Plug 'scrooloose/nerdtree'                    " Plugin for listing directory str
 Plug 'scrooloose/nerdcommenter'               " Commenter
 Plug 'majutsushi/tagbar'                      " Plugin for showing functions and vars description
 Plug 'tpope/vim-fugitive'                     " Plugin for git inside vim
+Plug 'airblade/vim-gitgutter'                 " Shows a git diff in the 'gutter' (sign column)
 Plug 'scrooloose/syntastic'                   " Plugin for error highlighter
 Plug 'Townk/vim-autoclose'                    " Plugin for autoclose brace () {}
 Plug 'terryma/vim-multiple-cursors'           " Multiple selection just like in sublime Ctrl + d selection
