@@ -133,7 +133,12 @@ export PATH=$PATH:$HOME/.local/bin
 
 if [ -f ~/.fzf.zsh ]; then
   source ~/.fzf.zsh
-
-  # Setting ag as the default source for fzf
-  export FZF_DEFAULT_COMMAND='ag -g "" --hidden --ignore=".git/" --ignore=".stack-work"'
 fi
+
+# Setting ag as the default source for fzf
+export FZF_DEFAULT_COMMAND='ag -g "" --hidden --ignore=".git/" --ignore=".stack-work"'
+
+export FZF_DEFAULT_OPTS='
+  --color fg:188,bg:233,hl:103,fg+:222,bg+:234,hl+:104
+  --color info:183,prompt:110,spinner:107,pointer:167,marker:215
+'
