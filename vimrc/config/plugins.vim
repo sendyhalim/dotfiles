@@ -51,6 +51,9 @@ Plug 'ternjs/tern_for_vim'
 Plug 'keith/swift.vim'                        " Swift syntax and indent files
 Plug 'rhysd/conflict-marker.vim'              " Jump and resolve git conflicts
 Plug 'mxw/vim-jsx'                            " React JSX plugin
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-repeat'
+
 
 " If error with airline, reinstall airline to fix
 " Clone https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher first
