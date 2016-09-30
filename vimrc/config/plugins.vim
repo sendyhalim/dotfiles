@@ -55,6 +55,11 @@ Plug 'mxw/vim-jsx'                            " React JSX plugin
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-repeat'
 
+" Writings
+" -----------------------------------------------
+Plug 'junegunn/limelight.vim'
+Plug 'junegunn/goyo.vim'
+
 
 " If error with airline, reinstall airline to fix
 " Clone https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher first
@@ -77,6 +82,15 @@ call plug#end()
 
 " Plugin Settings
 "-------------------------------------------
+" Vim Goyo
+let g:goyo_width = 140
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
+" Vim Limelight
+let g:limelight_conceal_ctermfg = 242
+
+
 " Vim indent lines
 let g:indentLine_color_term = 238
 let g:indentLine_leadingSpaceEnabled = 0
