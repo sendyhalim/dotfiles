@@ -52,7 +52,6 @@ set tabstop=2                   " Set tab size to 2
 set textwidth=0
 set timeoutlen=300
 set wrapmargin=0
-set switchbuf=usetab,newtab
 syntax enable
 colorscheme tender
 
