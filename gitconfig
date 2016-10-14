@@ -47,6 +47,7 @@
   d    = diff
   db   = diff HEAD~1..HEAD
   dc   = diff --cached
+  dm   = diff master..HEAD
   l    = log --oneline --decorate --color --graph
   lg   = log --stat --max-count=10
   lgg  = log --graph --max-count=10
