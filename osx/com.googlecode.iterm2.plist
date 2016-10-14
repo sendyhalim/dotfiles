@@ -27753,7 +27753,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 372 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>383 338 918 495 0 0 1440 900 </string>
+	<string>383 430 918 381 0 0 1440 877 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 293 592 584 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -28580,13 +28580,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.029374377802014351</real>
+				<real>0.086701489984989166</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.089083820581436157</real>
+				<real>0.062870591878890991</real>
 				<key>Red Component</key>
-				<real>0.019508810713887215</real>
+				<real>0.016811035573482513</real>
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
@@ -28762,13 +28762,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.11497494578361511</real>
+				<real>0.27170243859291077</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.15474162995815277</real>
+				<real>0.22997197508811951</real>
 				<key>Red Component</key>
-				<real>0.042873531579971313</real>
+				<real>0.088699236512184143</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
@@ -29640,7 +29640,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-09-21T16:41:34Z</date>
+	<date>2016-10-05T16:54:57Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
