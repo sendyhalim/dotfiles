@@ -54,6 +54,8 @@ Plug 'rhysd/conflict-marker.vim'              " Jump and resolve git conflicts
 Plug 'mxw/vim-jsx'                            " React JSX plugin
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-repeat'
+Plug 'elixir-lang/vim-elixir'
+Plug 'slashmili/alchemist.vim'
 
 " Writings
 " -----------------------------------------------
