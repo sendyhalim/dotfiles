@@ -77,6 +77,7 @@ alias lockscreen='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/
 
 # Alias for fixing alcatraz plugin
 alias fix-alcatraz='find ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins -name Info.plist -maxdepth 3 | xargs -I{} defaults write {} DVTPlugInCompatibilityUUIDs -array-add `defaults read /Applications/Xcode.app/Contents/Info DVTPlugInCompatibilityUUID`'
+alias xcode-uuid='defaults read /Applications/Xcode.app/Contents/Info DVTPlugInCompatibilityUUID'
 
 # Reclaim ctrl + s in zsh
 stty -ixon
