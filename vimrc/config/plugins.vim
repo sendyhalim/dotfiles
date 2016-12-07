@@ -165,6 +165,8 @@ let g:miniBufExplorerAutoStart = 0         "Just need the command :MBEbd to clos
 let g:user_emmet_leader_key='\'
 
 " Syntatic
+let g:syntastic_enable_elixir_checker = 1
+let g:syntastic_elixir_checkers = ['elixir']
 let g:syntastic_echo_current_error = 1
 let g:syntastic_enable_signs = 1
 let g:syntastic_enable_balloons = 1
