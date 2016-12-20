@@ -3,9 +3,9 @@
 call plug#begin('~/.vim/plugged')
 
 " YouCompleteMe only works in linux/Mac OSX
-if has('unix')
-  Plug 'Valloric/YouCompleteMe'
-endif
+" if has('unix')
+"   Plug 'Valloric/YouCompleteMe'
+" endif
 
 Plug 'Yggdroot/indentLine'                    " Indentation hint
 Plug 'flazz/vim-colorschemes'                 " vim colorschemes
@@ -56,6 +56,7 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-repeat'
 Plug 'elixir-lang/vim-elixir'
 Plug 'slashmili/alchemist.vim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocomplete plugin
 
 " Writings
 " -----------------------------------------------
@@ -110,6 +111,9 @@ let g:EclimCompletionMethod = 'omnifunc'
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_min_num_of_chars_for_completion = 1
+
+" Deoplete
+let g:deoplete#enable_at_startup = 1
 
 " Neco GHC
 " Haskell autocompletion using youcompleteme
@@ -205,27 +209,27 @@ let g:jsx_ext_required = 0
 
 " Fix issues between YouCompleteMe and UltiSnips
 "------------------------------------------------
-function! g:UltiSnips_Complete()
-  call UltiSnips#ExpandSnippet()
-  if g:ulti_expand_res == 0
-    if pumvisible()
-      return "\<C-n>"
-    else
-      call UltiSnips#JumpForwards()
-      if g:ulti_jump_forwards_res == 0
-        return "\<TAB>"
-      endif
-    endif
-  endif
-  return ""
-endfunction
-
-au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
-let g:UltiSnipsListSnippets="<c-e>"
+" function! g:UltiSnips_Complete()
+"   call UltiSnips#ExpandSnippet()
+"   if g:ulti_expand_res == 0
+"     if pumvisible()
+"       return "\<C-n>"
+"     else
+"       call UltiSnips#JumpForwards()
+"       if g:ulti_jump_forwards_res == 0
+"         return "\<TAB>"
+"       endif
+"     endif
+"   endif
+"   return ""
+" endfunction
+"
+" au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+" let g:UltiSnipsListSnippets="<c-e>"
 " this mapping Enter key to <C-y> to chose the current highlight item
 " and close the selection list, same as other IDEs.
 " CONFLICT with some plugins like tpope/Endwise
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 
 " Open NERDTree in the directory of the current
