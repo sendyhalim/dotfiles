@@ -2,6 +2,7 @@
 hi CursorLineNR guifg=#F2FF5C gui=bold "
 hi SyntasticErrorSign ctermbg=235
 hi SignColumn ctermbg=235
+hi Statement ctermfg=39
 
 " Visual selection background color
 hi Visual guibg=#888888 ctermbg=237
