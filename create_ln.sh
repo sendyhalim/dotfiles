@@ -6,12 +6,14 @@ ZSH_CUSTOM_DIR=~/.zsh-custom
 
 dotfiles=()
 os="osx"
+ln_flags="-shf"
 
 # OS Specific files
 # -----------------------------------------------
 if [[ $(uname) == "Linux" ]]; then
     echo "Creating links on Linux"
     os="linux"
+    ln_flags="-sT"
     dotfiles=(
         "tmux.conf"
         "spacemacs"
@@ -26,14 +28,13 @@ else
 fi
 
 for i in "${dotfiles[@]}"; do
-    rm ~/.$i
-    ln -s $PWD/$os/$i ~/.$i
+    ln "$ln_flags" $PWD/$os/$i ~/.$i
 done
 
 # General files
 # -----------------------------------------------
 if [ ! -d $ZSH_CUSTOM_DIR ]; then
-    ln -sh $PWD/$OS_DIR/zsh-custom $ZSH_CUSTOM_DIR
+    ln "$ln_flags" $PWD/$OS_DIR/zsh-custom $ZSH_CUSTOM_DIR
 fi
 
 general_dotfiles=(
@@ -43,8 +44,7 @@ general_dotfiles=(
 )
 
 for i in "${general_dotfiles[@]}"; do
-    rm ~/.$i
-    ln -sh $PWD/$i ~/.$i
+    ln "$ln_flags" $PWD/$i ~/.$i
 done
 
 # Vimrc
@@ -53,10 +53,10 @@ NEOVIM_DIR=$HOME/.config/nvim
 VIM_DIR=$HOME/.vim
 mkdir -p "$VIM_DIR"
 
-ln -sh "$VIM_DIR" "$NEOVIM_DIR"
-ln -sh "$(pwd)/vimrc/config" "$VIM_DIR/config"
-ln -sh "$(pwd)/vimrc/vimrc" "$NEOVIM_DIR/init.vim"
-ln -sh "$(pwd)/vimrc/vimrc" ~/.neovimrc
-ln -sh "$(pwd)/vimrc/vimrc" ~/.vimrc
-ln -sh "$(pwd)/vimrc/ideavimrc" ~/.ideavimrc
-ln -sh "$(pwd)/vimrc/xvimrc" ~/.xvimrc
+ln "$ln_flags" "$VIM_DIR" "$NEOVIM_DIR"
+ln "$ln_flags" "$(pwd)/vimrc/config" "$VIM_DIR/config"
+ln "$ln_flags" "$(pwd)/vimrc/vimrc" "$NEOVIM_DIR/init.vim"
+ln "$ln_flags" "$(pwd)/vimrc/vimrc" ~/.neovimrc
+ln "$ln_flags" "$(pwd)/vimrc/vimrc" ~/.vimrc
+ln "$ln_flags" "$(pwd)/vimrc/ideavimrc" ~/.ideavimrc
+ln "$ln_flags" "$(pwd)/vimrc/xvimrc" ~/.xvimrc
