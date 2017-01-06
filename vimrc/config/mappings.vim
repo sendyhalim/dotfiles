@@ -75,11 +75,14 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 
 nnoremap <F6> :NumbersToggle<CR>
 nnoremap <F7> :NumbersOnOff<CR>
-nnoremap <F8> :call NERDTreeToggleInCurrentDirectory()<cr>
+nnoremap <F8> :call NERDTreeToggleInCurrentDirectory()<CR>
 nnoremap <F9> :TagbarToggle<CR>
 
 " Fugitive git commit mapping
 nnoremap <leader>gc :Gc<CR>
 nnoremap <leader>gw :Gwrite<CR>
 nnoremap <leader>gb :Gblame<CR>
+
+" Copy relative filepath (based on cwd) of current buffer
+nnoremap <F10> :let @+ = expand("%")<CR>
 
