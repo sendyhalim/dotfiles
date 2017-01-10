@@ -195,6 +195,7 @@ let g:syntastic_warning_symbol = '!'
 
 " Vim Javascript
 let g:javascript_plugin_jsdoc = 1 " Highlight jsdoc
+let g:javascript_plugin_flow = 1 " Highlight facebook's flow
 
 " Vim JSON
 let g:vim_json_syntax_conceal = 0 " Disable concealing
