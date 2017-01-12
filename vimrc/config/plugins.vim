@@ -47,7 +47,7 @@ Plug 'embear/vim-localvimrc'                  " Load local vimrc if exist (Will 
 Plug 'easymotion/vim-easymotion'
 Plug 'eagletmt/neco-ghc'                      " Haskell autocomplete
 Plug 'moll/vim-node'                          " Node plugin
-Plug 'Shougo/vimproc.vim'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'ternjs/tern_for_vim'
 Plug 'keith/swift.vim'                        " Swift syntax and indent files
 Plug 'rhysd/conflict-marker.vim'              " Jump and resolve git conflicts
