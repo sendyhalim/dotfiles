@@ -77,6 +77,7 @@ setopt no_share_history
 
 # Load additional setup
 source $HOME/.customrc
+source $HOME/.aliases
 
 # http://hoppsjots.org/?p=177
 # Fix Underline + Color in TMUX (TERM=screen-256color)
