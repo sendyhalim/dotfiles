@@ -1,11 +1,10 @@
 #!/bin/bash
 PWD=$(pwd)
-OS_DIR=osx
 
 ZSH_CUSTOM_DIR=~/.zsh-custom
 
 dotfiles=()
-os="osx"
+os="macos"
 ln_flags="-shf"
 
 # OS Specific files
@@ -19,7 +18,7 @@ if [[ $(uname) == "Linux" ]]; then
         "spacemacs"
     )
 else
-    echo "Creating links on OSX"
+    echo "Creating links on macOS"
     dotfiles=(
         "slate"
         "tmux.conf"
@@ -34,7 +33,7 @@ done
 # General files
 # -----------------------------------------------
 if [ ! -d $ZSH_CUSTOM_DIR ]; then
-    ln "$ln_flags" $PWD/$OS_DIR/zsh-custom $ZSH_CUSTOM_DIR
+    ln "$ln_flags" $PWD/$os/zsh-custom $ZSH_CUSTOM_DIR
 fi
 
 general_dotfiles=(
