@@ -41,6 +41,7 @@ general_dotfiles=(
     "gitignore"
     "gitconfig"
     "zshrc"
+    "aliases"
 )
 
 for i in "${general_dotfiles[@]}"; do
