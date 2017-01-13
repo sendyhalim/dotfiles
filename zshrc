@@ -133,10 +133,6 @@ if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
 mkdir -p $HOME/.local/bin
 export PATH=$PATH:$HOME/.local/bin
 
-if [[ $OSTYPE == darwin* ]]; then
-  alias rm="trash"
-fi
-
 if [ -f ~/.fzf.zsh ]; then
   source ~/.fzf.zsh
 fi

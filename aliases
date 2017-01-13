@@ -46,3 +46,14 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
+function use-safe-rm {
+  if [[ $OSTYPE == darwin* ]]; then
+    alias rm="trash"
+  fi
+}
+
+function use-unsafe-rm {
+  unalias rm
+}
+
+use-safe-rm
