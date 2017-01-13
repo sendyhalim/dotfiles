@@ -27759,11 +27759,11 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 372 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>2108 407 918 381 1440 -180 1920 1080 </string>
+	<string>668 565 796 473 0 0 1920 1057 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 293 592 584 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1920 1057 0 0 1920 1057 </string>
+	<string>0 36 1440 841 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 500 570 377 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -29636,7 +29636,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/sendyhalim/development/my-repos/dotfiles/osx</string>
+	<string>/Users/sendyhalim/development/my-repos/dotfiles/macos</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -29656,7 +29656,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-01-05T18:34:43Z</date>
+	<date>2017-01-12T13:46:37Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
