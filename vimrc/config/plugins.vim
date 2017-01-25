@@ -57,6 +57,7 @@ Plug 'tpope/vim-repeat'
 Plug 'elixir-lang/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocomplete plugin
+Plug 'mitsuse/autocomplete-swift'
 
 " Writings
 " -----------------------------------------------
