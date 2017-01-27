@@ -1,5 +1,5 @@
 #!/bin/bash
-PWD=$(pwd)
+PWD=$PWD
 
 ZSH_CUSTOM_DIR=~/.zsh-custom
 
@@ -36,16 +36,10 @@ if [ ! -d $ZSH_CUSTOM_DIR ]; then
     ln "$ln_flags" $PWD/$os/zsh-custom $ZSH_CUSTOM_DIR
 fi
 
-general_dotfiles=(
-    "gitignore"
-    "gitconfig"
-    "zshrc"
-    "aliases"
-)
-
-for i in "${general_dotfiles[@]}"; do
-    ln "$ln_flags" $PWD/$i ~/.$i
-done
+ln "$ln_flags" "$PWD/zsh" "$HOME/.zsh"
+ln "$ln_flags" "$PWD/zsh/zshrc" "$HOME/.zshrc"
+ln "$ln_flags" "$PWD/git/gitconfig" "$HOME/.gitconfig"
+ln "$ln_flags" "$PWD/git/gitignore" "$HOME/.gitignore"
 
 # Vimrc
 # -----------------------------------------------
@@ -54,9 +48,9 @@ VIM_DIR=$HOME/.vim
 mkdir -p "$VIM_DIR"
 
 ln "$ln_flags" "$VIM_DIR" "$NEOVIM_DIR"
-ln "$ln_flags" "$(pwd)/vimrc/config" "$VIM_DIR/config"
-ln "$ln_flags" "$(pwd)/vimrc/vimrc" "$NEOVIM_DIR/init.vim"
-ln "$ln_flags" "$(pwd)/vimrc/vimrc" ~/.neovimrc
-ln "$ln_flags" "$(pwd)/vimrc/vimrc" ~/.vimrc
-ln "$ln_flags" "$(pwd)/vimrc/ideavimrc" ~/.ideavimrc
-ln "$ln_flags" "$(pwd)/vimrc/xvimrc" ~/.xvimrc
+ln "$ln_flags" "$PWD/vimrc/config" "$VIM_DIR/config"
+ln "$ln_flags" "$PWD/vimrc/vimrc" "$NEOVIM_DIR/init.vim"
+ln "$ln_flags" "$PWD/vimrc/vimrc" ~/.neovimrc
+ln "$ln_flags" "$PWD/vimrc/vimrc" ~/.vimrc
+ln "$ln_flags" "$PWD/vimrc/ideavimrc" ~/.ideavimrc
+ln "$ln_flags" "$PWD/vimrc/xvimrc" ~/.xvimrc
