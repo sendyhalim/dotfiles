@@ -59,4 +59,4 @@ function use-unsafe-rm {
   unalias rm
 }
 
-use-safe-rm
+# use-safe-rm

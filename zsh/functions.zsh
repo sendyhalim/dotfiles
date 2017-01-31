@@ -32,4 +32,3 @@ function set_screenshot_dir {
 function reload_xcode_plugins {
   curl -s https://raw.githubusercontent.com/ForkPanda/RescueXcodePlug-ins/master/RescueXcode.sh | sh
 }
-
