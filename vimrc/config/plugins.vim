@@ -85,21 +85,40 @@ Plug 'jacoborus/tender.vim'
 call plug#end()
 
 " Plugin Settings
-"-------------------------------------------
+" ====================
+"
+" Vim easy motion
+" --------------------
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+
 " Vim autoclose
+" --------------------
 " https://github.com/Valloric/YouCompleteMe/issues/9
 let g:AutoClosePumvisible = {"ENTER": "<C-Y>", "ESC": "<ESC>"}
 
 " Vim Goyo
+" --------------------
 let g:goyo_width = 140
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
 " Vim Limelight
+" --------------------
 let g:limelight_conceal_ctermfg = 242
 
 
 " Vim indent lines
+" --------------------
 let g:indentLine_color_term = 238
 let g:indentLine_leadingSpaceEnabled = 0
 let g:indentLine_leadingSpaceChar = '·'
@@ -107,17 +126,21 @@ let g:indentLine_enabled = 1
 let g:indentLine_char = '┊'
 
 " Fugitive
+" --------------------
 command -bar -bang -nargs=* Gc :Gcommit<bang> -v <args>
 
 " Eclim autocomplete with youcompleteme
+" --------------------
 let g:EclimCompletionMethod = 'omnifunc'
 
 " YouCompleteMe
+" --------------------
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_min_num_of_chars_for_completion = 1
 
 " Deoplete
+" --------------------
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#file#enable_buffer_path = 1 " For relative filelist autocomplete
 
@@ -129,6 +152,7 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 
 " Neco GHC
+" --------------------
 " Haskell autocompletion using youcompleteme
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
@@ -139,15 +163,18 @@ if in_macvim
 endif
 
 " Vim handlebars
+" --------------------
 let g:mustache_abbreviations = 1
 
 " vim-go
+" --------------------
 let g:go_highlight_operators = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 
 " Ctrl-P
+" --------------------
 " ignore directories
 let g:ctrlp_map = '<c-q>'
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|bower_components|vendor)|(\.(swp|ico|git|svn))$'
@@ -155,6 +182,7 @@ let g:ctrlp_show_hidden = 1
 let g:ctrlp_prompt_mappings = { 'PrtClearCache()': ['<F2>'] }
 
 " NerdTree
+" --------------------
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeSortOrder = ['\/$', '*', '\.toml']
 let g:NERDTreeDirArrows = 1
@@ -162,6 +190,7 @@ let g:NERDTreeIgnore = ['.git[[dir]]', '.idea[[dir]]']
 let g:NERDSpaceDelims = 1
 
 " Airline
+" --------------------
 " Go to https://github.com/powerline/fonts if airline fonts is ugly
 " let g:airline_left_sep=''
 " let g:airline_right_sep=''
@@ -172,16 +201,20 @@ let g:airline#extensions#tabline#enabled = 1
 let airline#extensions#tabline#buffer_nr_show = 1
 
 " Vim web dev icons
+" --------------------
 let g:webdevicons_enable_nerdtree = 0
 let g:webdevicons_enable_airline_tabline = 0
 
 " Minibuffer explorer
+" --------------------
 let g:miniBufExplorerAutoStart = 0         "Just need the command :MBEbd to close current buffer and retain NERDTree
 
 " Vim emmet
+" --------------------
 let g:user_emmet_leader_key='\'
 
 " Syntatic
+" --------------------
 let g:syntastic_enable_elixir_checker = 1
 let g:syntastic_elixir_checkers = ['elixir']
 let g:syntastic_echo_current_error = 1
@@ -195,19 +228,24 @@ let g:syntastic_error_symbol = '×'
 let g:syntastic_warning_symbol = '!'
 
 " Vim Javascript
+" --------------------
 let g:javascript_plugin_jsdoc = 1 " Highlight jsdoc
 let g:javascript_plugin_flow = 1 " Highlight facebook's flow
 
 " Vim JSON
+" --------------------
 let g:vim_json_syntax_conceal = 0 " Disable concealing
 
 " Tmux navigator
+" --------------------
 let g:tmux_navigator_no_mappings = 1
 
 " Vim Tern
+" --------------------
 let g:tern_request_timeout = 3
 
 " Ulti snip
+" --------------------
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<C-tab>"
@@ -216,6 +254,7 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 inoremap <c-x><c-k> <c-x><c-k>
 
 " Vim JSX
+" --------------------
 " By default, JSX syntax highlighting and indenting will be enabled only
 " for files with the .jsx extension, we want syntax highlighting in .js files
 " too
