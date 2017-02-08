@@ -68,7 +68,7 @@ Plug 'junegunn/goyo.vim'
 " If error with airline, reinstall airline to fix
 " Clone https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher first
 " Copy fonts in patched-fonts folder to ~/.fonts
-Plug 'ryanoasis/vim-webdevicons'                  " If error with airline, reinstall airline to fix
+Plug 'ryanoasis/vim-devicons'                  " If error with airline, reinstall airline to fix
 
 " Colorschemes
 "------------------------------------------------
