@@ -16,13 +16,13 @@
 [color "diff"]
   meta = yellow
   frag = magenta
-  old = 102
-  new = 39
+  old = 243
+  new = 45
 
 [color "status"]
-  added = green
-  changed = cyan
-  untracked = yellow
+  added = 45
+  changed = 78
+  untracked = 243
 
 [difftool "sourcetree"]
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
