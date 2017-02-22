@@ -27755,17 +27755,17 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>154 109 409 391 0 0 1440 877 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>121 273 1128 323 0 0 1440 877 </string>
+	<string>312 106 1128 267 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>-4 413 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 372 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>11 259 918 495 0 0 1440 877 </string>
+	<string>554 84 918 495 0 0 1440 877 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 293 592 584 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1440 -180 1920 1057 1440 -180 1920 1057 </string>
+	<string>0 192 1256 685 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1440 -180 1920 1057 1440 -180 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -28398,7 +28398,7 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>MonofurForPowerlineNerdFontC- 13</string>
+			<string>MesloLGSDZNerdFontC-RegularForPowerline 13</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
@@ -29284,7 +29284,7 @@
 			<key>Name</key>
 			<string>Sendy</string>
 			<key>Non Ascii Font</key>
-			<string>DroidSansMonoForPowerline 11</string>
+			<string>PragmataProForPowerlinePlusNerdFileTypes 11</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
@@ -29481,7 +29481,7 @@
 			<key>Use Non-ASCII Font</key>
 			<true/>
 			<key>Vertical Spacing</key>
-			<real>1.0334796216114457</real>
+			<real>1.007683076054217</real>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
