@@ -46,9 +46,6 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
-# Fast jumping between directory bookmarks
-alias j="jump"
-
 function use-safe-rm {
   if [[ $OSTYPE == darwin* ]]; then
     alias rm="trash"
@@ -59,4 +56,9 @@ function use-unsafe-rm {
   unalias rm
 }
 
-# use-safe-rm
+# Damn, too lazy to type
+# Fast jumping between directory bookmarks
+alias j="jump"
+alias g="git"
+alias v="vim"
+alias vi="vim"
