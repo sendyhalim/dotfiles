@@ -1,5 +1,9 @@
+" For base16 colorscheme
+let base16colorspace=256
+
 if in_neovim
   set termguicolors
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 elseif in_terminal
   set t_Co=256
 else

@@ -79,7 +79,7 @@ Plug 'Junza/Spink'
 Plug 'cseelus/vim-colors-clearance'
 Plug 'mhartington/oceanic-next'
 Plug 'jacoborus/tender.vim'
-
+Plug 'chriskempson/base16-vim'
 
 " Add plugins to &runtimepath
 call plug#end()
