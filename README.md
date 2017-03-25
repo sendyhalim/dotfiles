@@ -14,7 +14,7 @@ This repo contains my personal configurations for several apps
 ```
 git clone https://github.com/sendyhalim/dotfiles
 cd dotfiles
-./create_ln.sh
+./install.sh
 ```
 
 ## License
