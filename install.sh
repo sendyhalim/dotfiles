@@ -41,6 +41,11 @@ ln "$ln_flags" "$PWD/zsh/zshrc" "$HOME/.zshrc"
 ln "$ln_flags" "$PWD/git/gitconfig" "$HOME/.gitconfig"
 ln "$ln_flags" "$PWD/git/gitignore" "$HOME/.gitignore"
 
+# Tmux
+TMUX_DIR=$HOME/.tmux
+mkdir -p "$TMUX_DIR"
+ln "$ln_flags" "$PWD/tmux" "$TMUX_DIR/config"
+
 # Vimrc
 # -----------------------------------------------
 NEOVIM_DIR=$HOME/.config/nvim
