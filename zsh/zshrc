@@ -65,6 +65,6 @@ source $ZSH_CONFIG/aliases.zsh
 source $ZSH_CONFIG/colors.zsh
 source $ZSH_CONFIG/functions.zsh
 source $ZSH_CONFIG/language_env.zsh
-source $ZSH_CONFIG/options.zsh
+source $ZSH_CONFIG/history.zsh
 source $ZSH_CONFIG/paths.zsh
 source $ZSH_CONFIG/plugins.zsh
