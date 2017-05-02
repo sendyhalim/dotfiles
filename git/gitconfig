@@ -36,7 +36,7 @@
   a    = add
   b    = branch
   bm   = branch --move
-  bdp  = "!f() { git branch -D $(git branch | grep $1); }; f"
+  branch-delete-with-pattern = "!f() { git branch -D $(git branch | grep $1); }; f"
   cl   = clone
   c    = commit --verbose
   cm   = commit -m
@@ -56,6 +56,7 @@
   lgg  = log --graph --max-count=10
   lgga = log --graph --decorate --all
   lo   = log --oneline --decorate --color
+  ls-untracked = !git ls-files --others --exclude-standard
   p    = push
   po   = push origin
   pom  = push origin master
