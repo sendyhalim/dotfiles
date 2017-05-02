@@ -36,6 +36,7 @@
   a    = add
   b    = branch
   bm   = branch --move
+  bdp  = "!f() { git branch -D $(git branch | grep $1); }; f"
   cl   = clone
   c    = commit --verbose
   cm   = commit -m
