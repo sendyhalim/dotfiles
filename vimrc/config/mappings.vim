@@ -82,6 +82,7 @@ nnoremap <F9> :TagbarToggle<CR>
 nnoremap <leader>gc :Gc<CR>
 nnoremap <leader>gw :Gwrite<CR>
 nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gs :Gstatus<CR>
 
 " Copy relative filepath (based on cwd) of current buffer
 nnoremap <F10> :let @+ = expand("%")<CR>
