@@ -293,8 +293,11 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " file (or /home if no file is open)
 " -----------------------------------------------
 function! NERDTreeToggleInCurrentDirectory()
-  " If NerdTree is already opened
-  if (exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) != -1)
+  if (expand('%') == '')
+    " No buffer is opened, just toggle nerdtree to open it in the current directory
+    exe ":NERDTreeToggle"
+  elseif (exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) != -1)
+    " If NerdTree is already opened
     exe ":NERDTreeClose"
   else
     exe ":NERDTreeFind"
