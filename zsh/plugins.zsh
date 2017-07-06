@@ -10,6 +10,11 @@ if [ ! -d $ZSH_PLUGIN/zsh-syntax-highlighting ]; then
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_PLUGIN/zsh-syntax-highlighting
 fi
 
+if [ ! -d $ZSH_PLUGIN/zsh-autosuggestions ]; then
+  echo "zsh plugin zsh-autosuggestions does not exist, installing it..."
+  git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_PLUGIN/zsh-autosuggestions
+fi
+
 # http://hoppsjots.org/?p=177
 # Fix Underline + Color in TMUX (TERM=screen-256color)
 $({ infocmp -x screen-256color; printf '\t%s\n' 'ncv@,'; } > /tmp/t && tic -x /tmp/t)
