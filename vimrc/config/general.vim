@@ -24,6 +24,7 @@ filetype plugin indent on
 set background=dark
 set wildmenu
 set wildmode=longest:list,full
+set modifiable                  " Enable to modify filesystem through vim's native file browser
 set cursorline                  " Highlight current line
 set autoindent                  " Enables auto indentation
 set colorcolumn=80              " Show vertical ruler that at the 80th column
