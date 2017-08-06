@@ -5,6 +5,9 @@
 [core]
   excludesfile = ~/.gitignore
 
+[status]
+  showUntrackedFiles = all
+
 [color]
   ui = true
 
