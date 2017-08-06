@@ -29,8 +29,10 @@
 
 [diff]
   tool = icdiff
+
 [difftool]
   prompt = false
+
 [difftool "icdiff"]
   cmd = icdiff --line-numbers $LOCAL $REMOTE
 
