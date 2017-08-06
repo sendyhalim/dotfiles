@@ -73,3 +73,4 @@
   ss   = status -s
   st   = stash
   standup = !git log --author="$(git config --global user.email)" --oneline --since="yesterday" --all
+  undo = reset --soft HEAD^
