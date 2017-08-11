@@ -3,7 +3,7 @@ export ZSH=$HOME/.oh-my-zsh
 export ZSH_CONFIG=$HOME/.zsh
 export ZSH_CUSTOM=$HOME/.zsh-custom
 export ZSH_PLUGIN=$ZSH_CUSTOM/plugins
-export EDITOR=vim
+export EDITOR=nvim
 
 
 # Add zsh completions
