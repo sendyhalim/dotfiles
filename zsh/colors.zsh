@@ -9,6 +9,6 @@ ZSH_HIGHLIGHT_STYLES[alias]=fg=106
 ZSH_HIGHLIGHT_STYLES[globbing]=fg=140
 ZSH_HIGHLIGHT_STYLES[path]=fg=102
 ZSH_HIGHLIGHT_STYLES[comment]=fg=244
-ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=184
-ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=184
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=244
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=244
 
