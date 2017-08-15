@@ -46,6 +46,7 @@ Plug 'christoomey/vim-tmux-navigator'         " To navigate between panes seames
 Plug 'embear/vim-localvimrc'                  " Load local vimrc if exist (Will override global vimrc)
 Plug 'easymotion/vim-easymotion'
 Plug 'eagletmt/neco-ghc'                      " Haskell autocomplete
+Plug 'ElmCast/elm-vim'                        " Elm lang plugin
 Plug 'moll/vim-node'                          " Node plugin
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'ternjs/tern_for_vim'
