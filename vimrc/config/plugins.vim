@@ -262,10 +262,6 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 inoremap <c-x><c-k> <c-x><c-k>
 
-" Vim Bookmarks
-highlight BookmarkSign ctermbg=NONE ctermfg=white
-highlight BookmarkAnnotationSign ctermbg=NONE ctermfg=white
-
 " Vim JSX
 " --------------------
 " By default, JSX syntax highlighting and indenting will be enabled only
