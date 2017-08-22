@@ -25,6 +25,7 @@ Plug 'scrooloose/syntastic'                   " Plugin for error highlighter
 Plug 'Townk/vim-autoclose'                    " Plugin for autoclose brace () {}
 Plug 'terryma/vim-multiple-cursors'           " Multiple selection just like in sublime Ctrl + d selection
 Plug 'pangloss/vim-javascript'                " Javascript indentation + Syntax
+Plug 'mtscout6/syntastic-local-eslint.vim'    " Use local eslint if available
 Plug 'elzr/vim-json'
 Plug 'godlygeek/tabular'                      " Automatic alignment
 Plug 'SirVer/ultisnips'                       " Code snippets
@@ -225,8 +226,10 @@ let g:syntastic_elixir_checkers = ['elixir']
 let g:syntastic_echo_current_error = 1
 let g:syntastic_enable_signs = 1
 let g:syntastic_enable_balloons = 1
+
 let g:syntastic_javascript_checkers = ['eslint']
-let b:syntastic_javascript_eslint_exec = 'eslint'
+let b:syntastic_javascript_eslint_exe = 'eslint'
+
 let g:syntastic_always_populate_loc_list = 1  " Always populate loc list so we can use lnext and lprev to jump to errors
 let g:syntastic_html_tidy_quiet_messages = { "level" : "warnings" }
 let g:syntastic_error_symbol = '×'
