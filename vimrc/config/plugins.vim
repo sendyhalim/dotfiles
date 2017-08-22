@@ -20,8 +20,8 @@ Plug 'scrooloose/nerdtree'                    " Plugin for listing directory str
 Plug 'scrooloose/nerdcommenter'               " Commenter
 Plug 'majutsushi/tagbar'                      " Plugin for showing functions and vars description
 Plug 'tpope/vim-fugitive'                     " Plugin for git inside vim
-Plug 'airblade/vim-gitgutter'                 " Shows a git diff in the 'gutter' (sign column)
 Plug 'scrooloose/syntastic'                   " Plugin for error highlighter
+Plug 'airblade/vim-gitgutter'                 " Shows a git diff in the 'gutter' (sign column)
 Plug 'Townk/vim-autoclose'                    " Plugin for autoclose brace () {}
 Plug 'terryma/vim-multiple-cursors'           " Multiple selection just like in sublime Ctrl + d selection
 Plug 'pangloss/vim-javascript'                " Javascript indentation + Syntax
@@ -60,6 +60,7 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocomplete plugin
 Plug 'mitsuse/autocomplete-swift'
+Plug 'MattesGroeger/vim-bookmarks'
 
 " Writings
 " -----------------------------------------------
@@ -260,6 +261,10 @@ let g:UltiSnipsJumpForwardTrigger="<C-tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 inoremap <c-x><c-k> <c-x><c-k>
+
+" Vim Bookmarks
+highlight BookmarkSign ctermbg=NONE ctermfg=white
+highlight BookmarkAnnotationSign ctermbg=NONE ctermfg=white
 
 " Vim JSX
 " --------------------
