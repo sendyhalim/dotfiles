@@ -128,6 +128,21 @@ let g:indentLine_leadingSpaceChar = '·'
 let g:indentLine_enabled = 1
 let g:indentLine_char = '┊'
 
+" Vim Bookmarks
+" --------------------
+nmap <Leader><Leader> <Plug>BookmarkToggle
+nmap <Leader>mi <Plug>BookmarkAnnotate
+nmap <Leader>ma <Plug>BookmarkShowAll
+nmap <Leader>mj <Plug>BookmarkNext
+nmap <Leader>mk <Plug>BookmarkPrev
+nmap <Leader>mc <Plug>BookmarkClear
+nmap <Leader>mx <Plug>BookmarkClearAll
+
+" These will also work with a [count] prefix
+nmap <Leader>mkk <Plug>BookmarkMoveUp
+nmap <Leader>mjj <Plug>BookmarkMoveDown
+nmap <Leader>mg <Plug>BookmarkMoveToLine
+
 " Fugitive
 " --------------------
 command -bar -bang -nargs=* Gc :Gcommit<bang> -v <args>
