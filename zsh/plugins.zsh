@@ -1,19 +1,19 @@
-# Install custom plugins if it does not exist
-# TODO: Use loop?
-if [ ! -d $ZSH_PLUGIN/zshmarks ]; then
-  echo "zsh plugin zshmarks does not exist, installing it..."
-  git clone https://github.com/jocelynmallon/zshmarks.git $ZSH_PLUGIN/zshmarks
+export ZPLUG_HOME=/usr/local/opt/zplug
+
+if [ ! -d $ZPLUG_HOME ]; then
+  brew install zplug
 fi
 
-if [ ! -d $ZSH_PLUGIN/zsh-syntax-highlighting ]; then
-  echo "zsh plugin zsh-syntax-highlighting does not exist, installing it..."
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_PLUGIN/zsh-syntax-highlighting
-fi
+source $ZPLUG_HOME/init.zsh
 
-if [ ! -d $ZSH_PLUGIN/zsh-autosuggestions ]; then
-  echo "zsh plugin zsh-autosuggestions does not exist, installing it..."
-  git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_PLUGIN/zsh-autosuggestions
-fi
+# Note run `zplug install` in order to install these plugins
+zplug "jocelynmallon/zshmarks"
+zplug "zsh-users/zsh-syntax-highlighting"
+zplug "zsh-users/zsh-autosuggestions"
+
+
+# Load plugins
+zplug load
 
 # http://hoppsjots.org/?p=177
 # Fix Underline + Color in TMUX (TERM=screen-256color)
