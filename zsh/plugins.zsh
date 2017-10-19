@@ -1,4 +1,4 @@
-export ZPLUG_HOME=/usr/local/opt/zplug
+export ZPLUG_HOME=$(brew --prefix)/opt/zplug
 
 if [ ! -d $ZPLUG_HOME ]; then
   brew install zplug
