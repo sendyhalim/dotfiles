@@ -7,60 +7,60 @@ call plug#begin('~/.vim/plugged')
 "   Plug 'Valloric/YouCompleteMe'
 " endif
 
+Plug 'ElmCast/elm-vim'                        " Elm lang plugin
+Plug 'MattesGroeger/vim-bookmarks'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocomplete plugin
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'SirVer/ultisnips'                       " Code snippets
+Plug 'StanAngeloff/php.vim'                   " PHP Syntax highlighting
+Plug 'Townk/vim-autoclose'                    " Plugin for autoclose brace () {}
 Plug 'Yggdroot/indentLine'                    " Indentation hint
-Plug 'flazz/vim-colorschemes'                 " vim colorschemes
+Plug 'airblade/vim-gitgutter'                 " Shows a git diff in the 'gutter' (sign column)
+Plug 'cespare/vim-toml'                       " TOML syntax highlighting
+Plug 'christoomey/vim-tmux-navigator'         " To navigate between panes seamessly in vim
+Plug 'eagletmt/neco-ghc'                      " Haskell autocomplete
+Plug 'easymotion/vim-easymotion'
+Plug 'editorconfig/editorconfig-vim'          " Vim will read .editorconfig and set the configuration based on it
+Plug 'elixir-lang/vim-elixir'
+Plug 'elzr/vim-json'
+Plug 'embear/vim-localvimrc'                  " Load local vimrc if exist (Will override global vimrc)
 Plug 'fatih/vim-go'                           " Go programming language
-Plug 'vim-airline/vim-airline'                " Beautiful status bars
-Plug 'vim-airline/vim-airline-themes'
 Plug 'fholgado/minibufexpl.vim'               " Using it for deleting buffer
+Plug 'flazz/vim-colorschemes'                 " vim colorschemes
+Plug 'godlygeek/tabular'                      " Automatic alignment
+Plug 'gregsexton/MatchTag'                    " Highlight matched tag
+Plug 'groenewege/vim-less'                    " Less syntax highlighting
+Plug 'honza/vim-snippets'                     " Collection of snippets for ultisnipes
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Fuzzy file finder
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'                      " Distraction free mode
-Plug 'scrooloose/nerdtree'                    " Plugin for listing directory structure
-Plug 'scrooloose/nerdcommenter'               " Commenter
-Plug 'majutsushi/tagbar'                      " Plugin for showing functions and vars description
-Plug 'tpope/vim-fugitive'                     " Plugin for git inside vim
-Plug 'scrooloose/syntastic'                   " Plugin for error highlighter
-Plug 'airblade/vim-gitgutter'                 " Shows a git diff in the 'gutter' (sign column)
-Plug 'Townk/vim-autoclose'                    " Plugin for autoclose brace () {}
-Plug 'terryma/vim-multiple-cursors'           " Multiple selection just like in sublime Ctrl + d selection
-Plug 'pangloss/vim-javascript'                " Javascript indentation + Syntax
-Plug 'mtscout6/syntastic-local-eslint.vim'    " Use local eslint if available
-Plug 'elzr/vim-json'
-Plug 'godlygeek/tabular'                      " Automatic alignment
-Plug 'SirVer/ultisnips'                       " Code snippets
-Plug 'honza/vim-snippets'                     " Collection of snippets for ultisnipes
-Plug 'cespare/vim-toml'                       " TOML syntax highlighting
-Plug 'mattn/emmet-vim'                        " Emmet plugin
-Plug 'gregsexton/MatchTag'                    " Highlight matched tag
-Plug 'tmhedberg/matchit'                      " Jump between matched tags
-Plug 'wting/rust.vim'                         " Rust syntax highlighting
-Plug 'myusuf3/numbers.vim'                    " Relative number line
-Plug 'tpope/vim-surround'                     " Insert text in surrounding selected text
-Plug 'groenewege/vim-less'                    " Less syntax highlighting
-Plug 'mustache/vim-mustache-handlebars'       " Highlight handlebars
-Plug 'mileszs/ack.vim'                        " For searching, install http://beyondgrep.com/install first
-Plug 'editorconfig/editorconfig-vim'          " Vim will read .editorconfig and set the configuration based on it
-Plug 'xsbeats/vim-blade'                      " Laravel blade syntax highlighting
-Plug 'StanAngeloff/php.vim'                   " PHP Syntax highlighting
-Plug 'christoomey/vim-tmux-navigator'         " To navigate between panes seamessly in vim
-Plug 'embear/vim-localvimrc'                  " Load local vimrc if exist (Will override global vimrc)
-Plug 'easymotion/vim-easymotion'
-Plug 'eagletmt/neco-ghc'                      " Haskell autocomplete
-Plug 'ElmCast/elm-vim'                        " Elm lang plugin
-Plug 'moll/vim-node'                          " Node plugin
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'ternjs/tern_for_vim'
 Plug 'keith/swift.vim'                        " Swift syntax and indent files
-Plug 'rhysd/conflict-marker.vim'              " Jump and resolve git conflicts
-Plug 'mxw/vim-jsx'                            " React JSX plugin
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-repeat'
-Plug 'elixir-lang/vim-elixir'
-Plug 'slashmili/alchemist.vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocomplete plugin
+Plug 'majutsushi/tagbar'                      " Plugin for showing functions and vars description
+Plug 'mattn/emmet-vim'                        " Emmet plugin
+Plug 'mileszs/ack.vim'                        " For searching, install http://beyondgrep.com/install first
 Plug 'mitsuse/autocomplete-swift'
-Plug 'MattesGroeger/vim-bookmarks'
+Plug 'moll/vim-node'                          " Node plugin
+Plug 'mtscout6/syntastic-local-eslint.vim'    " Use local eslint if available
+Plug 'mustache/vim-mustache-handlebars'       " Highlight handlebars
+Plug 'mxw/vim-jsx'                            " React JSX plugin
+Plug 'myusuf3/numbers.vim'                    " Relative number line
+Plug 'pangloss/vim-javascript'                " Javascript indentation + Syntax
+Plug 'rhysd/conflict-marker.vim'              " Jump and resolve git conflicts
+Plug 'scrooloose/nerdcommenter'               " Commenter
+Plug 'scrooloose/nerdtree'                    " Plugin for listing directory structure
+Plug 'scrooloose/syntastic'                   " Plugin for error highlighter
+Plug 'slashmili/alchemist.vim'
+Plug 'ternjs/tern_for_vim'
+Plug 'terryma/vim-multiple-cursors'           " Multiple selection just like in sublime Ctrl + d selection
+Plug 'tmhedberg/matchit'                      " Jump between matched tags
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-fugitive'                     " Plugin for git inside vim
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'                     " Insert text in surrounding selected text
+Plug 'vim-airline/vim-airline'                " Beautiful status bars
+Plug 'vim-airline/vim-airline-themes'
+Plug 'wting/rust.vim'                         " Rust syntax highlighting
+Plug 'xsbeats/vim-blade'                      " Laravel blade syntax highlighting
 
 " Writings
 " -----------------------------------------------
