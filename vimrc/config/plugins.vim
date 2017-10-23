@@ -147,10 +147,6 @@ nmap <Leader>mg <Plug>BookmarkMoveToLine
 " --------------------
 command -bar -bang -nargs=* Gc :Gcommit<bang> -v <args>
 
-" Eclim autocomplete with youcompleteme
-" --------------------
-let g:EclimCompletionMethod = 'omnifunc'
-
 " YouCompleteMe
 " --------------------
 let g:ycm_autoclose_preview_window_after_completion = 1
