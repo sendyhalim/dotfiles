@@ -4,7 +4,7 @@ fi
 
 ZSH_THEME_DIRECTORY='%F{159}%c'
 ZSH_THEME_PREFIX='%F{39}$ZSH_THEME_CLOUD_PREFIX%f'
-ZSH_GIT_PROMPT='%{$fg_bold[white]%}$(git_prompt_info)%{$fg_bold[blue]%}'
+ZSH_GIT_PROMPT='%{$fg[white]%}$(git_prompt_info)%{$fg[blue]%}'
 
 PROMPT="$ZSH_THEME_PREFIX   $ZSH_THEME_DIRECTORY $ZSH_GIT_PROMPT % %{$reset_color%}"
 
