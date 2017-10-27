@@ -16,6 +16,7 @@ Plug 'StanAngeloff/php.vim'                   " PHP Syntax highlighting
 Plug 'Townk/vim-autoclose'                    " Plugin for autoclose brace () {}
 Plug 'Yggdroot/indentLine'                    " Indentation hint
 Plug 'airblade/vim-gitgutter'                 " Shows a git diff in the 'gutter' (sign column)
+Plug 'brooth/far.vim'
 Plug 'cespare/vim-toml'                       " TOML syntax highlighting
 Plug 'christoomey/vim-tmux-navigator'         " To navigate between panes seamessly in vim
 Plug 'eagletmt/neco-ghc'                      " Haskell autocomplete
@@ -40,15 +41,14 @@ Plug 'mattn/emmet-vim'                        " Emmet plugin
 Plug 'mileszs/ack.vim'                        " For searching, install http://beyondgrep.com/install first
 Plug 'mitsuse/autocomplete-swift'
 Plug 'moll/vim-node'                          " Node plugin
-Plug 'mtscout6/syntastic-local-eslint.vim'    " Use local eslint if available
 Plug 'mustache/vim-mustache-handlebars'       " Highlight handlebars
 Plug 'mxw/vim-jsx'                            " React JSX plugin
 Plug 'myusuf3/numbers.vim'                    " Relative number line
+Plug 'neovimhaskell/haskell-vim'              " Syntax highlighting and indentation for Haskell and Cabal
 Plug 'pangloss/vim-javascript'                " Javascript indentation + Syntax
 Plug 'rhysd/conflict-marker.vim'              " Jump and resolve git conflicts
 Plug 'scrooloose/nerdcommenter'               " Commenter
 Plug 'scrooloose/nerdtree'                    " Plugin for listing directory structure
-Plug 'scrooloose/syntastic'                   " Plugin for error highlighter
 Plug 'slashmili/alchemist.vim'
 Plug 'ternjs/tern_for_vim'
 Plug 'terryma/vim-multiple-cursors'           " Multiple selection just like in sublime Ctrl + d selection
@@ -59,8 +59,10 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'                     " Insert text in surrounding selected text
 Plug 'vim-airline/vim-airline'                " Beautiful status bars
 Plug 'vim-airline/vim-airline-themes'
+Plug 'w0rp/ale'                               " Asynchronous linter FTW!
 Plug 'wting/rust.vim'                         " Rust syntax highlighting
 Plug 'xsbeats/vim-blade'                      " Laravel blade syntax highlighting
+Plug 'nbouscal/vim-stylish-haskell', { 'do': 'stack install stylish-haskell' }
 
 " Writings
 " -----------------------------------------------
@@ -167,14 +169,21 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 
 " Neco GHC
 " --------------------
-" Haskell autocompletion using youcompleteme
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-let g:ycm_semantic_triggers = {'haskell' : ['.']}
 let g:necoghc_enable_detailed_browse = 1
+let g:necoghc_use_stack = 1
 
 if in_macvim
   let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 endif
+
+" Vim haskell syntax highlighting
+let g:haskell_enable_quantification = 1   " Enable highlighting of `forall`
+let g:haskell_enable_recursivedo = 1      " Enable highlighting of `mdo` and `rec`
+let g:haskell_enable_arrowsyntax = 1      " Enable highlighting of `proc`
+let g:haskell_enable_pattern_synonyms = 1 " Enable highlighting of `pattern`
+let g:haskell_enable_typeroles = 1        " Enable highlighting of type roles
+let g:haskell_enable_static_pointers = 1  " Enable highlighting of `static`
+let g:haskell_backpack = 1                " Enable highlighting of backpack keywords
 
 " Vim handlebars
 " --------------------
@@ -231,21 +240,14 @@ let g:miniBufExplorerAutoStart = 0         "Just need the command :MBEbd to clos
 " --------------------
 let g:user_emmet_leader_key='\'
 
-" Syntatic
+" Ale
 " --------------------
-let g:syntastic_enable_elixir_checker = 1
-let g:syntastic_elixir_checkers = ['elixir']
-let g:syntastic_echo_current_error = 1
-let g:syntastic_enable_signs = 1
-let g:syntastic_enable_balloons = 1
+let g:ale_sign_error = '×'
+let g:ale_sign_warning = '!'
 
-let g:syntastic_javascript_checkers = ['eslint']
-let b:syntastic_javascript_eslint_exe = 'eslint'
+" Set this. Airline will handle the rest.
+let g:airline#extensions#ale#enabled = 1
 
-let g:syntastic_always_populate_loc_list = 1  " Always populate loc list so we can use lnext and lprev to jump to errors
-let g:syntastic_html_tidy_quiet_messages = { "level" : "warnings" }
-let g:syntastic_error_symbol = '×'
-let g:syntastic_warning_symbol = '!'
 
 " Vim Javascript
 " --------------------

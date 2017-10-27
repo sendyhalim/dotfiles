@@ -1,8 +1,11 @@
 " Highlight current line number
 hi CursorLineNR guifg=#F2FF5C gui=bold "
-hi SyntasticErrorSign ctermbg=235
 hi SignColumn ctermbg=235
 hi Statement ctermfg=38
+
+" Clear ALE background color
+hi clear ALEErrorSign
+hi clear ALEWarningSign
 
 " Visual selection background color
 hi Visual guibg=#888888 ctermbg=237
