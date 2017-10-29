@@ -91,7 +91,14 @@ call plug#end()
 
 " Plugin Settings
 " ====================
-"
+
+" Vim autoclose
+" --------------------
+
+" Fix autoclose, we need to press <ESC> twice when autocompletion pops out
+" with this code we don't need to press <ESC> or 'ctrl + [' twice
+let g:AutoClosePumvisible = {"ENTER": "<C-Y>", "ESC": "<ESC>"}
+
 " Vim easy motion
 " --------------------
 " <Leader>f{char} to move to {char}
@@ -105,11 +112,6 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 " Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
-
-" Vim autoclose
-" --------------------
-" https://github.com/Valloric/YouCompleteMe/issues/9
-let g:AutoClosePumvisible = {"ENTER": "<C-Y>", "ESC": "<ESC>"}
 
 " Vim Goyo
 " --------------------
@@ -166,6 +168,30 @@ function! s:my_cr_function()
 endfunction
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+
+" Fix issues between YouCompleteMe/Deoplete/any completion plugin with UltiSnips
+"------------------------------------------------
+function! g:UltiSnips_Complete()
+  call UltiSnips#ExpandSnippet()
+  if g:ulti_expand_res == 0
+    if pumvisible()
+      return "\<C-n>"
+    else
+      call UltiSnips#JumpForwards()
+      if g:ulti_jump_forwards_res == 0
+        return "\<TAB>"
+      endif
+    endif
+  endif
+  return ""
+endfunction
+
+au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+let g:UltiSnipsListSnippets="<c-e>"
+" this mapping Enter key to <C-y> to chose the current highlight item
+" and close the selection list, same as other IDEs.
+" CONFLICT with some plugins like tpope/Endwise
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Neco GHC
 " --------------------
@@ -248,6 +274,12 @@ let g:ale_sign_warning = '!'
 " Set this. Airline will handle the rest.
 let g:airline#extensions#ale#enabled = 1
 
+" By default, all available tools for all supported languages will be run.
+" PHP Pear sucks, let's use phpcs, shall we?
+let g:ale_linters = {
+\   'php': ['phpcs'],
+\}
+
 
 " Vim Javascript
 " --------------------
@@ -275,36 +307,27 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 inoremap <c-x><c-k> <c-x><c-k>
 
+" Vim multiple cursor
+" --------------------
+
+" Fixing conflict with multiple cursors where
+" deoplete inserts '<Plug>bla bla' when multiple cursors are active
+" Called once right before you start selecting multiple cursors
+function! Multiple_cursors_before()
+    let b:deoplete_disable_auto_complete = 1
+endfunction
+
+" Called once only when the multiple selection is canceled (default <Esc>)
+function! Multiple_cursors_after()
+    let b:deoplete_disable_auto_complete = 0
+endfunction
+
 " Vim JSX
 " --------------------
 " By default, JSX syntax highlighting and indenting will be enabled only
 " for files with the .jsx extension, we want syntax highlighting in .js files
 " too
 let g:jsx_ext_required = 0
-
-" Fix issues between YouCompleteMe and UltiSnips
-"------------------------------------------------
-function! g:UltiSnips_Complete()
-  call UltiSnips#ExpandSnippet()
-  if g:ulti_expand_res == 0
-    if pumvisible()
-      return "\<C-n>"
-    else
-      call UltiSnips#JumpForwards()
-      if g:ulti_jump_forwards_res == 0
-        return "\<TAB>"
-      endif
-    endif
-  endif
-  return ""
-endfunction
-
-au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
-let g:UltiSnipsListSnippets="<c-e>"
-" this mapping Enter key to <C-y> to chose the current highlight item
-" and close the selection list, same as other IDEs.
-" CONFLICT with some plugins like tpope/Endwise
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 
 " Open NERDTree in the directory of the current
