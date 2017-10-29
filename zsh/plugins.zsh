@@ -1,19 +1,9 @@
-export ZPLUG_HOME=$(brew --prefix)/opt/zplug
+ANTIBODY_SOURCEABLES=$ZSH_CONFIG/sourceables.sh
 
-if [ ! -d $ZPLUG_HOME ]; then
-  brew install zplug
-fi
+# Brew install antibody
+antibody bundle < "$ZSH_CONFIG/plugins.txt" > $ANTIBODY_SOURCEABLES
 
-source $ZPLUG_HOME/init.zsh
-
-# Note run `zplug install` in order to install these plugins
-zplug "jocelynmallon/zshmarks"
-zplug "zsh-users/zsh-syntax-highlighting"
-zplug "zsh-users/zsh-autosuggestions"
-
-
-# Load plugins
-zplug load
+source $ANTIBODY_SOURCEABLES
 
 # http://hoppsjots.org/?p=177
 # Fix Underline + Color in TMUX (TERM=screen-256color)
