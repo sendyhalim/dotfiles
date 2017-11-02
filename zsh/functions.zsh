@@ -67,3 +67,8 @@ function print_colors {
     printf "\n";
   }'
 }
+
+# Remove simulators that is not listed in xcode.
+function delete_unused_xcode_simulators {
+  xcrun simctl delete unavailable
+}
