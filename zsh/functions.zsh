@@ -72,3 +72,9 @@ function print_colors {
 function delete_unused_xcode_simulators {
   xcrun simctl delete unavailable
 }
+
+
+# See directory sizes sorted ascending by size
+function dirsizes {
+  du -h $1 | sort -h
+}
