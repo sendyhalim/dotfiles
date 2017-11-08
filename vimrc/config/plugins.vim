@@ -238,6 +238,12 @@ let g:NERDTreeDirArrows = 1
 let g:NERDTreeIgnore = ['.git[[dir]]', '.idea[[dir]]']
 let g:NERDSpaceDelims = 1
 
+" NerdCommenter
+" --------------------
+let g:NERDCustomDelimiters = {
+  \ 'haskell': { 'left': '--', 'right': '' }
+\ }
+
 " Airline
 " --------------------
 " Go to https://github.com/powerline/fonts if airline fonts is ugly
