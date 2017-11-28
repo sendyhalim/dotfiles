@@ -14,6 +14,8 @@
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
 	<integer>1</integer>
+	<key>AppleWindowTabbingMode</key>
+	<string>manual</string>
 	<key>AutoHideTmuxClientSession</key>
 	<false/>
 	<key>CheckTestRelease</key>
@@ -100816,15 +100818,15 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 81 599 514 0 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>252 367 918 492 0 0 1440 877 </string>
+	<string>420 277 770 429 0 0 1440 877 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 293 592 584 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 37 1440 840 0 0 1440 877 </string>
+	<string>0 60 1440 817 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 526 570 351 0 0 1440 877 </string>
+	<string>240 706 570 351 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>720 36 720 841 0 0 1440 877 </string>
+	<string>720 526 570 351 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>720 36 720 841 0 0 1440 877 </string>
 	<key>NeverWarnAboutMeta</key>
@@ -102774,7 +102776,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.beta.10</string>
+	<string>3.1.5</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>1</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
