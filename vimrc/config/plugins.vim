@@ -2,11 +2,6 @@
 "-------------------------------------------
 call plug#begin('~/.vim/plugged')
 
-" YouCompleteMe only works in linux/Mac OSX
-" if has('unix')
-"   Plug 'Valloric/YouCompleteMe'
-" endif
-
 Plug 'ElmCast/elm-vim'                        " Elm lang plugin
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocomplete plugin
