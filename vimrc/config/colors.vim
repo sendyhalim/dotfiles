@@ -1,7 +1,8 @@
 " Highlight current line number
 hi CursorLineNR guifg=#F2FF5C gui=bold "
 hi SignColumn ctermbg=235
-hi Statement ctermfg=38
+hi Statement ctermfg=111
+hi Operator ctermfg=212
 
 " Clear ALE background color
 hi clear ALEErrorSign
