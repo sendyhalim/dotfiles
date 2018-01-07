@@ -78,3 +78,8 @@ function delete_unused_xcode_simulators {
 function dirsizes {
   du -h $1 | sort -h
 }
+
+# Copy file content to clipboard
+function to_clipboard {
+  cat $1 | pbcopy
+}
