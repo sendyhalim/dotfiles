@@ -58,7 +58,6 @@ Plug 'w0rp/ale'                               " Asynchronous linter FTW!
 Plug 'wting/rust.vim'                         " Rust syntax highlighting
 Plug 'xsbeats/vim-blade'                      " Laravel blade syntax highlighting
 Plug 'nbouscal/vim-stylish-haskell', { 'do': 'stack install stylish-haskell' }
-Plug 'tpope/vim-speeddating'
 Plug 'jceb/vim-orgmode'
 
 " Writings
