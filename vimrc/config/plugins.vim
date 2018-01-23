@@ -60,6 +60,9 @@ Plug 'xsbeats/vim-blade'                      " Laravel blade syntax highlightin
 Plug 'nbouscal/vim-stylish-haskell', { 'do': 'stack install stylish-haskell' }
 Plug 'jceb/vim-orgmode'
 
+Plug 'HerringtonDarkholme/yats.vim'           " Typescript syntax highlighting
+Plug 'mhartington/nvim-typescript'            " Typescript autocompletion
+
 " Writings
 " -----------------------------------------------
 Plug 'junegunn/limelight.vim'
