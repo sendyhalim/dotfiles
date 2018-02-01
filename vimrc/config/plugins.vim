@@ -61,6 +61,7 @@ Plug 'nbouscal/vim-stylish-haskell', { 'do': 'stack install stylish-haskell' }
 Plug 'jceb/vim-orgmode'
 
 Plug 'HerringtonDarkholme/yats.vim'           " Typescript syntax highlighting
+Plug 'tasn/vim-tsx'                           " Typescript + React Native syntax highlighting
 Plug 'mhartington/nvim-typescript'            " Typescript autocompletion
 
 " Writings
