@@ -57,6 +57,7 @@ set tabstop=2                   " Set tab size to 2
 set textwidth=0
 set timeoutlen=300
 set wrapmargin=0
+set guicursor=                  " https://github.com/neovim/neovim/issues/6403#issuecomment-326725288
 syntax enable
 colorscheme tender
 
