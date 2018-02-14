@@ -2,45 +2,28 @@
 "-------------------------------------------
 call plug#begin('~/.vim/plugged')
 
-Plug 'ElmCast/elm-vim'                        " Elm lang plugin
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocomplete plugin
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'SirVer/ultisnips'                       " Code snippets
-Plug 'StanAngeloff/php.vim'                   " PHP Syntax highlighting
 Plug 'Townk/vim-autoclose'                    " Plugin for autoclose brace () {}
 Plug 'Yggdroot/indentLine'                    " Indentation hint
 Plug 'airblade/vim-gitgutter'                 " Shows a git diff in the 'gutter' (sign column)
 Plug 'brooth/far.vim'
-Plug 'cespare/vim-toml'                       " TOML syntax highlighting
 Plug 'christoomey/vim-tmux-navigator'         " To navigate between panes seamessly in vim
-Plug 'eagletmt/neco-ghc'                      " Haskell autocomplete
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'          " Vim will read .editorconfig and set the configuration based on it
-Plug 'elixir-lang/vim-elixir'
-Plug 'elzr/vim-json'
 Plug 'embear/vim-localvimrc'                  " Load local vimrc if exist (Will override global vimrc)
-Plug 'fatih/vim-go'                           " Go programming language
 Plug 'fholgado/minibufexpl.vim'               " Using it for deleting buffer
-Plug 'flazz/vim-colorschemes'                 " vim colorschemes
 Plug 'godlygeek/tabular'                      " Automatic alignment
 Plug 'gregsexton/MatchTag'                    " Highlight matched tag
-Plug 'groenewege/vim-less'                    " Less syntax highlighting
 Plug 'honza/vim-snippets'                     " Collection of snippets for ultisnipes
+Plug 'jceb/vim-orgmode'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Fuzzy file finder
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/goyo.vim'                      " Distraction free mode
-Plug 'keith/swift.vim'                        " Swift syntax and indent files
 Plug 'majutsushi/tagbar'                      " Plugin for showing functions and vars description
-Plug 'mattn/emmet-vim'                        " Emmet plugin
 Plug 'mileszs/ack.vim'                        " For searching, install http://beyondgrep.com/install first
-Plug 'mitsuse/autocomplete-swift'
-Plug 'moll/vim-node'                          " Node plugin
-Plug 'mustache/vim-mustache-handlebars'       " Highlight handlebars
-Plug 'mxw/vim-jsx'                            " React JSX plugin
 Plug 'myusuf3/numbers.vim'                    " Relative number line
-Plug 'neovimhaskell/haskell-vim'              " Syntax highlighting and indentation for Haskell and Cabal
-Plug 'pangloss/vim-javascript'                " Javascript indentation + Syntax
 Plug 'rhysd/conflict-marker.vim'              " Jump and resolve git conflicts
 Plug 'scrooloose/nerdcommenter'               " Commenter
 Plug 'scrooloose/nerdtree'                    " Plugin for listing directory structure
@@ -55,28 +38,80 @@ Plug 'tpope/vim-surround'                     " Insert text in surrounding selec
 Plug 'vim-airline/vim-airline'                " Beautiful status bars
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'                               " Asynchronous linter FTW!
-Plug 'wting/rust.vim'                         " Rust syntax highlighting
-Plug 'xsbeats/vim-blade'                      " Laravel blade syntax highlighting
-Plug 'nbouscal/vim-stylish-haskell', { 'do': 'stack install stylish-haskell' }
-Plug 'jceb/vim-orgmode'
 
-Plug 'HerringtonDarkholme/yats.vim'           " Typescript syntax highlighting
-Plug 'tasn/vim-tsx'                           " Typescript + React Native syntax highlighting
-Plug 'mhartington/nvim-typescript'            " Typescript autocompletion
+" Haskell
+" -----------------------------------------------
+Plug 'neovimhaskell/haskell-vim'        " Syntax highlighting and indentation for Haskell and Cabal
+Plug 'eagletmt/neco-ghc'                " Haskell autocomplete
+Plug 'nbouscal/vim-stylish-haskell', { 'do': 'stack install stylish-haskell' }
+
+" Swift
+" -----------------------------------------------
+Plug 'keith/swift.vim'                  " Swift syntax and indent files
+Plug 'mitsuse/autocomplete-swift'
+
+" Elm
+" -----------------------------------------------
+Plug 'ElmCast/elm-vim'
+
+" Toml
+" -----------------------------------------------
+Plug 'cespare/vim-toml'                 " TOML syntax highlighting
+
+" Elixir
+" -----------------------------------------------
+Plug 'elixir-lang/vim-elixir'
+
+" Typescript
+" -----------------------------------------------
+Plug 'HerringtonDarkholme/yats.vim'     " Typescript syntax highlighting
+Plug 'tasn/vim-tsx'                     " Typescript + React Native syntax highlighting
+Plug 'mhartington/nvim-typescript'      " Typescript autocompletion
+
+" Golang
+" -----------------------------------------------
+Plug 'fatih/vim-go'                     " Go programming language
+
+" Rust
+" -----------------------------------------------
+Plug 'wting/rust.vim'                   " Rust syntax highlighting
+
+" Kotlin
+" -----------------------------------------------
+Plug 'udalov/kotlin-vim'                " Kotlin syntax highlighting
+
+" Javascript
+" -----------------------------------------------
+Plug 'moll/vim-node'                    " Node plugin
+Plug 'mxw/vim-jsx'                      " React JSX plugin
+Plug 'pangloss/vim-javascript'          " Javascript indentation + Syntax
+Plug 'elzr/vim-json'
+
+" PHP
+" -----------------------------------------------
+Plug 'StanAngeloff/php.vim'             " PHP Syntax highlighting
+Plug 'xsbeats/vim-blade'                " Laravel blade syntax highlighting
+
+" HTML + CSS + Less + Templating
+" -----------------------------------------------
+Plug 'groenewege/vim-less'              " Less syntax highlighting
+Plug 'mustache/vim-mustache-handlebars' " Highlight handlebars
+Plug 'mattn/emmet-vim'                  " Emmet plugin
 
 " Writings
 " -----------------------------------------------
+Plug 'junegunn/goyo.vim'                " Distraction free mode
 Plug 'junegunn/limelight.vim'
-Plug 'junegunn/goyo.vim'
 
 
 " If error with airline, reinstall airline to fix
 " Clone https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher first
 " Copy fonts in patched-fonts folder to ~/.fonts
-Plug 'ryanoasis/vim-devicons'                  " If error with airline, reinstall airline to fix
+Plug 'ryanoasis/vim-devicons'           " If error with airline, reinstall airline to fix
 
 " Colorschemes
 "------------------------------------------------
+Plug 'flazz/vim-colorschemes'
 Plug 'ajh17/Spacegray.vim'
 Plug 'gosukiwi/vim-atom-dark'
 Plug 'yamafaktory/lumberjack.vim'
