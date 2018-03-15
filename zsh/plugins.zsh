@@ -1,7 +1,9 @@
 ANTIBODY_SOURCEABLES=$ZSH_CONFIG/sourceables.sh
 
-# Brew install antibody
-antibody bundle < "$ZSH_CONFIG/plugins.txt" > $ANTIBODY_SOURCEABLES
+function register_zsh_plugins {
+  # Brew install antibody
+  antibody bundle < "$ZSH_CONFIG/plugins.txt" > $ANTIBODY_SOURCEABLES
+}
 
 source $ANTIBODY_SOURCEABLES
 
