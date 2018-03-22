@@ -88,3 +88,12 @@ function to_clipboard {
 function measure_zsh_start_time {
   for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
 }
+
+function print_256_colors {
+  for i in {0..255} ; do
+    printf "\x1b[48;5;%sm%3d\e[0m " "$i" "$i"
+    if (( i == 15 )) || (( i > 15 )) && (( (i-15) % 6 == 0 )); then
+      printf "\n";
+    fi
+  done
+}
