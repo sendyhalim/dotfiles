@@ -83,3 +83,8 @@ function dirsizes {
 function to_clipboard {
   cat $1 | pbcopy
 }
+
+# Measure zsh start time
+function measure_zsh_start_time {
+  for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
+}
