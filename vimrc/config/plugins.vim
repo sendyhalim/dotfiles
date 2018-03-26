@@ -28,7 +28,7 @@ Plug 'rhysd/conflict-marker.vim'              " Jump and resolve git conflicts
 Plug 'scrooloose/nerdcommenter'               " Commenter
 Plug 'scrooloose/nerdtree'                    " Plugin for listing directory structure
 Plug 'slashmili/alchemist.vim'
-Plug 'ternjs/tern_for_vim'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'terryma/vim-multiple-cursors'           " Multiple selection just like in sublime Ctrl + d selection
 Plug 'tmhedberg/matchit'                      " Jump between matched tags
 Plug 'tpope/vim-abolish'
