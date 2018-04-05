@@ -97,3 +97,23 @@ function print_256_colors {
     fi
   done
 }
+
+function set_login_bg_with_current_wallpaper {
+  os="High Sierra"
+  wallpaper_path=$(sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db 'select * from data limit 1 offset (select (count(*) - 1) from data)')
+
+  # https://superuser.com/a/474199
+  wallpaper_path=$(eval echo "$wallpaper_path")
+
+  os_pictures_dir="/Library/Desktop Pictures"
+  default_wallpaper="$os_pictures_dir/$os.jpg"
+  backup_path="$os_pictures_dir/$os - Backup.jpg"
+
+  if [ ! -f "$backup_path" ]
+  then
+    echo "I'm gonna backup $default_wallpaper to $backup_path"
+  fi
+
+  echo "Replacing $default_wallpaper with $wallpaper_path"
+  cp "$wallpaper_path" "$default_wallpaper"
+}
