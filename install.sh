@@ -33,7 +33,7 @@ done
 # General files
 # -----------------------------------------------
 if [ ! -d $ZSH_CUSTOM_DIR ]; then
-    ln "$ln_flags" $PWD/$os/zsh-custom $ZSH_CUSTOM_DIR
+    ln "$ln_flags" $PWD/zsh/zsh-custom $ZSH_CUSTOM_DIR
 fi
 
 ln "$ln_flags" "$PWD/zsh" "$HOME/.zsh"
