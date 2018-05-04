@@ -59,3 +59,8 @@ ln "$ln_flags" "$PWD/vimrc/vimrc" ~/.neovimrc
 ln "$ln_flags" "$PWD/vimrc/vimrc" ~/.vimrc
 ln "$ln_flags" "$PWD/vimrc/ideavimrc" ~/.ideavimrc
 ln "$ln_flags" "$PWD/vimrc/xvimrc" ~/.xvimrc
+
+# Hammerspoon
+HAMMERSPOON_DIR=$HOME/.hammerspoon
+mkdir -p $HAMMERSPOON_DIR
+ln "$ln_flags" "$PWD/$os/hammerspoon.lua" "$HAMMERSPOON_DIR/init.lua"

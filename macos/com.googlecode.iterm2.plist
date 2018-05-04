@@ -100829,7 +100829,7 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 81 599 514 0 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>404 335 918 381 0 0 1440 877 </string>
+	<string>404 427 918 381 0 0 1440 877 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 293 592 584 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -101129,13 +101129,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.63137254901960782</real>
+				<real>0.81568627450980391</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.9137254901960784</real>
+				<real>0.63137254901960782</real>
 				<key>Red Component</key>
-				<real>0.59607843137254901</real>
+				<real>0.12941176470588237</real>
 			</dict>
 			<key>Cursor Guide Color</key>
 			<dict>
