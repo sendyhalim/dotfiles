@@ -1,5 +1,7 @@
 local pushWindowKeys =  {"cmd", "ctrl"}
 
+hs.window.animationDuration = 0
+
 hs.hotkey.bind(pushWindowKeys, "Left", function ()
   local window = hs.window.focusedWindow()
   local frame = window:frame()
