@@ -64,4 +64,4 @@ alias v="vim"
 alias vi="vim"
 
 # NOTE: ls alias is also defined in oh-my-zsh repo, below alias definition will overwrite oh-my-zsh's
-alias ls="ls -GF"
+alias ls="exa -F --header --git"
