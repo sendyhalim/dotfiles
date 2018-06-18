@@ -38,6 +38,7 @@ Plug 'tpope/vim-surround'                     " Insert text in surrounding selec
 Plug 'vim-airline/vim-airline'                " Beautiful status bars
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'                               " Asynchronous linter FTW!
+Plug 'Chiel92/vim-autoformat'
 
 " Haskell
 " -----------------------------------------------
