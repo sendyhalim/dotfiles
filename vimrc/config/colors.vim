@@ -1,14 +1,15 @@
 " Make bg color to equal terminal's bg color #262626
-hi Normal ctermbg=235
-hi NonText ctermbg=235
-hi SignColumn ctermbg=235
-hi LineNr ctermbg=235
-hi CursorLine ctermbg=235
+hi Normal guibg=#262626 ctermbg=235
+hi NonText guibg=#262626 ctermbg=235
+hi SignColumn guibg=#262626 ctermbg=235
+hi LineNr guibg=#262626 ctermbg=235
+hi CursorLine guibg=#262626 ctermbg=235
 
 " Highlight current line number
-hi CursorLineNR guifg=#F2FF5C gui=bold " ctermbg=235
+hi CursorLineNR guibg=guibg=#262626 guifg=#F2FF5C gui=bold ctermbg=235
+
 hi Statement ctermfg=80
-hi Operator ctermfg=212
+hi Operator guifg=#FD98BA ctermfg=212
 
 " Clear ALE background color
 hi clear ALEErrorSign

@@ -39,6 +39,7 @@ Plug 'vim-airline/vim-airline'                " Beautiful status bars
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'                               " Asynchronous linter FTW!
 Plug 'Chiel92/vim-autoformat'
+Plug 'tomasiser/vim-code-dark'
 
 " Haskell
 " -----------------------------------------------
@@ -256,10 +257,6 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 let g:necoghc_enable_detailed_browse = 1
 let g:necoghc_use_stack = 1
 
-if in_macvim
-  let g:ycm_path_to_python_interpreter = '/usr/bin/python'
-endif
-
 " Vim haskell syntax highlighting
 let g:haskell_enable_quantification = 1   " Enable highlighting of `forall`
 let g:haskell_enable_recursivedo = 1      " Enable highlighting of `mdo` and `rec`
@@ -308,7 +305,7 @@ let g:NERDCustomDelimiters = {
 " let g:airline_left_sep=''
 " let g:airline_right_sep=''
 let g:tender_airline = 1
-let g:airline_theme = 'angr'
+let g:airline_theme = 'onedark'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let airline#extensions#tabline#buffer_nr_show = 1

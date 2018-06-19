@@ -1,26 +1,12 @@
 " For base16 colorscheme
 let base16colorspace=256
 
-if in_neovim
-  set termguicolors
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-elseif in_terminal
-  set t_Co=256
-else
-  set guioptions -=T              " remove toolbar on gvim
-  set guioptions -=r              " remove right-hand scroll bar
-  set guioptions -=L              " remove left-hand scroll bar
-  set guioptions -=m              " remove menu bar
-  set guioptions -=M              " remove menu bar
-endif
-
-if in_macvim
-  set guifont=DejaVu_Sans_Mono_for_Powerline_Plus_Nerd_File_Types_Mono:h13
-else
-  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
-endif
-
 filetype plugin indent on
+set termguicolors
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set t_Co=256
+set t_ut=
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
 set background=dark
 set wildmenu
 set wildmode=longest:list,full
