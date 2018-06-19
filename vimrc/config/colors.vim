@@ -1,7 +1,13 @@
-" Highlight current line number
-hi CursorLineNR guifg=#F2FF5C gui=bold "
+" Make bg color to equal terminal's bg color #262626
+hi Normal ctermbg=235
+hi NonText ctermbg=235
 hi SignColumn ctermbg=235
-hi Statement ctermfg=111
+hi LineNr ctermbg=235
+hi CursorLine ctermbg=235
+
+" Highlight current line number
+hi CursorLineNR guifg=#F2FF5C gui=bold " ctermbg=235
+hi Statement ctermfg=80
 hi Operator ctermfg=212
 
 " Clear ALE background color
