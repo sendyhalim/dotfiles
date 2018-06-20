@@ -16,7 +16,7 @@ hi clear ALEErrorSign
 hi clear ALEWarningSign
 
 " Visual selection background color
-hi Visual guibg=#888888 ctermbg=237
+hi Visual guibg=#333333 ctermbg=237
 
 " Change cursor color to white
 hi Cursor guibg=#618AFB guifg=white
