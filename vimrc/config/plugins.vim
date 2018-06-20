@@ -182,6 +182,7 @@ let g:limelight_conceal_ctermfg = 242
 " Vim indent lines
 " --------------------
 let g:indentLine_color_term = 238
+let g:indentLine_color_gui = '#555555'
 let g:indentLine_leadingSpaceEnabled = 0
 let g:indentLine_leadingSpaceChar = '·'
 let g:indentLine_enabled = 1
@@ -313,6 +314,21 @@ let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
+let g:airline_mode_map = {
+  \ '__' : '-',
+  \ 'n'  : 'N',
+  \ 'i'  : 'I',
+  \ 'R'  : 'R',
+  \ 'c'  : 'C',
+  \ 'v'  : 'V',
+  \ 'V'  : 'V',
+  \ '' : 'V',
+  \ 's'  : 'S',
+  \ 'S'  : 'S',
+  \ '' : 'S',
+  \ 't'  : 'T',
+  \ }
+
 
 " Vim web dev icons
 " --------------------
