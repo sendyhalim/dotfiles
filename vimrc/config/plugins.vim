@@ -40,6 +40,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'                               " Asynchronous linter FTW!
 Plug 'Chiel92/vim-autoformat'
 Plug 'tomasiser/vim-code-dark'
+Plug 'mhinz/vim-sayonara'                     " Smart buffer/window deletion
 
 " Haskell
 " -----------------------------------------------

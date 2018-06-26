@@ -11,7 +11,7 @@ inoremap <C-s> <ESC>:w<CR>a
 map <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
 
 " Close current buffer
-nnoremap QQ :MBEbd <CR>
+nnoremap QQ :Sayonara <CR>
 
 noremap L g_
 noremap H ^
