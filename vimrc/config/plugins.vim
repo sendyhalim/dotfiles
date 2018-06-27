@@ -470,3 +470,6 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 
+
+" Vim startify
+let g:startify_lists = []
