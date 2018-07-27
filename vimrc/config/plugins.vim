@@ -41,7 +41,6 @@ Plug 'w0rp/ale'                               " Asynchronous linter FTW!
 Plug 'Chiel92/vim-autoformat'
 Plug 'tomasiser/vim-code-dark'
 Plug 'mhinz/vim-sayonara'                     " Smart buffer/window deletion
-Plug 'mhinz/vim-startify'                     " Pretty start screen
 
 " Haskell
 " -----------------------------------------------
@@ -470,6 +469,3 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 
-
-" Vim startify
-let g:startify_lists = []
