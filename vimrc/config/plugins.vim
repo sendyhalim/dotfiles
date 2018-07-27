@@ -29,7 +29,7 @@ Plug 'scrooloose/nerdcommenter'               " Commenter
 Plug 'scrooloose/nerdtree'                    " Plugin for listing directory structure
 Plug 'slashmili/alchemist.vim'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
-Plug 'terryma/vim-multiple-cursors'           " Multiple selection just like in sublime Ctrl + d selection
+Plug 'mg979/vim-visual-multi'
 Plug 'tmhedberg/matchit'                      " Jump between matched tags
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-fugitive'                     " Plugin for git inside vim
@@ -401,21 +401,6 @@ let g:UltiSnipsJumpForwardTrigger="<C-tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 inoremap <c-x><c-k> <c-x><c-k>
-
-" Vim multiple cursor
-" --------------------
-
-" Fixing conflict with multiple cursors where
-" deoplete inserts '<Plug>bla bla' when multiple cursors are active
-" Called once right before you start selecting multiple cursors
-function! Multiple_cursors_before()
-    let b:deoplete_disable_auto_complete = 1
-endfunction
-
-" Called once only when the multiple selection is canceled (default <Esc>)
-function! Multiple_cursors_after()
-    let b:deoplete_disable_auto_complete = 0
-endfunction
 
 " Vim JSX
 " --------------------
