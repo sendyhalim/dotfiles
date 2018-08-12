@@ -162,6 +162,8 @@ let g:fzf_colors =
 " Vim visual multi
 " --------------------
 let g:VM_sublime_mappings = 0
+let g:VM_maps = {}
+let g:VM_maps['Visual Cursors'] = ''
 
 " Vim autoclose
 " --------------------
