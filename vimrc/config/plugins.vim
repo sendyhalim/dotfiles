@@ -29,7 +29,7 @@ Plug 'scrooloose/nerdcommenter'               " Commenter
 Plug 'scrooloose/nerdtree'                    " Plugin for listing directory structure
 Plug 'slashmili/alchemist.vim'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
-Plug 'mg979/vim-visual-multi'
+Plug 'mg979/vim-visual-multi', { 'branch': 'test' }
 Plug 'tmhedberg/matchit'                      " Jump between matched tags
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-fugitive'                     " Plugin for git inside vim
@@ -164,6 +164,10 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
+
+" Vim visual multi
+" --------------------
+let g:VM_sublime_mappings = 0
 
 " Vim autoclose
 " --------------------
