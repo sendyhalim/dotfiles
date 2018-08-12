@@ -65,12 +65,6 @@ Plug 'cespare/vim-toml'                 " TOML syntax highlighting
 " -----------------------------------------------
 Plug 'elixir-lang/vim-elixir'
 
-" Typescript
-" -----------------------------------------------
-Plug 'HerringtonDarkholme/yats.vim'     " Typescript syntax highlighting
-Plug 'tasn/vim-tsx'                     " Typescript + React Native syntax highlighting
-Plug 'mhartington/nvim-typescript'      " Typescript autocompletion
-
 " Golang
 " -----------------------------------------------
 Plug 'fatih/vim-go'                     " Go programming language
