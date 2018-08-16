@@ -237,8 +237,9 @@ let g:deoplete#enable_at_startup = 1
 let g:deoplete#file#enable_buffer_path = 1 " For relative filelist autocomplete
 
 " Prevent autocompletion to be trimmed
-let g:deoplete#max_abbr_width = 0
-let g:deoplete#max_menu_width = 0
+call deoplete#custom#source('_',  'max_menu_width', 0)
+call deoplete#custom#source('_',  'max_abbr_width', 0)
+call deoplete#custom#source('_',  'max_kind_width', 0)
 
 inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 function! s:my_cr_function()
