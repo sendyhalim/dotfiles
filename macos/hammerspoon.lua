@@ -1,4 +1,5 @@
 local pushWindowKeys =  {"cmd", "ctrl"}
+local moveWindowToAnotherMonitorKey = {"cmd", "ctrl", "alt"}
 
 hs.window.animationDuration = 0
 
@@ -66,3 +67,17 @@ hs.hotkey.bind(pushWindowKeys, "M", function ()
 
   window:setFrame(frame)
 end)
+
+hs.hotkey.bind(moveWindowToAnotherMonitorKey, "Left", function ()
+  local window = hs.window.focusedWindow()
+
+  window:moveToScreen(window:screen():previous())
+end)
+
+
+hs.hotkey.bind(moveWindowToAnotherMonitorKey, "Right", function ()
+	local window = hs.window.focusedWindow()
+
+	window:moveToScreen(window:screen():next())
+end)
+
