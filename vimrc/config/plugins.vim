@@ -13,7 +13,6 @@ Plug 'brooth/far.vim'
 Plug 'christoomey/vim-tmux-navigator'         " To navigate between panes seamessly in vim
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'          " Vim will read .editorconfig and set the configuration based on it
-Plug 'embear/vim-localvimrc'                  " Load local vimrc if exist (Will override global vimrc)
 Plug 'fholgado/minibufexpl.vim'               " Using it for deleting buffer
 Plug 'godlygeek/tabular'                      " Automatic alignment
 Plug 'gregsexton/MatchTag'                    " Highlight matched tag
@@ -324,6 +323,7 @@ let g:NERDCustomDelimiters = {
 " Go to https://github.com/powerline/fonts if airline fonts is ugly
 " let g:airline_left_sep=''
 " let g:airline_right_sep=''
+let g:airline#extensions#eclim#enabled = 0 " By default eclim is enabled and it's SLOW
 let g:tender_airline = 1
 let g:airline_theme = 'base16_eighties'
 let g:airline_powerline_fonts = 1
