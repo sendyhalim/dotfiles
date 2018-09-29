@@ -100829,11 +100829,11 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 81 599 514 0 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>703 613 930 444 0 0 1920 1057 </string>
+	<string>662 343 918 566 0 0 1920 1057 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 293 592 584 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 706 570 351 0 0 1920 1057 </string>
+	<string>0 36 1920 1021 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 526 570 351 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -101630,6 +101630,8 @@
 			<string>xterm-256color</string>
 			<key>Thin Strokes</key>
 			<integer>2</integer>
+			<key>Title Components</key>
+			<integer>1</integer>
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Triggers</key>
@@ -102537,6 +102539,8 @@
 			<string>xterm-256color</string>
 			<key>Thin Strokes</key>
 			<integer>3</integer>
+			<key>Title Components</key>
+			<integer>1</integer>
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Triggers</key>
@@ -102633,7 +102637,9 @@
 			<string>currentTab</string>
 			<string>currentTab.currentSession.session.terminalWindowName</string>
 			<string>currentTab.currentSession</string>
+			<string>currentTab.currentSession.session.columns</string>
 			<string>currentTab.currentSession.session.pid</string>
+			<string>currentTab.currentSession.session.mouseReportingMode</string>
 			<string>currentTab.currentSession.session.terminalIconName</string>
 			<string>currentTab.currentSession.session.autoName</string>
 			<string>currentTab.currentSession.session.presentationName</string>
@@ -102641,6 +102647,7 @@
 			<string>currentTab.currentSession.session.name</string>
 			<string>currentTab.currentSession.session.tty</string>
 			<string>currentTab.currentSession.session.jobName</string>
+			<string>currentTab.currentSession.session.rows</string>
 			<string>iterm2</string>
 			<string>currentTab.currentSession.session.hostname</string>
 			<string>currentTab.currentSession.session.path</string>
@@ -102650,9 +102657,11 @@
 		<array>
 			<string>currentSession</string>
 			<string>titleOverride</string>
+			<string>currentSession.session.rows</string>
 			<string>currentSession.session.pid</string>
 			<string>currentSession.session.autoName</string>
 			<string>currentSession.session.name</string>
+			<string>currentSession.session.mouseReportingMode</string>
 			<string>currentSession.session.path</string>
 			<string>currentSession.session.terminalWindowName</string>
 			<string>currentSession.session.tty</string>
@@ -102664,6 +102673,7 @@
 			<string>currentSession.session.username</string>
 			<string>currentSession.session.terminalIconName</string>
 			<string>currentSession.session.jobPid</string>
+			<string>currentSession.session.columns</string>
 		</array>
 		<key>4</key>
 		<array>
