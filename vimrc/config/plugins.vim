@@ -87,6 +87,7 @@ Plug 'elzr/vim-json'
 " -----------------------------------------------
 Plug 'StanAngeloff/php.vim'             " PHP Syntax highlighting
 Plug 'xsbeats/vim-blade'                " Laravel blade syntax highlighting
+Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }  " PHP completion
 
 " HTML + CSS + Less + Templating
 " -----------------------------------------------
@@ -234,6 +235,11 @@ let g:ycm_min_num_of_chars_for_completion = 1
 " --------------------
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#file#enable_buffer_path = 1 " For relative filelist autocomplete
+
+" Setpu completion for php
+" https://github.com/lvht/phpcd.vim#deoplete
+let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
+let g:deoplete#ignore_sources.php = ['omni']
 
 " Prevent autocompletion to be trimmed
 call deoplete#custom#source('_',  'max_menu_width', 0)
