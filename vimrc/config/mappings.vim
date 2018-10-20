@@ -77,13 +77,12 @@ nnoremap <F6> :NumbersToggle<CR>
 nnoremap <F7> :NumbersOnOff<CR>
 nnoremap <F8> :call NERDTreeToggleInCurrentDirectory()<CR>
 nnoremap <F9> :TagbarToggle<CR>
+" Copy relative filepath (based on cwd) of current buffer
+nnoremap <F10> :let @+ = expand("%")<CR>
+nnoremap <F12> :call CloseHiddenBuffers()<CR>
 
 " Fugitive git commit mapping
 nnoremap <leader>gc :Gc<CR>
 nnoremap <leader>gw :Gwrite<CR>
 nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gs :Gstatus<CR>
-
-" Copy relative filepath (based on cwd) of current buffer
-nnoremap <F10> :let @+ = expand("%")<CR>
-
