@@ -417,6 +417,10 @@ inoremap <c-x><c-k> <c-x><c-k>
 " too
 let g:jsx_ext_required = 0
 
+" Vim rest console
+let g:vrc_curl_opts = {
+  \ '--verbose': '',
+\}
 
 " Open NERDTree in the directory of the current
 " file (or /home if no file is open)
