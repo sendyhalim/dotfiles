@@ -41,6 +41,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'tomasiser/vim-code-dark'
 Plug 'mhinz/vim-sayonara'                     " Smart buffer/window deletion
 Plug 'diepm/vim-rest-console'                 " REST plugin
+Plug 'plasticboy/vim-markdown'                " Markdown syntax highlighting
 
 " Haskell
 " -----------------------------------------------
@@ -407,6 +408,9 @@ let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<C-tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" Vim markdown
+let g:vim_markdown_conceal = 0
 
 inoremap <c-x><c-k> <c-x><c-k>
 
