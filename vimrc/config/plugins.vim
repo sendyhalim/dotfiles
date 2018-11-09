@@ -17,7 +17,6 @@ Plug 'fholgado/minibufexpl.vim'               " Using it for deleting buffer
 Plug 'godlygeek/tabular'                      " Automatic alignment
 Plug 'gregsexton/MatchTag'                    " Highlight matched tag
 Plug 'honza/vim-snippets'                     " Collection of snippets for ultisnipes
-Plug 'jceb/vim-orgmode'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Fuzzy file finder
 Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'                      " Plugin for showing functions and vars description
@@ -42,6 +41,12 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'mhinz/vim-sayonara'                     " Smart buffer/window deletion
 Plug 'diepm/vim-rest-console'                 " REST plugin
 Plug 'plasticboy/vim-markdown'                " Markdown syntax highlighting
+
+" Task management
+" -----------------------------------------------
+Plug 'jceb/vim-orgmode'                       " Check https://github.com/jceb/vim-orgmode/blob/master/doc/orgguide.txt#L241
+Plug 'mattn/calendar-vim'
+Plug 'vim-scripts/utl.vim'
 
 " Haskell
 " -----------------------------------------------
@@ -160,6 +165,16 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
+
+" Vim org mode
+" ---------------------
+" Automatically indent text under heading
+let g:org_indent = 1
+
+" Disable heading star "*" concealling
+let g:org_heading_shade_leading_stars = 0
+let g:org_todo_keywords = ['TODO(1)', 'DOING(2)', 'DELEGATED(3)', '|', 'MASTER(4)', 'STAGING(5)', 'PRODUCTION(6)', 'DONE(7)']
+let org_prefer_insert_mode = 0
 
 " Vim visual multi
 " --------------------
