@@ -33,8 +33,7 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-fugitive'                     " Plugin for git inside vim
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'                     " Insert text in surrounding selected text
-Plug 'vim-airline/vim-airline'                " Beautiful status bars
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 Plug 'w0rp/ale'                               " Asynchronous linter FTW!
 Plug 'Chiel92/vim-autoformat'
 Plug 'tomasiser/vim-code-dark'
@@ -108,11 +107,6 @@ Plug 'junegunn/goyo.vim'                " Distraction free mode
 Plug 'junegunn/limelight.vim'
 
 
-" If error with airline, reinstall airline to fix
-" Clone https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher first
-" Copy fonts in patched-fonts folder to ~/.fonts
-Plug 'ryanoasis/vim-devicons'           " If error with airline, reinstall airline to fix
-
 " Colorschemes
 "------------------------------------------------
 Plug 'flazz/vim-colorschemes'
@@ -165,6 +159,11 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
+" Vim org mode
+" --------------
+let g:lightline = {
+  \ 'colorscheme': 'seoul256',
+  \ }
 
 " Vim org mode
 " ---------------------
@@ -341,42 +340,6 @@ let g:NERDCustomDelimiters = {
   \ 'haskell': { 'left': '--', 'right': '' }
 \ }
 
-" Airline
-" --------------------
-" Go to https://github.com/powerline/fonts if airline fonts is ugly
-" let g:airline_left_sep=''
-" let g:airline_right_sep=''
-let g:airline#extensions#eclim#enabled = 0 " By default eclim is enabled and it's SLOW
-let g:tender_airline = 1
-let g:airline_theme = 'base16_eighties'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let airline#extensions#tabline#buffer_nr_show = 1
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_mode_map = {
-  \ '__' : '-',
-  \ 'n'  : 'N',
-  \ 'i'  : 'I',
-  \ 'R'  : 'R',
-  \ 'c'  : 'C',
-  \ 'v'  : 'V',
-  \ 'V'  : 'V',
-  \ '' : 'V',
-  \ 's'  : 'S',
-  \ 'S'  : 'S',
-  \ '' : 'S',
-  \ 't'  : 'T',
-  \ }
-
-
-" Vim web dev icons
-" --------------------
-let g:webdevicons_enable_nerdtree = 0
-let g:webdevicons_enable_airline_tabline = 0
-
 " Minibuffer explorer
 " --------------------
 let g:miniBufExplorerAutoStart = 0         "Just need the command :MBEbd to close current buffer and retain NERDTree
@@ -389,9 +352,6 @@ let g:user_emmet_leader_key='\'
 " --------------------
 let g:ale_sign_error = '×'
 let g:ale_sign_warning = '!'
-
-" Set this. Airline will handle the rest.
-let g:airline#extensions#ale#enabled = 1
 
 " By default, all available tools for all supported languages will be run.
 " PHP Pear sucks, let's use phpcs, shall we?
