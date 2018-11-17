@@ -58,6 +58,7 @@
   cp   = cherry-pick
   d    = diff
   db   = diff HEAD~1..HEAD
+  dbf  = diff HEAD~1..HEAD --name-status
   dc   = diff --cached
   dm   = diff master..HEAD
   l    = log --oneline --decorate --color --graph
