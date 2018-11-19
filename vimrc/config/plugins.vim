@@ -162,8 +162,25 @@ let g:fzf_colors =
 " Vim org mode
 " --------------
 let g:lightline = {
-  \ 'colorscheme': 'seoul256',
+  \   'colorscheme': 'seoul256',
   \ }
+
+" See https://github.com/itchyny/lightline.vim/blob/master/doc/lightline.txt#L67-L79
+let g:lightline.active = {
+    \ 'left': [ [ 'mode', 'paste' ],
+    \           [ 'readonly', 'filename', 'modified' ] ],
+    \ 'right': [ [ 'fileencoding', 'filetype' ] ]
+    \ }
+
+let g:lightline.inactive = {
+    \ 'left': [ [ 'filename' ] ],
+    \ 'right': [ ]
+    \ }
+
+let g:lightline.tabline = {
+    \ 'left': [ [ 'tabs' ] ],
+    \ 'right': [ ]
+    \ }
 
 " Vim org mode
 " ---------------------
