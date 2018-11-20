@@ -406,6 +406,12 @@ let g:vim_markdown_conceal = 0
 
 inoremap <c-x><c-k> <c-x><c-k>
 
+" Vim ack
+" --------------------
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
 " Vim JSX
 " --------------------
 " By default, JSX syntax highlighting and indenting will be enabled only
