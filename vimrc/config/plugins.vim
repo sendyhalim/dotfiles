@@ -124,6 +124,10 @@ call plug#end()
 
 " Plugin Settings
 " ====================
+" Vim Far
+" --------------
+let g:far#source = 'ag'
+
 " FZF
 function! s:buflist()
   redir => ls
