@@ -18,6 +18,8 @@
 	<string>manual</string>
 	<key>AutoHideTmuxClientSession</key>
 	<false/>
+	<key>BracketedPasteMode</key>
+	<true/>
 	<key>CGFontRenderingFontSmoothingDisabled</key>
 	<false/>
 	<key>CheckTestRelease</key>
@@ -100594,6 +100596,8 @@
 	<false/>
 	<key>EnableRendezvous</key>
 	<false/>
+	<key>EscapeShellCharsWithBackslash</key>
+	<false/>
 	<key>FlashTabBarInFullscreen</key>
 	<true/>
 	<key>FocusFollowsMouse</key>
@@ -100825,7 +100829,7 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>709 152 408 385 0 0 1920 1080 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>520 527 1112 77 0 0 1920 1057 </string>
+	<string>211 299 1112 211 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>-4 413 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
@@ -100833,11 +100837,11 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 81 599 514 0 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>2118 360 770 420 1440 -111 1920 1057 </string>
+	<string>384 298 916 514 0 0 1440 877 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 293 592 584 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 37 1440 840 0 0 1440 877 </string>
+	<string>0 37 1920 1020 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 526 570 351 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -102609,7 +102613,7 @@
 		<array>
 			<string>session.jobName</string>
 			<string>session.id</string>
-			<string>session.badge</string>
+			<string>session.columns</string>
 			<string>session.profileName</string>
 			<string>session.name</string>
 			<string>session.terminalIconName</string>
@@ -102620,6 +102624,7 @@
 			<string>session.hostname</string>
 			<string>session.username</string>
 			<string>session.tmuxStatusRight</string>
+			<string>session.tab</string>
 			<string>session.tmuxRole</string>
 			<string>session.path</string>
 			<string>session.creationTimeString</string>
@@ -102627,7 +102632,9 @@
 			<string>session.tmuxWindowTitle</string>
 			<string>session.autoLogId</string>
 			<string>session.tty</string>
+			<string>session.badge</string>
 			<string>session.autoName</string>
+			<string>session.autoNameFormat</string>
 			<string>session.terminalWindowName</string>
 			<string>iterm2</string>
 			<string>session.jobPid</string>
@@ -102636,31 +102643,30 @@
 			<string>session.tmuxStatusLeft</string>
 			<string>session.pid</string>
 			<string>session.presentationName</string>
-			<string>session.columns</string>
-			<string>session.autoNameFormat</string>
 		</array>
 		<key>16</key>
 		<array>
-			<string>titleOverride</string>
-			<string>currentTab.currentSession.session.autoNameFormat</string>
-			<string>currentTab</string>
-			<string>currentTab.currentSession.session.terminalWindowName</string>
-			<string>currentTab.currentSession</string>
-			<string>currentTab.currentSession.session.columns</string>
-			<string>currentTab.currentSession.session.pid</string>
 			<string>currentTab.currentSession.session.mouseReportingMode</string>
-			<string>currentTab.currentSession.session.terminalIconName</string>
-			<string>currentTab.currentSession.session.autoName</string>
-			<string>currentTab.currentSession.session.presentationName</string>
 			<string>currentTab.currentSession.session.username</string>
-			<string>currentTab.currentSession.session.name</string>
 			<string>currentTab.currentSession.session.tty</string>
-			<string>currentTab.currentSession.session.jobName</string>
-			<string>currentTab.currentSession.session.rows</string>
-			<string>iterm2</string>
+			<string>currentTab.currentSession.session.name</string>
 			<string>currentTab.currentSession.session.hostname</string>
+			<string>currentTab.currentSession.session.termid</string>
+			<string>currentTab</string>
+			<string>currentTab.currentSession.session.pid</string>
 			<string>currentTab.currentSession.session.path</string>
+			<string>currentTab.currentSession</string>
+			<string>titleOverride</string>
+			<string>currentTab.currentSession.session.terminalWindowName</string>
+			<string>currentTab.currentSession.session.autoName</string>
 			<string>currentTab.currentSession.session.jobPid</string>
+			<string>currentTab.currentSession.session.autoNameFormat</string>
+			<string>iterm2</string>
+			<string>currentTab.currentSession.session.presentationName</string>
+			<string>currentTab.currentSession.session.columns</string>
+			<string>currentTab.currentSession.session.terminalIconName</string>
+			<string>currentTab.currentSession.session.rows</string>
+			<string>currentTab.currentSession.session.jobName</string>
 		</array>
 		<key>2</key>
 		<array>
@@ -102796,6 +102802,16 @@
 	<false/>
 	<key>PasteFromClipboard</key>
 	<false/>
+	<key>PasteSpecialChunkDelay</key>
+	<real>0.00099999990407369449</real>
+	<key>PasteSpecialChunkSize</key>
+	<integer>1048576</integer>
+	<key>PasteSpecialRegex</key>
+	<string></string>
+	<key>PasteSpecialSubstitution</key>
+	<string></string>
+	<key>PasteSpecialUseRegexSubstitution</key>
+	<false/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -102835,6 +102851,10 @@
 	<true/>
 	<key>PromptOnQuit</key>
 	<true/>
+	<key>QuickPasteBytesPerCall</key>
+	<integer>5184</integer>
+	<key>QuickPasteDelayBetweenCalls</key>
+	<real>0.0019753084052354097</real>
 	<key>QuitWhenAllWindowsClosed</key>
 	<false/>
 	<key>RightCommand</key>
@@ -102852,7 +102872,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-09-30T07:48:03Z</date>
+	<date>2018-10-28T14:29:01Z</date>
 	<key>SUSkippedVersion</key>
 	<string>3.1.2.beta.2</string>
 	<key>SavePasteHistory</key>
@@ -102888,7 +102908,7 @@
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<false/>
 	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1463367552</real>
+	<real>1543588352</real>
 	<key>URLHandlersByGuid</key>
 	<dict/>
 	<key>UseBorder</key>
@@ -102916,7 +102936,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.20181026-nightly</string>
+	<string>3.3.20181125-nightly</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>1</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
