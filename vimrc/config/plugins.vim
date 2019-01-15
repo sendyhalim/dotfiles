@@ -40,6 +40,7 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'mhinz/vim-sayonara'                     " Smart buffer/window deletion
 Plug 'diepm/vim-rest-console'                 " REST plugin
 Plug 'plasticboy/vim-markdown'                " Markdown syntax highlighting
+Plug 'RRethy/vim-illuminate'                  " Highlight same variable under cursor
 
 " Task management
 " -----------------------------------------------

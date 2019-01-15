@@ -5,6 +5,11 @@ hi SignColumn guibg=#262626 ctermbg=235
 hi LineNr guibg=#262626 ctermbg=235
 hi CursorLine guibg=#262626 ctermbg=235
 
+" By default it follows CursorLine color, but since CursorLine is set to be
+" the same as vim background then it won't show.
+" See the plugin https://github.com/RRethy/vim-illuminate
+hi illuminatedWord guibg=#2F2F2F cterm=underline gui=underline
+
 " Highlight current line number
 hi CursorLineNR guibg=guibg=#262626 guifg=#F2FF5C gui=bold ctermbg=235
 
