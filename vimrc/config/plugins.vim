@@ -41,6 +41,7 @@ Plug 'mhinz/vim-sayonara'                     " Smart buffer/window deletion
 Plug 'diepm/vim-rest-console'                 " REST plugin
 Plug 'plasticboy/vim-markdown'                " Markdown syntax highlighting
 Plug 'RRethy/vim-illuminate'                  " Highlight same variable under cursor
+Plug 'AndrewRadev/splitjoin.vim'
 
 " Task management
 " -----------------------------------------------
@@ -79,10 +80,6 @@ Plug 'fatih/vim-go'                     " Go programming language
 " -----------------------------------------------
 Plug 'wting/rust.vim'                   " Rust syntax highlighting
 
-" Kotlin
-" -----------------------------------------------
-Plug 'udalov/kotlin-vim'                " Kotlin syntax highlighting
-
 " Javascript
 " -----------------------------------------------
 Plug 'moll/vim-node'                    " Node plugin
@@ -102,19 +99,11 @@ Plug 'groenewege/vim-less'              " Less syntax highlighting
 Plug 'mustache/vim-mustache-handlebars' " Highlight handlebars
 Plug 'mattn/emmet-vim'                  " Emmet plugin
 
-" Writings
-" -----------------------------------------------
-Plug 'junegunn/goyo.vim'                " Distraction free mode
-Plug 'junegunn/limelight.vim'
-
 
 " Colorschemes
 "------------------------------------------------
 Plug 'flazz/vim-colorschemes'
-Plug 'ajh17/Spacegray.vim'
 Plug 'gosukiwi/vim-atom-dark'
-Plug 'yamafaktory/lumberjack.vim'
-Plug 'Junza/Spink'
 Plug 'cseelus/vim-colors-clearance'
 Plug 'mhartington/oceanic-next'
 Plug 'jacoborus/tender.vim'
