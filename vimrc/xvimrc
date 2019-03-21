@@ -1,6 +1,9 @@
 set relativenumber
 set ignorecase          " Case-insensitive searching.
 set smartcase           " But case-sensitive if expression contains a capital letter.
+set shiftwidth=2        " number of spaces to use for autoindenting
+set tabstop=2           " Set tab size to 2
+
 
 " Tabs
 nnoremap <space>tt :xccmd newTab<CR>
