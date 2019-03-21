@@ -74,7 +74,9 @@ Plug 'elixir-lang/vim-elixir'
 
 " Golang
 " -----------------------------------------------
-Plug 'fatih/vim-go'                     " Go programming language
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'stamblerre/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 
 " Rust
 " -----------------------------------------------
@@ -303,6 +305,10 @@ let g:UltiSnipsListSnippets="<c-e>"
 " and close the selection list, same as other IDEs.
 " CONFLICT with some plugins like tpope/Endwise
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Deoplete-go
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+
 
 " Neco GHC
 " --------------------
