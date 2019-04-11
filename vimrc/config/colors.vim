@@ -38,3 +38,9 @@ hi link htmlLink                None
 " Vim Bookmarks
 highlight BookmarkSign ctermbg=NONE ctermfg=84 guifg=#b0d68b
 highlight BookmarkAnnotationSign ctermbg=NONE ctermfg=84 guifg=#b0d68b
+
+
+" Remove underline for html element within <u></u> tag
+highlight link htmlLink text
+highlight link htmlBoldUnderline text
+highlight link htmlUnderline text
