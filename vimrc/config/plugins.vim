@@ -89,6 +89,9 @@ Plug 'mxw/vim-jsx'                      " React JSX plugin
 Plug 'pangloss/vim-javascript'          " Javascript indentation + Syntax
 Plug 'elzr/vim-json'
 
+" Java
+Plug 'artur-shaik/vim-javacomplete2'
+
 " PHP
 " -----------------------------------------------
 Plug 'StanAngeloff/php.vim'             " PHP Syntax highlighting
