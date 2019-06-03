@@ -98,6 +98,7 @@ Plug 'StanAngeloff/php.vim'             " PHP Syntax highlighting
 Plug 'xsbeats/vim-blade'                " Laravel blade syntax highlighting
 Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }  " PHP completion
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'} " PHP Refactor tool
+Plug 'kristijanhusak/deoplete-phpactor' " PHPActor integration with deoplete
 
 " HTML + CSS + Less + Templating
 " -----------------------------------------------
@@ -122,7 +123,7 @@ call plug#end()
 " ====================
 " Vim Far
 " --------------
-let g:far#source = 'ag'
+let g:far#source = 'agnvim'
 
 " FZF
 function! s:buflist()
