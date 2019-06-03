@@ -474,3 +474,6 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 
+" Vim leader guide
+" ---------------------------
+let g:leaderGuide_hspace = 3

@@ -89,11 +89,30 @@ vnoremap <silent> <leader> :<c-u>LeaderGuideVisual '<Space>'<CR>
 
 let g:lmap =  {}
 
-" Git mapping
+" Git mappings
 let g:lmap.g = {
   \ 'name' : 'Git',
-  \ 'c': ['Gcommit', 'Git Commit'],
+  \ 'c': ['Gc', 'Git Commit'],
   \ 'w': ['Gwrite', 'Git Write'],
   \ 'b': ['Gblame', 'Git Blame'],
   \ 's': ['Gstatus', 'Git Status']
+\}
+
+" Language specific mappings
+let g:lmap.l = { 'name': 'Language' }
+let g:lmap.l.p = {
+  \ 'name': 'php',
+  \ 'b': ['call phpactor#ClassExpand()', 'ExpandClass'],
+  \ 'c': ['call phpactor#CopyFile()', 'Copy file'],
+  \ 'd': ['call phpactor#GotoDefinition()', 'Go to definition'],
+  \ 'e': ['call phpactor#mxtractMethod()', 'Extract method'],
+  \ 'f': ['call phpactor#FindReferences()', 'Find references'],
+  \ 'k': ['call phpactor#ContextMenu()', 'Menu'],
+  \ 'h': ['call phpactor#Hover()', 'Hover'],
+  \ 'i': ['call phpactor#ClassInflect()', 'Inflect'],
+  \ 'l': ['call phpactor#ClassNew()', 'New class'],
+  \ 'm': ['call phpactor#MoveFile()', 'Move file'],
+  \ 'n': ['call phpactor#Navigate()', 'Navigate'],
+  \ 't': ['call phpactor#Transform()', 'Transform/Complete'],
+  \ 'u': ['call phpactor#UseAdd()', 'UseAdd'],
 \}
