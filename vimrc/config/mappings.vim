@@ -81,8 +81,19 @@ nnoremap <F9> :TagbarToggle<CR>
 nnoremap <F10> :let @+ = expand("%")<CR>
 nnoremap <F12> :call CloseHiddenBuffers()<CR>
 
-" Fugitive git commit mapping
-nnoremap <leader>gc :Gc<CR>
-nnoremap <leader>gw :Gwrite<CR>
-nnoremap <leader>gb :Gblame<CR>
-nnoremap <leader>gs :Gstatus<CR>
+" Leader guides
+" --------------------
+call leaderGuide#register_prefix_descriptions("<Space>", "g:lmap")
+nnoremap <silent> <leader> :<c-u>LeaderGuide '<Space>'<CR>
+vnoremap <silent> <leader> :<c-u>LeaderGuideVisual '<Space>'<CR>
+
+let g:lmap =  {}
+
+" Git mapping
+let g:lmap.g = {
+  \ 'name' : 'Git',
+  \ 'c': ['Gcommit', 'Git Commit'],
+  \ 'w': ['Gwrite', 'Git Write'],
+  \ 'b': ['Gblame', 'Git Blame'],
+  \ 's': ['Gstatus', 'Git Status']
+\}
