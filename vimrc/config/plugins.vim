@@ -42,6 +42,7 @@ Plug 'diepm/vim-rest-console'                 " REST plugin
 Plug 'plasticboy/vim-markdown'                " Markdown syntax highlighting
 Plug 'RRethy/vim-illuminate'                  " Highlight same variable under cursor
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'hecal3/vim-leader-guide'                " Guided nested leader mappings
 
 " Task management
 " -----------------------------------------------
