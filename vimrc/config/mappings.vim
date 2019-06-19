@@ -1,4 +1,5 @@
-let mapleader = ' '
+let g:mapleader = "\<Space>"
+let g:maplocalleader = ','
 
 " Map <C-w> to <Space>
 nnoremap <silent> <leader>w <C-w>
@@ -81,16 +82,17 @@ nnoremap <F9> :TagbarToggle<CR>
 nnoremap <F10> :let @+ = expand("%")<CR>
 nnoremap <F12> :call CloseHiddenBuffers()<CR>
 
-" Leader guides
-" --------------------
-call leaderGuide#register_prefix_descriptions("<Space>", "g:lmap")
-nnoremap <silent> <leader> :<c-u>LeaderGuide '<Space>'<CR>
-vnoremap <silent> <leader> :<c-u>LeaderGuideVisual '<Space>'<CR>
+" Register which_key_map
+" ------------------------------------
+call which_key#register('<Space>', "g:which_key_map")
+nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 
-let g:lmap =  {}
+let g:which_key_map = {}
 
 " Git mappings
-let g:lmap.g = {
+" ------------------------------------
+let g:which_key_map.g = {
   \ 'name' : 'Git',
   \ 'c': ['Gc', 'Git Commit'],
   \ 'w': ['Gwrite', 'Git Write'],
@@ -99,8 +101,9 @@ let g:lmap.g = {
 \}
 
 " Language specific mappings
-let g:lmap.l = { 'name': 'Language' }
-let g:lmap.l.p = {
+" ------------------------------------
+let g:which_key_map.l = { 'name': 'Language' }
+let g:which_key_map.l.p = {
   \ 'name': 'php',
   \ 'b': ['call phpactor#ClassExpand()', 'ExpandClass'],
   \ 'c': ['call phpactor#CopyFile()', 'Copy file'],
