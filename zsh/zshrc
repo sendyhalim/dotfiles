@@ -60,6 +60,7 @@ plugins=(theme last-working-dir)
 source $ZSH/oh-my-zsh.sh
 
 # Load additional setup
+source $ZSH_CONFIG/variables.zsh
 source $ZSH_CONFIG/aliases.zsh
 source $ZSH_CONFIG/colors.zsh
 source $ZSH_CONFIG/functions.zsh
