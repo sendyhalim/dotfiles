@@ -1,9 +1,11 @@
 " Make bg color to equal terminal's bg color #262626
-hi Normal guibg=#262626 ctermbg=235
-hi NonText guibg=#262626 ctermbg=235
+hi Normal     guibg=#262626 ctermbg=235
+hi NonText    guibg=#262626 ctermbg=235
 hi SignColumn guibg=#262626 ctermbg=235
-hi LineNr guibg=#262626 ctermbg=235
+hi LineNr     guibg=#262626 ctermbg=235
 hi CursorLine guibg=#262626 ctermbg=235
+hi Identifier guifg=#1db0e3 ctermfg=38
+hi Special    guifg=#41d989 ctermfg=42
 
 " By default it follows CursorLine color, but since CursorLine is set to be
 " the same as vim background then it won't show.
