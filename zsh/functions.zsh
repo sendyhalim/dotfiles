@@ -117,3 +117,20 @@ function set_login_bg_with_current_wallpaper {
   echo "Replacing $default_wallpaper with $wallpaper_path"
   cp "$wallpaper_path" "$default_wallpaper"
 }
+
+# Function to convert hex to 256 term color.
+# Usage:
+# hex_to_256_color A52A2A
+# hex_to_256_color "#A52A2A"
+#
+# Source: https://gist.github.com/mhulse/b11e568260fb8c3aa2a8
+function hex_to_256_color() {
+  hex=$1
+  if [[ $hex == "#"* ]]; then
+    hex=$(echo $1 | awk '{print substr($0,2)}')
+  fi
+  r=$(printf '0x%0.2s' "$hex")
+  g=$(printf '0x%0.2s' ${hex#??})
+  b=$(printf '0x%0.2s' ${hex#????})
+  echo -e `printf "%03d" "$(((r<75?0:(r-35)/40)*6*6+(g<75?0:(g-35)/40)*6+(b<75?0:(b-35)/40)+16))"`
+}
