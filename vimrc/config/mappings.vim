@@ -85,14 +85,15 @@ nnoremap <F12> :call CloseHiddenBuffers()<CR>
 " Register which_key_map
 " ------------------------------------
 call which_key#register('<Space>', "g:which_key_map")
-nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
-nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
+nnoremap <silent> <leader>\      :<c-u>WhichKey '<Space>'<CR>
+nnoremap <silent> <localleader>\ :<c-u>WhichKey  ','<CR>
 
 let g:which_key_map = {}
+let g:which_key_map.m = { 'name': 'Custom Leader Mapping' }
 
 " Git mappings
 " ------------------------------------
-let g:which_key_map.g = {
+let g:which_key_map.m.g = {
   \ 'name' : 'Git',
   \ 'c': ['Gc', 'Git Commit'],
   \ 'w': ['Gwrite', 'Git Write'],
@@ -102,8 +103,8 @@ let g:which_key_map.g = {
 
 " Language specific mappings
 " ------------------------------------
-let g:which_key_map.l = { 'name': 'Language' }
-let g:which_key_map.l.p = {
+let g:which_key_map.m.l = { 'name': 'Language' }
+let g:which_key_map.m.l.p = {
   \ 'name': 'php',
   \ 'b': ['phpactor#ClassExpand()', 'ExpandClass'],
   \ 'c': ['phpactor#CopyFile()', 'Copy file'],
