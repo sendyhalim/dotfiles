@@ -47,3 +47,8 @@ set guicursor=                  " https://github.com/neovim/neovim/issues/6403#i
 syntax enable
 colorscheme tender
 
+
+" indentLine does not support tab hint
+" because vim can display tab with another character,
+" we just need to activate it just like below.
+set list lcs=tab:\┊\ ,trail:~,eol:¬
