@@ -109,7 +109,7 @@ Plug 'mattn/emmet-vim'                  " Emmet plugin
 
 
 " Colorschemes
-"------------------------------------------------
+" ------------------------------------------------
 Plug 'flazz/vim-colorschemes'
 Plug 'gosukiwi/vim-atom-dark'
 Plug 'cseelus/vim-colors-clearance'
@@ -117,11 +117,24 @@ Plug 'mhartington/oceanic-next'
 Plug 'jacoborus/tender.vim'
 Plug 'chriskempson/base16-vim'
 
+" Protobuf stuffs
+"------------------------------------------------
+Plug 'uber/prototool', { 'rtp':'vim/prototool' }
+
 " Add plugins to &runtimepath
 call plug#end()
 
 " Plugin Settings
 " ====================
+" Vim Prototool
+" --------------
+let g:ale_linters = {
+\   'go': ['golint'],
+\   'proto': ['prototool-lint'],
+\}
+
+let g:ale_lint_on_text_changed = 'never'
+
 " Vim Far
 " --------------
 let g:far#source = 'agnvim'
