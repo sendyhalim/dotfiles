@@ -5,3 +5,4 @@ export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.cabal/bin:$PATH
 export PATH=$HOME/.composer/vendor/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH

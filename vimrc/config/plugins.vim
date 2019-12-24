@@ -81,7 +81,8 @@ Plug 'stamblerre/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/
 
 " Rust
 " -----------------------------------------------
-Plug 'wting/rust.vim'                   " Rust syntax highlighting
+Plug 'rust-lang/rust.vim'    " Rust syntax highlighting
+Plug 'racer-rust/vim-racer'  " Rust autocompletion
 
 " Javascript
 " -----------------------------------------------
@@ -126,6 +127,10 @@ call plug#end()
 
 " Plugin Settings
 " ====================
+" Rust.vim
+" --------------
+let g:rustfmt_autosave = 1
+
 " Vim Prototool
 " --------------
 let g:ale_linters = {

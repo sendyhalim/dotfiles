@@ -120,3 +120,14 @@ let g:which_key_map.m.l.p = {
   \ 't': ['phpactor#Transform()', 'Transform/Complete'],
   \ 'u': ['phpactor#UseAdd()', 'UseAdd'],
 \}
+
+let g:which_key_map.m.l.r = {
+  \ 'name': 'rust',
+  \ 'g': {
+    \ 'name': 'Go to',
+    \ 'd': ['<Plug>(rust-def)', 'Go to Definition'],
+    \ 's': ['<Plug>(rust-def-split)', 'Split Definition Horizontally'],
+    \ 'v': ['<Plug>(rust-def-vertical)', 'Split Definition Vertically'],
+  \ },
+  \ 'd': ['<Plug>(rust-doc)', 'Documentation'],
+\}
