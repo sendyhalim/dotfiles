@@ -118,6 +118,9 @@ Plug 'mhartington/oceanic-next'
 Plug 'jacoborus/tender.vim'
 Plug 'chriskempson/base16-vim'
 
+" Force vim to change working dir nearest to git repo
+Plug 'airblade/vim-rooter'
+
 " Protobuf stuffs
 "------------------------------------------------
 Plug 'uber/prototool', { 'rtp':'vim/prototool' }
