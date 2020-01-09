@@ -281,12 +281,6 @@ nmap <Leader>mg <Plug>BookmarkMoveToLine
 " --------------------
 command -bar -bang -nargs=* Gc :Gcommit<bang> -v <args>
 
-" YouCompleteMe
-" --------------------
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_min_num_of_chars_for_completion = 1
-
 " Deoplete
 " --------------------
 let g:deoplete#enable_at_startup = 1
