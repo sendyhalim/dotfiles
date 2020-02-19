@@ -134,15 +134,6 @@ call plug#end()
 " --------------
 let g:rustfmt_autosave = 1
 
-" Vim Prototool
-" --------------
-let g:ale_linters = {
-\   'go': ['golint'],
-\   'proto': ['prototool-lint'],
-\}
-
-let g:ale_lint_on_text_changed = 'never'
-
 " Vim Far
 " --------------
 let g:far#source = 'agnvim'
@@ -369,7 +360,7 @@ let g:ctrlp_prompt_mappings = { 'PrtClearCache()': ['<F2>'] }
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeSortOrder = ['\/$', '*', '\.toml']
 let g:NERDTreeDirArrows = 1
-let g:NERDTreeIgnore = ['.git[[dir]]', '.idea[[dir]]']
+let g:NERDTreeIgnore = ['.git$[[dir]]', '.idea$[[dir]]']
 let g:NERDSpaceDelims = 1
 
 " NerdCommenter
@@ -395,7 +386,12 @@ let g:ale_sign_warning = '!'
 " PHP Pear sucks, let's use phpcs, shall we?
 let g:ale_linters = {
 \   'php': ['phpcs'],
+\   'go': ['golint'],
+\   'proto': ['prototool-lint'],
 \}
+
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
 
 
 " Vim Javascript
