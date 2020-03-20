@@ -392,6 +392,7 @@ let g:ale_linters = {
 
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
+let g:ale_rust_cargo_clippy_options = '--allow clippy::needless_return'
 
 
 " Vim Javascript
