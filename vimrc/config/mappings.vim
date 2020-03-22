@@ -1,3 +1,6 @@
+" https://www.reddit.com/r/vim/comments/39jtib/what_is_the_difference_between_mapleader_and/
+" Basically if someone says <LocalLeader> then it will use
+" the key in `maplocalleader`, otherwise <Leader> maps to key in `mapleader`
 let g:mapleader = "\<Space>"
 let g:maplocalleader = ','
 
@@ -113,12 +116,12 @@ let g:which_key_map.m.l.p = {
   \ 'f': ['phpactor#FindReferences()', 'Find references'],
   \ 'k': ['phpactor#ContextMenu()', 'Menu'],
   \ 'h': ['phpactor#Hover()', 'Hover'],
-  \ 'i': ['phpactor#ClassInflect()', 'Inflect'],
+  \ 'i': ['phpactor#ImportMissingClasses()', 'Import missing classes'],
   \ 'l': ['phpactor#ClassNew()', 'New class'],
   \ 'm': ['phpactor#MoveFile()', 'Move file'],
   \ 'n': ['phpactor#Navigate()', 'Navigate'],
-  \ 't': ['phpactor#Transform()', 'Transform/Complete'],
-  \ 'u': ['phpactor#UseAdd()', 'UseAdd'],
+  \ 't': ['phpactor#Transform()', 'Complete implementation'],
+  \ 'u': ['phpactor#UseAdd()', 'Import class/trait under cursor'],
 \}
 
 let g:which_key_map.m.l.r = {
