@@ -274,12 +274,11 @@ command -bar -bang -nargs=* Gc :Gcommit<bang> -v <args>
 " Deoplete
 " --------------------
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#file#enable_buffer_path = 1 " For relative filelist autocomplete
+call deoplete#custom#var('file', 'enable_buffer_path', 1)
 
-" Setpu completion for php
+" Setup completion for php
 " https://github.com/lvht/phpcd.vim#deoplete
-let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
-let g:deoplete#ignore_sources.php = ['omni']
+call deoplete#custom#option('ignore_sources', { 'php': ['omni'] })
 
 " Prevent autocompletion to be trimmed
 call deoplete#custom#source('_',  'max_menu_width', 0)
