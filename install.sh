@@ -59,6 +59,7 @@ ln "$ln_flags" "$PWD/vimrc/vimrc" ~/.neovimrc
 ln "$ln_flags" "$PWD/vimrc/vimrc" ~/.vimrc
 ln "$ln_flags" "$PWD/vimrc/ideavimrc" ~/.ideavimrc
 ln "$ln_flags" "$PWD/vimrc/xvimrc" ~/.xvimrc
+ln "$ln_flags" "$PWD/alacritty.yml" ~/.alacritty.yml
 
 # Hammerspoon
 HAMMERSPOON_DIR=$HOME/.hammerspoon
