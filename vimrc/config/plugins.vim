@@ -98,8 +98,9 @@ Plug 'artur-shaik/vim-javacomplete2'
 " -----------------------------------------------
 Plug 'StanAngeloff/php.vim'             " PHP Syntax highlighting
 Plug 'xsbeats/vim-blade'                " Laravel blade syntax highlighting
-Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'} " PHP Refactor tool
-Plug 'kristijanhusak/deoplete-phpactor' " PHPActor integration with deoplete
+Plug 'phpactor/phpactor', {'for': 'php', 'branch': 'master', 'do': 'composer install --no-dev -o'} " PHP Refactor tool
+Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
+
 
 " HTML + CSS + Less + Templating
 " -----------------------------------------------
