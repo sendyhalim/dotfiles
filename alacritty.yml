@@ -420,7 +420,15 @@ shell:
 #
 # If the same trigger is assigned to multiple actions, all of them are executed
 # at once.
-#key_bindings:
+key_bindings:
+  # Make ctrl+6 works in vim
+  # https://github.com/alacritty/alacritty/issues/1108
+  - { key: Key6,        mods: Control, chars: "\x1e"                     }
+
+  # This will enable us to press ctrl+q once instead of twice
+  # https://github.com/alacritty/alacritty/issues/1359#issuecomment-430265381
+  - { key: Q, mods: Control, chars: "\x11" }
+
   #- { key: Paste,                                action: Paste          }
   #- { key: Copy,                                 action: Copy           }
   #- { key: L,         mods: Control,             action: ClearLogNotice }
@@ -505,7 +513,7 @@ shell:
   #- { key: N,      mods: Command,            action: SpawnNewInstance }
   #- { key: F,      mods: Command|Control,    action: ToggleFullscreen }
 
-#debug:
+# debug:
   # Display the time it takes to redraw each frame.
   #render_timer: false
 
@@ -524,4 +532,4 @@ shell:
   #log_level: Warn
 
   # Print all received window events.
-  #print_events: false
+  # print_events: false
