@@ -39,7 +39,7 @@ window:
 
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: true
-  decorations: buttonless
+  decorations: none
   startup_mode: Windowed
 
   scrolling:
