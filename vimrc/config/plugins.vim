@@ -196,6 +196,11 @@ let g:lightline.tabline = {
     \ 'right': [ ]
     \ }
 
+" vim-which-key
+" ---------------------
+" Add 1 more space to the left
+let g:which_key_floating_opts = { 'width': '-1', 'col': '+1' }
+
 " Vim org mode
 " ---------------------
 " Automatically indent text under heading

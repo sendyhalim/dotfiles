@@ -46,3 +46,10 @@ highlight BookmarkAnnotationSign ctermbg=NONE ctermfg=84 guifg=#b0d68b
 highlight link htmlLink text
 highlight link htmlBoldUnderline text
 highlight link htmlUnderline text
+
+
+autocmd FileType which_key highlight WhichKey guibg=#262626 guifg=#f1c66d
+autocmd FileType which_key highlight WhichKeySeperator guibg=#262626 guifg=#777777
+autocmd FileType which_key highlight WhichKeyDesc guibg=#262626 guifg=#BBBBBB
+autocmd FileType which_key highlight WhichKeyFloating guibg=#262626 guifg=255
+autocmd FileType which_key highlight WhichKeyGroup guibg=#262626 guifg=255
