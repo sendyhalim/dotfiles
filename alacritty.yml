@@ -43,6 +43,11 @@ font:
 colors:
   primary:
     background: '#252625'
+
+  cursor:
+    text: '#333333'
+    cursor: '#f1c66d'
+
   # Vi mode cursor colors
   #
   # Colors for the cursor when the vi mode is active. If these are unset, the
@@ -148,7 +153,7 @@ colors:
 #dynamic_title: true
 
 cursor:
-  style: Underline
+  style: Block
 
   # Vi mode cursor style
   #
