@@ -472,7 +472,7 @@ key_bindings:
   #- { key: Q,      mods: Command,            action: Quit             }
   #- { key: W,      mods: Command,            action: Quit             }
   #- { key: N,      mods: Command,            action: SpawnNewInstance }
-  #- { key: F,      mods: Command|Control,    action: ToggleFullscreen }
+  - { key: F,      mods: Control|Shift,    action: ToggleFullscreen }
 
 # debug:
   # Display the time it takes to redraw each frame.
