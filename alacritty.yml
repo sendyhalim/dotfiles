@@ -28,14 +28,16 @@ window:
 
 # Font configuration
 font:
-  use_thin_strokes: false
+  use_thin_strokes: true
   normal:
     family: 'Menlo for Powerline'
     style: Regular
   size: 11.0
   offset:
     x: 1
-    y: 4 # To make vim indentation hint looks better (more uniform)
+    # To make vim indentation hint looks better (more uniform)
+    # until https://github.com/alacritty/alacritty/issues/957 is done
+    y: 4
   glyph_offset:
     x: 0
     y: 2
