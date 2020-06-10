@@ -48,8 +48,8 @@ highlight link htmlBoldUnderline text
 highlight link htmlUnderline text
 
 
-autocmd FileType which_key highlight WhichKey guibg=#262626 guifg=#f1c66d
-autocmd FileType which_key highlight WhichKeySeperator guibg=#262626 guifg=#777777
-autocmd FileType which_key highlight WhichKeyDesc guibg=#262626 guifg=#BBBBBB
-autocmd FileType which_key highlight WhichKeyFloating guibg=#262626 guifg=255
-autocmd FileType which_key highlight WhichKeyGroup guibg=#262626 guifg=255
+autocmd FileType which_key highlight WhichKey guibg=#2d2d2d guifg=#f1c66d
+autocmd FileType which_key highlight WhichKeySeperator guibg=#2d2d2d guifg=#777777
+autocmd FileType which_key highlight WhichKeyDesc guibg=#2d2d2d guifg=#BBBBBB
+autocmd FileType which_key highlight WhichKeyFloating guibg=#2d2d2d guifg=255
+autocmd FileType which_key highlight WhichKeyGroup guibg=#2d2d2d guifg=255
