@@ -53,3 +53,24 @@ autocmd FileType which_key highlight WhichKeySeperator guibg=#2d2d2d guifg=#7777
 autocmd FileType which_key highlight WhichKeyDesc guibg=#2d2d2d guifg=#BBBBBB
 autocmd FileType which_key highlight WhichKeyFloating guibg=#2d2d2d guifg=255
 autocmd FileType which_key highlight WhichKeyGroup guibg=#2d2d2d guifg=255
+
+" Highlight coc code hint
+highlight CocHintSign guifg=#444444
+highlight CocInfoFloat guifg=#41d989
+highlight CocErrorFloat guifg=#daad8b
+highlight CocWarningFloat guifg=#f1c66d
+highlight CocHintFloat guifg=#444444
+
+" Autocompletion box color
+" --------------------------------------
+" Completion item
+highlight Pmenu guibg=#222222 guifg=#666666
+
+" Selected item
+highlight PmenuSel guibg=#262626 guifg=#888888
+
+" Scroll bar
+highlight PmenuSbar guibg=#444444
+
+" Scrollbar marker
+highlight PmenuThumb guibg=#f1c66d
