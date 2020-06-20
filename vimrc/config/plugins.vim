@@ -3,7 +3,6 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'MattesGroeger/vim-bookmarks'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocomplete plugin
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'SirVer/ultisnips'                       " Code snippets
 Plug 'Townk/vim-autoclose'                    " Plugin for autoclose brace () {}
@@ -44,6 +43,8 @@ Plug 'RRethy/vim-illuminate'                  " Highlight same variable under cu
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'liuchengxu/vim-which-key'               " Guided nested leader mappings
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " Task management
 " -----------------------------------------------
 Plug 'jceb/vim-orgmode'                       " Check https://github.com/jceb/vim-orgmode/blob/master/doc/orgguide.txt#L241
@@ -76,13 +77,11 @@ Plug 'elixir-lang/vim-elixir'
 " Golang
 " -----------------------------------------------
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'stamblerre/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 
 " Rust
 " -----------------------------------------------
 Plug 'rust-lang/rust.vim'    " Rust syntax highlighting
-Plug 'racer-rust/vim-racer'  " Rust autocompletion
 
 " Javascript
 " -----------------------------------------------
@@ -133,6 +132,9 @@ call plug#end()
 " Rust.vim
 " --------------
 let g:rustfmt_autosave = 1
+
+" Coc
+let g:coc_global_extensions = ['coc-json', 'coc-rust-analyzer', 'coc-phpls']
 
 " Vim Far
 " --------------
@@ -277,19 +279,6 @@ nmap <Leader>mg <Plug>BookmarkMoveToLine
 " --------------------
 command -bar -bang -nargs=* Gc :Gcommit<bang> -v <args>
 
-" Deoplete
-" --------------------
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#var('file', 'enable_buffer_path', 1)
-
-" Setup completion for php
-" https://github.com/lvht/phpcd.vim#deoplete
-call deoplete#custom#option('ignore_sources', { 'php': ['omni'] })
-
-" Prevent autocompletion to be trimmed
-call deoplete#custom#source('_',  'max_menu_width', 0)
-call deoplete#custom#source('_',  'max_abbr_width', 0)
-call deoplete#custom#source('_',  'max_kind_width', 0)
 
 inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 function! s:my_cr_function()
@@ -321,9 +310,6 @@ let g:UltiSnipsListSnippets="<c-e>"
 " and close the selection list, same as other IDEs.
 " CONFLICT with some plugins like tpope/Endwise
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-" Deoplete-go
-let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 
 
 " Neco GHC
@@ -493,3 +479,22 @@ let g:tagbar_type_go = {
 " Vim leader guide
 " ---------------------------
 let g:leaderGuide_hspace = 3
+
+
+" Trigger auto-completion with C-space.
+" inoremap <silent><expr> <c-space> coc#refresh()
+" Make <TAB> select next completion and Shift-<TAB> to select previous.
+" function! s:check_back_space() abort
+  " let col = col('.') - 1
+  " return !col || getline('.')[col - 1]  =~ '\s'
+" endfunction
+" inoremap <silent><expr> <TAB>
+  " \ pumvisible() ? "\<C-n>" :
+  " \ <SID>check_back_space() ? "\<TAB>" :
+  " \ coc#refresh()
+" inoremap <silent><expr> <S-TAB>
+  " \ pumvisible() ? "\<C-p>" :
+  " \ <SID>check_back_space() ? "\<S-TAB>" :
+  " \ coc#refresh()
+" " Make <CR> confirm completion.
+" inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
