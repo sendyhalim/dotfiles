@@ -178,25 +178,32 @@ let g:fzf_colors =
 " Vim org mode
 " --------------
 let g:lightline = {
-  \   'colorscheme': 'seoul256',
-  \ }
+  \ 'colorscheme': 'seoul256',
+  \ 'component_function': {
+  \   'cocstatus': 'coc#status',
+  \ },
+\ }
 
 " See https://github.com/itchyny/lightline.vim/blob/master/doc/lightline.txt#L67-L79
+" `modified` is basically whether the current change in the file is modified but not saved.
 let g:lightline.active = {
-    \ 'left': [ [ 'mode', 'paste' ],
-    \           [ 'readonly', 'filename', 'modified' ] ],
-    \ 'right': [ [ 'fileencoding', 'filetype' ] ]
-    \ }
+  \ 'left': [ [ 'mode', 'paste' ],
+  \           [ 'readonly', 'filename', 'modified' ] ],
+  \ 'right': [ [ 'fileencoding', 'filetype' ], [ 'cocstatus' ] ],
+\ }
 
 let g:lightline.inactive = {
-    \ 'left': [ [ 'filename' ] ],
-    \ 'right': [ ]
-    \ }
+  \ 'left': [ [ 'filename' ] ],
+  \ 'right': [ ]
+\ }
 
 let g:lightline.tabline = {
-    \ 'left': [ [ 'tabs' ] ],
-    \ 'right': [ ]
-    \ }
+  \ 'left': [ [ 'tabs' ] ],
+  \ 'right': [ ]
+\ }
+
+" Use autocmd to force lightline update.
+autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 
 " vim-which-key
 " ---------------------
