@@ -1,4 +1,6 @@
 {
+  "diagnostic.errorSign": "×",
+  "diagnostic.warningSign": "!",
   "languageserver": {
   }
 }
