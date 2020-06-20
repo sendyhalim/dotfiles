@@ -134,3 +134,20 @@ let g:which_key_map.m.l.r = {
   \ },
   \ 'd': ['<Plug>(rust-doc)', 'Documentation'],
 \}
+
+let g:which_key_map.i = {
+  \ 'name': 'IDE' ,
+  \ 'g': {
+    \ 'name': 'Navigation',
+    \ 'd': ['<Plug>(coc-definition)', 'Go to definition'],
+    \ 'y': ['<Plug>(coc-type-definition)', 'Go to type definition'],
+    \ 'i': ['<Plug>(coc-implementation)', 'Go to implementation'],
+    \ 'r': ['<Plug>(coc-references)', 'Go to references'],
+    \ 'n': ['<Plug>(coc-diagnostic-next)', 'Next diagnostic'],
+    \ 'p': ['<Plug>(coc-diagnostic-prev)', 'Previous diagnostic'],
+  \ },
+  \ 'r' : {
+    \ 'name': 'Refactor',
+    \ 'r': ['<Plug>(coc-rename)', 'Rename symbol'],
+  \ },
+\}
