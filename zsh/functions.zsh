@@ -33,22 +33,6 @@ function reload_xcode_plugins {
   curl -s https://raw.githubusercontent.com/ForkPanda/RescueXcodePlug-ins/master/RescueXcode.sh | sh
 }
 
-# Load nvm explicitly only when we need it. It makes zsh slow
-function load_nvm {
-  # On macOS we have brew
-  if test "$(which brew)"; then
-    NVM_INSTALL=$(brew --prefix nvm)
-
-    if [ -d "$NVM_INSTALL" ]; then
-      export NVM_DIR="$HOME/.nvm"
-      . "$NVM_INSTALL/nvm.sh"
-    fi
-  else
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-  fi
-}
-
 # https://gist.github.com/XVilka/8346728
 function print_colors {
   awk 'BEGIN {
