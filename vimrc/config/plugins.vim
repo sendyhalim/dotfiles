@@ -134,7 +134,12 @@ call plug#end()
 let g:rustfmt_autosave = 1
 
 " Coc
-let g:coc_global_extensions = ['coc-json', 'coc-rust-analyzer', 'coc-phpls']
+let g:coc_global_extensions = [
+  \ 'coc-json',
+  \ 'coc-rust-analyzer',
+  \ 'coc-phpls',
+  \ 'coc-tsserver',
+\]
 
 " Vim Far
 " --------------
