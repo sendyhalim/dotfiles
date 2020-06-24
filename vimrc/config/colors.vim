@@ -64,10 +64,10 @@ highlight CocHintFloat guifg=#444444
 " Autocompletion box color
 " --------------------------------------
 " Completion item
-highlight Pmenu guibg=#222222 guifg=#666666
+highlight Pmenu guibg=#1E1E1E guifg=#777777
 
 " Selected item
-highlight PmenuSel guibg=#262626 guifg=#888888
+highlight PmenuSel guibg=#202020 guifg=#AAAAAA
 
 " Scroll bar
 highlight PmenuSbar guibg=#444444
