@@ -85,6 +85,13 @@ nnoremap <F9> :TagbarToggle<CR>
 nnoremap <F10> :let @+ = expand("%")<CR>
 nnoremap <F12> :call CloseHiddenBuffers()<CR>
 
+" For easier understanding: basically <Plug> is an alias to another mapping
+" so we need to use `nmap` instead of `nnoremap` because we want
+" `gd` to be mapped to `(coc-definition)` and `(coc-definition)` to another
+" mapping:
+" gd -> (coc-definition) -> <some other function expression>
+nmap gd <Plug>(coc-definition)
+
 " Register which_key_map
 " ------------------------------------
 call which_key#register('<Space>', "g:which_key_map")
