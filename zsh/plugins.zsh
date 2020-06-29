@@ -10,6 +10,10 @@ function register_zsh_plugins {
 # `lukechilds/zsh-nvm` plugin will auto install nvm in $HOME/.nvm
 export NVM_LAZY_LOAD=true
 
+# https://github.com/lukechilds/zsh-nvm#extra-commands-to-trigger-lazy-loading
+# Lazy load nvm when using vim
+export NVM_LAZY_LOAD_EXTRA_COMMANDS=('vim' 'nvim' 'v')
+
 source $ANTIBODY_SOURCEABLES
 
 # http://hoppsjots.org/?p=177
