@@ -33,7 +33,6 @@ Plug 'tpope/vim-fugitive'                     " Plugin for git inside vim
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'                     " Insert text in surrounding selected text
 Plug 'itchyny/lightline.vim'
-Plug 'w0rp/ale'                               " Asynchronous linter FTW!
 Plug 'Chiel92/vim-autoformat'
 Plug 'tomasiser/vim-code-dark'
 Plug 'mhinz/vim-sayonara'                     " Smart buffer/window deletion
@@ -378,24 +377,6 @@ let g:miniBufExplorerAutoStart = 0         "Just need the command :MBEbd to clos
 " Vim emmet
 " --------------------
 let g:user_emmet_leader_key='\'
-
-" Ale
-" --------------------
-let g:ale_sign_error = '×'
-let g:ale_sign_warning = '!'
-
-" By default, all available tools for all supported languages will be run.
-" PHP Pear sucks, let's use phpcs, shall we?
-let g:ale_linters = {
-\   'php': ['phpcs'],
-\   'go': ['golint'],
-\   'proto': ['prototool-lint'],
-\}
-
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
-let g:ale_rust_cargo_clippy_options = '--allow clippy::needless_return'
-
 
 " Vim Javascript
 " --------------------

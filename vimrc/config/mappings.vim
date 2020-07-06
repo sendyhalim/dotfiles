@@ -90,7 +90,9 @@ nnoremap <F12> :call CloseHiddenBuffers()<CR>
 " `gd` to be mapped to `(coc-definition)` and `(coc-definition)` to another
 " mapping:
 " gd -> (coc-definition) -> <some other function expression>
-nmap gd <Plug>(coc-definition)
+" nnoremap gd <Plug>(coc-definition)
+" Somehow `gd` does not work for `coc-rust-analyzer` so we'll just use `ff`.
+nnoremap ff :call CocActionAsync('jumpDefinition')<CR>
 
 " Register which_key_map
 " ------------------------------------
@@ -129,17 +131,6 @@ let g:which_key_map.m.l.p = {
   \ 'n': ['phpactor#Navigate()', 'Navigate'],
   \ 't': ['phpactor#Transform()', 'Complete implementation'],
   \ 'u': ['phpactor#UseAdd()', 'Import class/trait under cursor'],
-\}
-
-let g:which_key_map.m.l.r = {
-  \ 'name': 'rust',
-  \ 'g': {
-    \ 'name': 'Go to',
-    \ 'd': ['<Plug>(rust-def)', 'Go to Definition'],
-    \ 's': ['<Plug>(rust-def-split)', 'Split Definition Horizontally'],
-    \ 'v': ['<Plug>(rust-def-vertical)', 'Split Definition Vertically'],
-  \ },
-  \ 'd': ['<Plug>(rust-doc)', 'Documentation'],
 \}
 
 let g:which_key_map.i = {
