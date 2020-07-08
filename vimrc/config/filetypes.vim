@@ -13,5 +13,3 @@ autocmd FileType python set shiftwidth=4 tabstop=4 expandtab
 autocmd FileType php set shiftwidth=4 tabstop=4 expandtab
 
 autocmd BufWritePre * :%s/\s\+$//e " automatically trim trailing space everytime we save
-
-au FileType rust nmap gd <Plug>(rust-def)

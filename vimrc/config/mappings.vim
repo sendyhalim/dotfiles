@@ -92,7 +92,7 @@ nnoremap <F12> :call CloseHiddenBuffers()<CR>
 " gd -> (coc-definition) -> <some other function expression>
 " nnoremap gd <Plug>(coc-definition)
 " Somehow `gd` does not work for `coc-rust-analyzer` so we'll just use `ff`.
-nnoremap ff :call CocActionAsync('jumpDefinition')<CR>
+nnoremap gd :call CocActionAsync('jumpDefinition')<CR>
 
 " Register which_key_map
 " ------------------------------------
