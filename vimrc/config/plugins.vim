@@ -56,15 +56,6 @@ Plug 'neovimhaskell/haskell-vim'        " Syntax highlighting and indentation fo
 Plug 'eagletmt/neco-ghc'                " Haskell autocomplete
 Plug 'nbouscal/vim-stylish-haskell', { 'do': 'stack install stylish-haskell' }
 
-" Swift
-" -----------------------------------------------
-Plug 'keith/swift.vim'                  " Swift syntax and indent files
-Plug 'mitsuse/autocomplete-swift'
-
-" Elm
-" -----------------------------------------------
-Plug 'ElmCast/elm-vim'
-
 " Toml
 " -----------------------------------------------
 Plug 'cespare/vim-toml'                 " TOML syntax highlighting
@@ -94,10 +85,8 @@ Plug 'artur-shaik/vim-javacomplete2'
 
 " PHP
 " -----------------------------------------------
-Plug 'StanAngeloff/php.vim'             " PHP Syntax highlighting
 Plug 'xsbeats/vim-blade'                " Laravel blade syntax highlighting
 Plug 'phpactor/phpactor', {'for': 'php', 'branch': 'master', 'do': 'composer install --no-dev -o'} " PHP Refactor tool
-Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 
 
 " HTML + CSS + Less + Templating
