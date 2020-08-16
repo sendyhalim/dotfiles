@@ -95,6 +95,11 @@ nnoremap <F12> :call CloseHiddenBuffers()<CR>
 nnoremap gd :call CocActionAsync('jumpDefinition')<CR>
 nnoremap gr :call CocActionAsync('jumpReferences')<CR>
 
+
+" Use <C-l> for trigger snippet expand.
+" inoremap <C-l> <Plug>(coc-snippets-expand)
+
+
 " Register which_key_map
 " ------------------------------------
 call which_key#register('<Space>', "g:which_key_map")

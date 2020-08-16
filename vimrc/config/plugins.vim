@@ -127,6 +127,7 @@ let g:coc_global_extensions = [
   \ 'coc-rust-analyzer',
   \ 'coc-phpls',
   \ 'coc-tsserver',
+  \ 'coc-snippets',
 \]
 
 " Vim Far
