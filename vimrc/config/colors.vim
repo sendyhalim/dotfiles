@@ -49,13 +49,15 @@ hi link mustacheConditionals    Function
 hi link mustacheHelpers         Function
 hi link mustacheSection         Function
 hi link rustStorage             PreProc
-hi link phpIdentifier           PreProc
-
 
 " Vim Bookmarks
 " --------------------------------------
 highlight BookmarkSign ctermbg=NONE ctermfg=84 guifg=#b0d68b
 highlight BookmarkAnnotationSign ctermbg=NONE ctermfg=84 guifg=#b0d68b
+
+" PHP
+" --------------------------------------
+hi phpIdentifier ctermbg=NONE guifg=#41d989
 
 
 " Html
