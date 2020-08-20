@@ -1,0 +1,30 @@
+snippet emptyclass "Create a basic php empty class" b
+<?php declare(strict_types=1);
+
+namespace foo/$1;
+
+class ${1:someClass} {
+  public function __construct($2) {
+
+  }
+}
+endsnippet
+
+snippet pub "Public function" b
+public function ${1:name}(${2:$param}): $3 {
+  $4
+}
+endsnippet
+
+
+snippet pro "Protected function" b
+protected function ${1:name}(${2:$param}): $3 {
+  $4
+}
+endsnippet
+
+snippet pri "Private function" b
+private function ${1:name}(${2:$param}): $3 {
+  $4
+}
+endsnippet

@@ -61,6 +61,7 @@ ln "$ln_flags" "$PWD/vimrc/ideavimrc" ~/.ideavimrc
 ln "$ln_flags" "$PWD/vimrc/xvimrc" ~/.xvimrc
 ln "$ln_flags" "$PWD/alacritty.yml" ~/.alacritty.yml
 ln "$ln_flags" "$PWD/vimrc/coc-settings.json" $NEOVIM_DIR/coc-settings.json
+ln "$ln_flags" "$PWD/vimrc/config/ultisnips" ~/.config/coc/ultisnips
 
 # Hammerspoon
 HAMMERSPOON_DIR=$HOME/.hammerspoon

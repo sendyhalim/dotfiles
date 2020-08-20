@@ -289,8 +289,15 @@ endfunction
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 
+" UltiSnips
+" ------------------------------------------------
+" Setup custom snippet dir
+" https://github.com/SirVer/ultisnips/issues/948#issuecomment-571907338
+let $HOME = expand('~')
+let g:UltiSnipsSnippetsDir = $HOME."~/.vim/config/snippets"
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/config/snippets']
+
 " Fix issues between YouCompleteMe/Deoplete/any completion plugin with UltiSnips
-"------------------------------------------------
 function! g:UltiSnips_Complete()
   call UltiSnips#ExpandSnippet()
   if g:ulti_expand_res == 0
