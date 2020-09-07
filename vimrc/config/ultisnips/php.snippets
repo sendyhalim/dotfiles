@@ -3,7 +3,7 @@ snippet emptyclass "Create a basic php empty class" b
 
 namespace `!v phpactor#GetNamespace()`;
 
-class ${1:someClass} {
+class ${1:`!v split(phpactor#GetClassFullName(), '\')[-1]`} {
   public function __construct($2) {
 
   }
@@ -26,5 +26,31 @@ endsnippet
 snippet pri "Private function" b
 private function ${1:name}(${2:$param}): $3 {
   $4
+}
+endsnippet
+
+
+
+snippet emptylaraveltest "Create an empty laravel test case" b
+<?php declare(strict_types=1);
+
+namespace `!v phpactor#GetNamespace()`;
+
+use Tests\TestCase;
+
+class ${1:`!v split(phpactor#GetClassFullName(), '\')[-1]`} extends TestCase {
+  protected function setUp(): void {
+    parent::setUp();
+  }
+}
+endsnippet
+
+
+snippet testmethod "Create an empty test method" b
+/**
+ * @test
+ */
+public function ${1:methodName}_${2:testContext}(): void {
+	$3
 }
 endsnippet
