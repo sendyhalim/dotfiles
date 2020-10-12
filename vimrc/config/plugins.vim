@@ -167,6 +167,9 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
+" Set completion output box layout position to be at the bottom
+let g:fzf_layout = { 'down': '~25%' }
+
 " Vim org mode
 " --------------
 let g:lightline = {
@@ -343,13 +346,6 @@ let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 
-" Ctrl-P
-" --------------------
-" ignore directories
-let g:ctrlp_map = '<c-q>'
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|bower_components|vendor)|(\.(swp|ico|git|svn))$'
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_prompt_mappings = { 'PrtClearCache()': ['<F2>'] }
 
 " NerdTree
 " --------------------
