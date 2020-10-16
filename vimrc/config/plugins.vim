@@ -170,12 +170,18 @@ let g:fzf_colors =
 " Set completion output box layout position to be at the bottom
 let g:fzf_layout = { 'down': '~25%' }
 
+
+function! CocCurrentFunction()
+  return get(b:, 'coc_current_function', '')
+endfunction
+
 " Vim org mode
 " --------------
 let g:lightline = {
   \ 'colorscheme': 'seoul256',
   \ 'component_function': {
   \   'cocstatus': 'coc#status',
+  \   'coccurrentfunction': 'CocCurrentFunction',
   \ },
 \ }
 
@@ -184,7 +190,7 @@ let g:lightline = {
 let g:lightline.active = {
   \ 'left': [ [ 'mode', 'paste' ],
   \           [ 'readonly', 'filename', 'modified' ] ],
-  \ 'right': [ [ 'fileencoding', 'filetype' ], [ 'cocstatus' ] ],
+  \ 'right': [ [ 'fileencoding', 'filetype' ], [ 'cocstatus', 'coccurrentfunction' ] ],
 \ }
 
 let g:lightline.inactive = {
