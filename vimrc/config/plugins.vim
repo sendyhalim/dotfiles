@@ -21,11 +21,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'                      " Plugin for showing functions and vars description
 Plug 'mileszs/ack.vim'                        " For searching, install http://beyondgrep.com/install first
 Plug 'myusuf3/numbers.vim'                    " Relative number line
-Plug 'rhysd/conflict-marker.vim'              " Jump and resolve git conflicts
 Plug 'scrooloose/nerdcommenter'               " Commenter
 Plug 'scrooloose/nerdtree'                    " Plugin for listing directory structure
-Plug 'slashmili/alchemist.vim'
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'mg979/vim-visual-multi', { 'branch': 'test' }
 Plug 'tmhedberg/matchit'                      " Jump between matched tags
 Plug 'tpope/vim-abolish'
@@ -36,7 +33,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'tomasiser/vim-code-dark'
 Plug 'mhinz/vim-sayonara'                     " Smart buffer/window deletion
-Plug 'diepm/vim-rest-console'                 " REST plugin
 Plug 'plasticboy/vim-markdown'                " Markdown syntax highlighting
 Plug 'RRethy/vim-illuminate'                  " Highlight same variable under cursor
 Plug 'AndrewRadev/splitjoin.vim'
@@ -53,21 +49,15 @@ Plug 'vim-scripts/utl.vim'
 " Haskell
 " -----------------------------------------------
 Plug 'neovimhaskell/haskell-vim'        " Syntax highlighting and indentation for Haskell and Cabal
-Plug 'eagletmt/neco-ghc'                " Haskell autocomplete
 Plug 'nbouscal/vim-stylish-haskell', { 'do': 'stack install stylish-haskell' }
 
 " Toml
 " -----------------------------------------------
 Plug 'cespare/vim-toml'                 " TOML syntax highlighting
 
-" Elixir
-" -----------------------------------------------
-Plug 'elixir-lang/vim-elixir'
-
 " Golang
 " -----------------------------------------------
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'stamblerre/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 
 " Rust
 " -----------------------------------------------
@@ -75,8 +65,6 @@ Plug 'rust-lang/rust.vim'    " Rust syntax highlighting
 
 " Javascript
 " -----------------------------------------------
-Plug 'moll/vim-node'                    " Node plugin
-Plug 'mxw/vim-jsx'                      " React JSX plugin
 Plug 'pangloss/vim-javascript'          " Javascript indentation + Syntax
 Plug 'elzr/vim-json'
 
