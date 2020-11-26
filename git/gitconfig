@@ -28,6 +28,9 @@
   changed = 78
   untracked = 243
 
+[pull]
+  rebase = true
+
 [diff]
   tool = icdiff
 
