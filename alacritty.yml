@@ -34,7 +34,7 @@ font:
     style: Regular
   size: 11.0
   offset:
-    x: 0
+    x: 1
     # To make vim indentation hint looks better (more uniform)
     # until https://github.com/alacritty/alacritty/issues/957 is done
     y: 4
