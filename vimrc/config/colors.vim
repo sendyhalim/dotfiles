@@ -8,8 +8,9 @@ hi LineNr     guibg=#262626 ctermbg=235
 hi CursorLine guibg=#262626 ctermbg=235
 hi Identifier guifg=#1db0e3 ctermfg=38
 hi Special    guifg=#41d989 ctermfg=42
-hi Statement ctermfg=80
-hi Operator guifg=#FD98BA ctermfg=212
+hi Statement  ctermfg=80
+hi Operator   guifg=#FD98BA ctermfg=212
+hi Type       guifg=#85afaf
 
 " Highlight current line number
 hi CursorLineNR guibg=guibg=#262626 guifg=#F2FF5C gui=bold ctermbg=235
