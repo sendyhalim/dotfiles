@@ -67,6 +67,7 @@ Plug 'rust-lang/rust.vim'    " Rust syntax highlighting
 " -----------------------------------------------
 Plug 'pangloss/vim-javascript'          " Javascript indentation + Syntax
 Plug 'elzr/vim-json'
+Plug 'hjson/vim-hjson'                  " Highlight hjson filetype
 
 " PHP
 " -----------------------------------------------
