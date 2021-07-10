@@ -101,3 +101,7 @@ highlight PmenuSbar guibg=#444444
 
 " Scrollbar marker
 highlight PmenuThumb guibg=#f1c66d
+
+"highlight VertSplit guibg
+highlight VertSplit guibg=bg guifg=#555555
+
