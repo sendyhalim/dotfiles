@@ -11,7 +11,3 @@ ZSH_HIGHLIGHT_STYLES[path]=fg=102
 ZSH_HIGHLIGHT_STYLES[comment]=fg=244
 ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=244
 ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=244
-
-
-LSCOLORS=Hxfxcxdxbxegedabagacad
-

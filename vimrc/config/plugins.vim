@@ -30,6 +30,8 @@ Plug 'tpope/vim-fugitive'                     " Plugin for git inside vim
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'                     " Insert text in surrounding selected text
 Plug 'itchyny/lightline.vim'
+Plug 'nvim-lua/lsp-status.nvim'               " Utility functions to get  lsp statuses
+Plug 'kabouzeid/nvim-lspinstall'
 Plug 'Chiel92/vim-autoformat'
 Plug 'tomasiser/vim-code-dark'
 Plug 'mhinz/vim-sayonara'                     " Smart buffer/window deletion
@@ -38,13 +40,18 @@ Plug 'RRethy/vim-illuminate'                  " Highlight same variable under cu
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'liuchengxu/vim-which-key'               " Guided nested leader mappings
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-compe'
 
 " Task management
 " -----------------------------------------------
 Plug 'jceb/vim-orgmode'                       " Check https://github.com/jceb/vim-orgmode/blob/master/doc/orgguide.txt#L241
 Plug 'mattn/calendar-vim'
 Plug 'vim-scripts/utl.vim'
+
+" Lua
+" -----------------------------------------------
+Plug 'tbastos/vim-lua'
 
 " Haskell
 " -----------------------------------------------
@@ -107,16 +114,6 @@ call plug#end()
 " --------------
 let g:rustfmt_autosave = 1
 
-" Coc
-let g:coc_global_extensions = [
-  \ 'coc-json',
-  \ 'coc-rust-analyzer',
-  \ 'coc-phpls',
-  \ 'coc-tsserver',
-  \ 'coc-css',
-  \ 'coc-snippets',
-\]
-
 " Vim Far
 " --------------
 let g:far#source = 'agnvim'
@@ -159,9 +156,13 @@ let g:fzf_colors =
 " Set completion output box layout position to be at the bottom
 let g:fzf_layout = { 'down': '~25%' }
 
+" Statusline
+function! LspStatus() abort
+  if luaeval('#vim.lsp.buf_get_clients() > 0')
+    return luaeval("require('lsp-status').status()")
+  endif
 
-function! CocCurrentFunction()
-  return get(b:, 'coc_current_function', '')
+  return ''
 endfunction
 
 " Vim org mode
@@ -169,8 +170,7 @@ endfunction
 let g:lightline = {
   \ 'colorscheme': 'seoul256',
   \ 'component_function': {
-  \   'cocstatus': 'coc#status',
-  \   'coccurrentfunction': 'CocCurrentFunction',
+  \   'lsp_status': 'LspStatus',
   \ },
 \ }
 
@@ -179,7 +179,7 @@ let g:lightline = {
 let g:lightline.active = {
   \ 'left': [ [ 'mode', 'paste' ],
   \           [ 'readonly', 'filename', 'modified' ] ],
-  \ 'right': [ [ 'fileencoding', 'filetype' ], [ 'cocstatus', 'coccurrentfunction' ] ],
+  \ 'right': [ [ 'fileencoding', 'filetype' ], [ 'lsp_status'] ],
 \ }
 
 let g:lightline.inactive = {
@@ -458,22 +458,3 @@ let g:tagbar_type_go = {
 " Vim leader guide
 " ---------------------------
 let g:leaderGuide_hspace = 3
-
-
-" Trigger auto-completion with C-space.
-" inoremap <silent><expr> <c-space> coc#refresh()
-" Make <TAB> select next completion and Shift-<TAB> to select previous.
-" function! s:check_back_space() abort
-  " let col = col('.') - 1
-  " return !col || getline('.')[col - 1]  =~ '\s'
-" endfunction
-" inoremap <silent><expr> <TAB>
-  " \ pumvisible() ? "\<C-n>" :
-  " \ <SID>check_back_space() ? "\<TAB>" :
-  " \ coc#refresh()
-" inoremap <silent><expr> <S-TAB>
-  " \ pumvisible() ? "\<C-p>" :
-  " \ <SID>check_back_space() ? "\<S-TAB>" :
-  " \ coc#refresh()
-" " Make <CR> confirm completion.
-" inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"

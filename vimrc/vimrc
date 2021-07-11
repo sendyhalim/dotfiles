@@ -16,3 +16,5 @@ let configs = [
 for file in configs
   execute 'source' Dot(file)
 endfor
+
+execute 'luafile' Dot('lsp-setup.lua')
