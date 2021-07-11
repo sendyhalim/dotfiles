@@ -252,7 +252,7 @@ let g:limelight_conceal_ctermfg = 242
 " --------------------
 let g:indentLine_color_term = 238
 let g:indentLine_color_gui = '#373737'
-let g:indentLine_leadingSpaceEnabled = 0
+let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_leadingSpaceChar = '·'
 let g:indentLine_enabled = 1
 let g:indentLine_char = '┊'
