@@ -105,3 +105,8 @@ highlight PmenuThumb guibg=#f1c66d
 "highlight VertSplit guibg
 highlight VertSplit guibg=bg guifg=#555555
 
+
+highlight LspDiagnosticsDefaultError guifg=#444444
+highlight LspDiagnosticsDefaultWarning guifg=#444444
+highlight LspDiagnosticsDefaultInformation guifg=#444444
+highlight LspDiagnosticsDefaultHint guifg=#444444
