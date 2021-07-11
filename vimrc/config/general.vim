@@ -53,3 +53,6 @@ colorscheme tender
 " because vim can display tab with another character,
 " we just need to activate it just like below.
 set list lcs=tab:\┊\ ,trail:~,eol:¬
+
+" Set vertical split separator
+set fillchars+=vert:\┊
