@@ -85,20 +85,6 @@ nnoremap <F9> :TagbarToggle<CR>
 nnoremap <F10> :let @+ = expand("%")<CR>
 nnoremap <F12> :call CloseHiddenBuffers()<CR>
 
-" For easier understanding: basically <Plug> is an alias to another mapping
-" so we need to use `nmap` instead of `nnoremap` because we want
-" `gd` to be mapped to `(coc-definition)` and `(coc-definition)` to another
-" mapping:
-" gd -> (coc-definition) -> <some other function expression>
-" nnoremap gd <Plug>(coc-definition)
-" Somehow `gd` does not work for `coc-rust-analyzer` so we'll just use `ff`.
-nnoremap gd :call CocActionAsync('jumpDefinition')<CR>
-nnoremap gr :call CocActionAsync('jumpReferences')<CR>
-
-
-" Use <C-l> for trigger snippet expand.
-" inoremap <C-l> <Plug>(coc-snippets-expand)
-
 
 " Register which_key_map
 " ------------------------------------
