@@ -10,13 +10,13 @@ local lspinstall = require('lspinstall')
 lsp_status.register_progress()
 lsp_status.config({
   status_symbol = '🔮',
-  component_separator = '|',
-  indicator_separator = ':',
+  component_separator = ' • ',
+  indicator_separator = ' ',
   indicator_ok = '🏖',
   indicator_info = '📗',
   indicator_warnings = '📙',
   indicator_errors = '📕',
-  indicator_hint = '📰'
+  indicator_hint = '💡'
 })
 
 
