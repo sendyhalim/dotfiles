@@ -58,7 +58,10 @@ highlight BookmarkAnnotationSign ctermbg=NONE ctermfg=84 guifg=#b0d68b
 
 " PHP
 " --------------------------------------
-hi phpIdentifier ctermbg=NONE guifg=#41d989
+hi link phpStorageClass Function
+hi link phpStructure Identifier
+hi link phpIdentifier Normal
+hi link phpVarSelector PreProc
 
 
 " Html
