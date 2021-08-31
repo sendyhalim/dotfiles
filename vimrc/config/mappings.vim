@@ -105,6 +105,12 @@ let g:which_key_map.m.g = {
   \ 's': ['Gstatus', 'Git Status']
 \}
 
+let g:which_key_map.n = {
+  \ 'name': 'Nerd Tree',
+  \ 't': ['NERDTreeToggleInCurrentDirectory()', 'Toggle Nerd Tree'],
+  \ 'f': ['NERDTreeFind', 'Find current buffer']
+\}
+
 " Language specific mappings
 " ------------------------------------
 let g:which_key_map.m.l = { 'name': 'Language' }
