@@ -107,9 +107,11 @@ local function optionally_install_and_setup_servers()
 
     if server_available then
       requested_server:on_ready(function ()
-        local opts = {}
+        local opts = {} -- Assumes empty option for each lsp as of now
+
         requested_server:setup(opts)
       end)
+
       if not requested_server:is_installed() then
         -- Queue the server to be installed
         requested_server:install()
