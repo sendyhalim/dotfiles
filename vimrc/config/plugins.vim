@@ -4,7 +4,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'SirVer/ultisnips'                       " Code snippets
 Plug 'Townk/vim-autoclose'                    " Plugin for autoclose brace () {}
 Plug 'Yggdroot/indentLine'                    " Indentation hint
 Plug 'airblade/vim-gitgutter'                 " Shows a git diff in the 'gutter' (sign column)
@@ -15,7 +14,7 @@ Plug 'editorconfig/editorconfig-vim'          " Vim will read .editorconfig and 
 Plug 'fholgado/minibufexpl.vim'               " Using it for deleting buffer
 Plug 'godlygeek/tabular'                      " Automatic alignment
 Plug 'gregsexton/MatchTag'                    " Highlight matched tag
-Plug 'honza/vim-snippets'                     " Collection of snippets for ultisnipes
+Plug 'SirVer/ultisnips'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Fuzzy file finder
 Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'                      " Plugin for showing functions and vars description
@@ -31,7 +30,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'                     " Insert text in surrounding selected text
 Plug 'itchyny/lightline.vim'
 Plug 'nvim-lua/lsp-status.nvim'               " Utility functions to get  lsp statuses
-Plug 'kabouzeid/nvim-lspinstall'
 Plug 'Chiel92/vim-autoformat'
 Plug 'tomasiser/vim-code-dark'
 Plug 'mhinz/vim-sayonara'                     " Smart buffer/window deletion
@@ -40,14 +38,17 @@ Plug 'RRethy/vim-illuminate'                  " Highlight same variable under cu
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'liuchengxu/vim-which-key'               " Guided nested leader mappings
 
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-compe'
-
 " Task management
 " -----------------------------------------------
 Plug 'jceb/vim-orgmode'                       " Check https://github.com/jceb/vim-orgmode/blob/master/doc/orgguide.txt#L241
 Plug 'mattn/calendar-vim'
 Plug 'vim-scripts/utl.vim'
+
+Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/nvim-lsp-installer'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 
 " Lua
 " -----------------------------------------------
@@ -237,16 +238,6 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 
-" Vim Goyo
-" --------------------
-let g:goyo_width = 140
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
-
-" Vim Limelight
-" --------------------
-let g:limelight_conceal_ctermfg = 242
-
 
 " Vim indent lines
 " --------------------
@@ -275,51 +266,6 @@ nmap <Leader>mg <Plug>BookmarkMoveToLine
 " Fugitive
 " --------------------
 command -bar -bang -nargs=* Gc :Gcommit<bang> -v <args>
-
-
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-    return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
-endfunction
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
-
-" UltiSnips
-" ------------------------------------------------
-" Setup custom snippet dir
-" https://github.com/SirVer/ultisnips/issues/948#issuecomment-571907338
-let $HOME = expand('~')
-let g:UltiSnipsSnippetsDir = $HOME."~/.vim/config/snippets"
-let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/config/snippets']
-
-" Fix issues between YouCompleteMe/Deoplete/any completion plugin with UltiSnips
-function! g:UltiSnips_Complete()
-  call UltiSnips#ExpandSnippet()
-  if g:ulti_expand_res == 0
-    if pumvisible()
-      return "\<C-n>"
-    else
-      call UltiSnips#JumpForwards()
-      if g:ulti_jump_forwards_res == 0
-        return "\<TAB>"
-      endif
-    endif
-  endif
-  return ""
-endfunction
-
-au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
-let g:UltiSnipsListSnippets="<c-e>"
-" this mapping Enter key to <C-y> to chose the current highlight item
-" and close the selection list, same as other IDEs.
-" CONFLICT with some plugins like tpope/Endwise
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-
-" Neco GHC
-" --------------------
-let g:necoghc_enable_detailed_browse = 1
-let g:necoghc_use_stack = 1
 
 " Vim haskell syntax highlighting
 let g:haskell_enable_quantification = 1   " Enable highlighting of `forall`
@@ -377,10 +323,6 @@ let g:vim_json_syntax_conceal = 0 " Disable concealing
 " --------------------
 let g:tmux_navigator_no_mappings = 1
 
-" Vim Tern
-" --------------------
-let g:tern_request_timeout = 3
-
 " Ulti snip
 " --------------------
 let g:UltiSnipsEditSplit="vertical"
@@ -425,35 +367,6 @@ function! NERDTreeToggleInCurrentDirectory()
     exe ":NERDTreeFind"
   endif
 endfunction
-
-" Golang tagbar solution
-let g:tagbar_type_go = {
-    \ 'ctagstype' : 'go',
-    \ 'kinds'     : [
-        \ 'p:package',
-        \ 'i:imports:1',
-        \ 'c:constants',
-        \ 'v:variables',
-        \ 't:types',
-        \ 'n:interfaces',
-        \ 'w:fields',
-        \ 'e:embedded',
-        \ 'm:methods',
-        \ 'r:constructor',
-        \ 'f:functions'
-    \ ],
-    \ 'sro' : '.',
-    \ 'kind2scope' : {
-        \ 't' : 'ctype',
-        \ 'n' : 'ntype'
-    \ },
-    \ 'scope2kind' : {
-        \ 'ctype' : 't',
-        \ 'ntype' : 'n'
-    \ },
-    \ 'ctagsbin'  : 'gotags',
-    \ 'ctagsargs' : '-sort -silent'
-\ }
 
 " Vim leader guide
 " ---------------------------

@@ -1,6 +1,59 @@
 local lsp_status = require('lsp-status')
 local lspconfig = require('lspconfig')
-local lspinstall = require('lspinstall')
+local lsp_installer = require("nvim-lsp-installer")
+local lsp_installer_servers = require'nvim-lsp-installer.servers'
+
+-- Add additional capabilities supported by nvim-cmp
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
+-- Set completeopt to have a better completion experience
+vim.o.completeopt = 'menuone,noselect'
+
+
+
+---------------------------------
+-- Neovim autocompletion setup
+---------------------------------
+local cmp = require 'cmp'
+
+cmp.setup {
+  snippet = {
+    expand = function(args)
+      vim.fn["UltiSnips#Anon"](args.body)
+    end,
+  },
+  mapping = {
+    ['<C-p>'] = cmp.mapping.select_prev_item(),
+    ['<C-n>'] = cmp.mapping.select_next_item(),
+    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.close(),
+    ['<CR>'] = cmp.mapping.confirm {
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true,
+    },
+    ['<Tab>'] = function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      else
+        fallback()
+      end
+    end,
+    ['<S-Tab>'] = function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      else
+        fallback()
+      end
+    end,
+  },
+  sources = {
+    { name = 'nvim_lsp' },
+    { name = 'ultisnips' },
+  },
+}
 
 
 
@@ -24,102 +77,48 @@ lsp_status.config({
 ---------------------------------
 -- Install & setup language servers
 ---------------------------------
-lspinstall.setup()
+lsp_installer.on_server_ready(function(server)
+  local opts = {}
 
-local function optionally_install_servers()
+  -- (optional) Customize the options passed to the server
+  -- if server.name == "tsserver" then
+  --     opts.root_dir = function() ... end
+  -- end
+
+  -- This setup() function is exactly the same as lspconfig's setup function.
+  -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+  server:setup(opts)
+end)
+
+local function optionally_install_and_setup_servers()
   -- Now we're going to hardcode the installations for each LSPs
-  local languages = {
-    'rust',
-    'php',
-    'python',
-    'lua',
-    'typescript',
-    'dockerfile',
-    'json',
-    'yaml',
+  local lsp_servers = {
+    'rust_analyzer',
+    'intelephense', -- php
+    'sumneko_lua',
+    'tsserver', -- typescript
+    'dockerls',
+    'jsonls',
+    'yamlls',
   }
 
-  for _, server_language in pairs(languages) do
-    if not lspinstall.is_server_installed(server_language) then
-      lspinstall.install_server(server_language)
+  for _, lsp_server in pairs(lsp_servers) do
+    local server_available, requested_server = lsp_installer_servers.get_server(lsp_server)
+
+    if server_available then
+      requested_server:on_ready(function ()
+        local opts = {}
+        requested_server:setup(opts)
+      end)
+      if not requested_server:is_installed() then
+        -- Queue the server to be installed
+        requested_server:install()
+      end
     end
   end
 end
 
-local function setup_servers()
-  local servers = lspinstall.installed_servers()
-
-  for _, server in pairs(servers) do
-    lspconfig[server].setup{}
-  end
-end
-
--- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
-lspinstall.post_install_hook = function ()
-  setup_servers() -- reload installed servers
-  vim.cmd('bufdo e') -- this triggers the FileType autocmd that starts the server
-end
-
-optionally_install_servers()
-setup_servers()
-
-
-
----------------------------------
--- Neovim autocompletion setup
----------------------------------
-require'compe'.setup {
-  enabled = true;
-  autocomplete = true;
-  debug = false;
-  min_length = 1;
-  preselect = 'enable';
-  throttle_time = 80;
-  source_timeout = 200;
-  incomplete_delay = 400;
-  max_abbr_width = 100;
-  max_kind_width = 100;
-  max_menu_width = 100;
-  documentation = true;
-
-  source = {
-    path = true;
-    nvim_lsp = true;
-  };
-}
-
-local t = function(str)
-  return vim.api.nvim_replace_termcodes(str, true, true, true)
-end
-
-local check_back_space = function()
-    local col = vim.fn.col('.') - 1
-    if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
-        return true
-    else
-        return false
-    end
-end
-
--- Use (s-)tab to:
---- move to prev/next item in completion menuone
---- jump to prev/next snippet's placeholder
-_G.tab_complete = function()
-  if vim.fn.pumvisible() == 1 then
-    return t '<C-n>'
-  elseif check_back_space() then
-    return t '<Tab>'
-  else
-    return vim.fn['compe#complete']()
-  end
-end
-_G.s_tab_complete = function()
-  if vim.fn.pumvisible() == 1 then
-    return t '<C-p>'
-  else
-    return t '<S-Tab>'
-  end
-end
+optionally_install_and_setup_servers()
 
 -- TODO: Maybe move to mappings.vim
 vim.api.nvim_set_keymap('i', '<Tab>', 'v:lua.tab_complete()', {expr = true})
