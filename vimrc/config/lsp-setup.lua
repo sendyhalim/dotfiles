@@ -35,14 +35,22 @@ cmp.setup {
       select = true,
     },
     ['<Tab>'] = function(fallback)
-      if cmp.visible() then
+      if cmp.get_selected_entry() == nil and vim.fn["UltiSnips#CanExpandSnippet"]() == 1 then
+        press("<C-R>=UltiSnips#ExpandSnippet()<CR>")
+      elseif vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
+        press("<ESC>:call UltiSnips#JumpForwards()<CR>")
+      elseif cmp.visible() then
         cmp.select_next_item()
+      elseif has_any_words_before() then
+        press("<Tab>")
       else
         fallback()
       end
     end,
     ['<S-Tab>'] = function(fallback)
-      if cmp.visible() then
+      if vim.fn["UltiSnips#CanJumpBackwards"]() == 1 then
+        press("<ESC>:call UltiSnips#JumpBackwards()<CR>")
+      elseif cmp.visible() then
         cmp.select_prev_item()
       else
         fallback()

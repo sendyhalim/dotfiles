@@ -330,6 +330,12 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<C-tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
+" Setup custom snippet dir
+" https://github.com/SirVer/ultisnips/issues/948#issuecomment-571907338
+let $HOME = expand('~')
+let g:UltiSnipsSnippetsDir = $HOME."~/.vim/config/ultisnips"
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/config/ultisnips']
+
 " Vim markdown
 let g:vim_markdown_conceal = 0
 
