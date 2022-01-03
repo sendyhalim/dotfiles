@@ -16,6 +16,13 @@ vim.o.completeopt = 'menuone,noselect'
 -- Neovim autocompletion setup
 ---------------------------------
 local cmp = require 'cmp'
+local has_any_words_before = function()
+  if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then
+    return false
+  end
+  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+end
 
 cmp.setup {
   snippet = {
@@ -33,36 +40,30 @@ cmp.setup {
     ['<CR>'] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
-    },
-    ['<Tab>'] = function(fallback)
-      if cmp.get_selected_entry() == nil and vim.fn["UltiSnips#CanExpandSnippet"]() == 1 then
-        press("<C-R>=UltiSnips#ExpandSnippet()<CR>")
-      elseif vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
-        press("<ESC>:call UltiSnips#JumpForwards()<CR>")
-      elseif cmp.visible() then
-        cmp.select_next_item()
-      elseif has_any_words_before() then
-        press("<Tab>")
-      else
-        fallback()
-      end
-    end,
-    ['<S-Tab>'] = function(fallback)
-      if vim.fn["UltiSnips#CanJumpBackwards"]() == 1 then
-        press("<ESC>:call UltiSnips#JumpBackwards()<CR>")
-      elseif cmp.visible() then
-        cmp.select_prev_item()
-      else
-        fallback()
-      end
-    end,
+    }
   },
   sources = {
     { name = 'nvim_lsp' },
     { name = 'ultisnips' },
+    { name = 'buffer' },
   },
 }
 
+-- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
+cmp.setup.cmdline('/', {
+  sources = {
+    { name = 'buffer' }
+  }
+})
+
+-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+cmp.setup.cmdline(':', {
+  sources = cmp.config.sources({
+    { name = 'path' }
+  }, {
+    { name = 'cmdline' }
+  })
+})
 
 
 ---------------------------------
