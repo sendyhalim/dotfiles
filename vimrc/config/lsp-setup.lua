@@ -1,7 +1,7 @@
 local lsp_status = require('lsp-status')
 local lspconfig = require('lspconfig')
-local lsp_installer = require("nvim-lsp-installer")
-local lsp_installer_servers = require'nvim-lsp-installer.servers'
+local lsp_installer = require('nvim-lsp-installer')
+local lsp_installer_servers = require('nvim-lsp-installer.servers')
 
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -141,3 +141,17 @@ local noremap_opt = { noremap=true, silent=true }
 vim.api.nvim_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', noremap_opt)
 vim.api.nvim_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', noremap_opt)
 vim.api.nvim_set_keymap('n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>', noremap_opt)
+
+vim.api.nvim_set_keymap(
+  'n',
+  '[d',
+  '<Cmd>lua vim.diagnostic.goto_prev()<CR>',
+  noremap_opt
+)
+
+vim.api.nvim_set_keymap(
+  'n',
+  ']d',
+  '<Cmd>lua vim.diagnostic.goto_next()<CR>',
+  noremap_opt
+)
