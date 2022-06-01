@@ -30,7 +30,7 @@ window:
 font:
   use_thin_strokes: true
   normal:
-    family: 'Menlo for Powerline'
+    family: 'SF Mono Powerline'
     style: Regular
   size: 11.0
   offset:
