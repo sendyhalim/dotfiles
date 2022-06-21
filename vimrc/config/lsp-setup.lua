@@ -106,6 +106,7 @@ local function optionally_install_and_setup_servers()
     'intelephense', -- php
     'sumneko_lua',
     'tsserver', -- typescript
+    'vscode-json-language-server',
     'dockerls',
     'jsonls',
     'yamlls',
