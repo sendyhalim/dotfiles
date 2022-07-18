@@ -1,5 +1,4 @@
 local lsp_status = require('lsp-status')
-local lspconfig = require('lspconfig')
 local lsp_installer = require('nvim-lsp-installer')
 local lsp_installer_servers = require('nvim-lsp-installer.servers')
 
@@ -106,9 +105,7 @@ local function optionally_install_and_setup_servers()
     'intelephense', -- php
     'sumneko_lua',
     'tsserver', -- typescript
-    'vscode-json-language-server',
     'dockerls',
-    'jsonls',
     'yamlls',
   }
 
