@@ -18,3 +18,4 @@ for file in configs
 endfor
 
 execute 'luafile' Dot('lsp-setup.lua')
+execute 'luafile' Dot('mappings/which-key.lua')

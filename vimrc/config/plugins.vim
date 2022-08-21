@@ -36,7 +36,7 @@ Plug 'mhinz/vim-sayonara'                     " Smart buffer/window deletion
 Plug 'plasticboy/vim-markdown'                " Markdown syntax highlighting
 Plug 'RRethy/vim-illuminate'                  " Highlight same variable under cursor
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'liuchengxu/vim-which-key'               " Guided nested leader mappings
+Plug 'folke/which-key.nvim'                   " Guided nested leader mappings
 
 " Task management
 " -----------------------------------------------
