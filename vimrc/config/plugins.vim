@@ -309,10 +309,6 @@ let g:NERDCustomDelimiters = {
 " --------------------
 let g:miniBufExplorerAutoStart = 0         "Just need the command :MBEbd to close current buffer and retain NERDTree
 
-" Vim emmet
-" --------------------
-let g:user_emmet_leader_key='\'
-
 " Vim Javascript
 " --------------------
 let g:javascript_plugin_jsdoc = 1 " Highlight jsdoc
