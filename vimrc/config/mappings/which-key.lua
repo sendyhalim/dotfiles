@@ -49,6 +49,10 @@ wk.register({
       n = {cmd_str('call phpactor#Navigate()'), 'Navigate'},
       t = {cmd_str('call phpactor#Transform()'), 'Complete implementation'},
       u = {cmd_str('call phpactor#UseAdd()'), 'Import class/trait under cursor'},
+    },
+    r = {
+      name = 'rust',
+      h = { require('rust-tools').inlay_hints.set, 'Show inlay hints' }
     }
   }
 }, { prefix = "<leader>" })

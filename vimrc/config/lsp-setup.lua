@@ -100,8 +100,10 @@ end)
 
 local function optionally_install_and_setup_servers()
   -- Now we're going to hardcode the installations for each LSPs
+  -- NOTE for rust we're using https://github.com/simrat39/rust-tools.nvim which
+  -- will configure lsp server automatically so we cannot set it up manually here
+  -- since it'll cause conflict.
   local lsp_servers = {
-    'rust_analyzer',
     'intelephense', -- php
     'sumneko_lua',
     'tsserver', -- typescript
@@ -128,6 +130,23 @@ local function optionally_install_and_setup_servers()
 end
 
 optionally_install_and_setup_servers()
+
+-- Rust
+-- Setup rust tool
+-------------------------------------------------------
+local rustTools = require('rust-tools')
+
+rustTools.setup({
+  server = {
+    on_attach = function(_, bufnr)
+      -- Hover actions
+      vim.keymap.set('n', '<C-space>', rt.hover_actions.hover_actions, { buffer = bufnr })
+      -- Code action groups
+      vim.keymap.set('n', '<Leader>a', rt.code_action_group.code_action_group, { buffer = bufnr })
+    end,
+  },
+})
+-------------------------------------------------------
 
 -- TODO: Maybe move to mappings.vim
 vim.api.nvim_set_keymap('i', '<Tab>', 'v:lua.tab_complete()', {expr = true})

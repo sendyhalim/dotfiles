@@ -40,8 +40,6 @@ Plug 'folke/which-key.nvim'                   " Guided nested leader mappings
 
 " Task management
 " -----------------------------------------------
-Plug 'jceb/vim-orgmode'                       " Check https://github.com/jceb/vim-orgmode/blob/master/doc/orgguide.txt#L241
-Plug 'mattn/calendar-vim'
 Plug 'vim-scripts/utl.vim'
 
 Plug 'neovim/nvim-lspconfig'
@@ -73,6 +71,11 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Rust
 " -----------------------------------------------
 Plug 'rust-lang/rust.vim'    " Rust syntax highlighting
+Plug 'simrat39/rust-tools.nvim'
+
+" Debugging
+Plug 'nvim-lua/plenary.nvim'
+Plug 'mfussenegger/nvim-dap'
 
 " Javascript
 " -----------------------------------------------
@@ -169,8 +172,6 @@ function! LspStatus() abort
   return ''
 endfunction
 
-" Vim org mode
-" --------------
 let g:lightline = {
   \ 'colorscheme': 'seoul256',
   \ 'component_function': {
@@ -195,24 +196,6 @@ let g:lightline.tabline = {
   \ 'left': [ [ 'tabs' ] ],
   \ 'right': [ ]
 \ }
-
-" Use autocmd to force lightline update.
-autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
-
-" vim-which-key
-" ---------------------
-" Add 1 more space to the left
-let g:which_key_floating_opts = { 'width': '-1', 'col': '+1' }
-
-" Vim org mode
-" ---------------------
-" Automatically indent text under heading
-let g:org_indent = 1
-
-" Disable heading star "*" concealling
-let g:org_heading_shade_leading_stars = 0
-let g:org_todo_keywords = ['TODO(1)', 'DOING(2)', 'DELEGATED(3)', '|', 'MASTER(4)', 'STAGING(5)', 'PRODUCTION(6)', 'DONE(7)']
-let org_prefer_insert_mode = 0
 
 " Vim visual multi
 " --------------------
@@ -352,11 +335,6 @@ endif
 " for files with the .jsx extension, we want syntax highlighting in .js files
 " too
 let g:jsx_ext_required = 0
-
-" Vim rest console
-let g:vrc_curl_opts = {
-  \ '--verbose': '',
-\}
 
 " Open NERDTree in the directory of the current
 " file (or /home if no file is open)
