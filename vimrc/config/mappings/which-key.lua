@@ -31,6 +31,18 @@ wk.register({
       name = 'Refactor',
       r = { vim.lsp.buf.rename, 'Rename symbol'},
     },
+    g = {
+      name = 'Find',
+      r = { vim.lsp.buf.references, 'Find references' },
+      i = { vim.lsp.buf.implementation, 'Find implementation' },
+      d = { vim.lsp.buf.definition, 'Find definition' },
+      D = { vim.lsp.buf.declaration, 'Find declaration' },
+    },
+    d = {
+      name = 'Diagnostic',
+      n = { vim.diagnostic.goto_next, 'Next diagnostic' },
+      p = { vim.diagnostic.goto_prev, 'Previous diagnostic' },
+    }
   },
   l = {
     name = 'language',
