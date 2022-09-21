@@ -23,7 +23,8 @@ wk.register({
   f = {
     name = 'file', -- optional group name
     t = {cmd_str('call NERDTreeToggleInCurrentDirectory()'), 'Toggle Nerd Tree'},
-    f = {cmd_str('NERDTreeFind'), 'Find current buffer'}
+    f = {cmd_str('NERDTreeFind'), 'Find current buffer'},
+    p = {cmd_str('let @+ = expand("%")'), 'Copy current buffer filepath into clipboard'}
   },
   i = {
     name = 'IDE',
