@@ -82,6 +82,7 @@
   standup = !git log --author="$(git config --global user.email)" --oneline --since="yesterday" --all
   stash-all = stash save --include-untracked
   t    = tag
-  td   = tag -d
+  td   = tag -d # Delete tag
   tdr  = push --delete origin
+  delete-remote-tag = push --delete origin
   undo = reset --soft HEAD^
