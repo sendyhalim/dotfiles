@@ -31,6 +31,7 @@ wk.register({
     r = {
       name = 'Refactor',
       r = { vim.lsp.buf.rename, 'Rename symbol'},
+      f = { require('spectre').open_visual, 'Find and replace in all files' }
     },
     g = {
       name = 'Find',

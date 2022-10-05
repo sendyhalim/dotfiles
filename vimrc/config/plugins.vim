@@ -37,6 +37,8 @@ Plug 'plasticboy/vim-markdown'                " Markdown syntax highlighting
 Plug 'RRethy/vim-illuminate'                  " Highlight same variable under cursor
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'folke/which-key.nvim'                   " Guided nested leader mappings
+Plug 'nvim-lua/plenary.nvim'
+Plug 'windwp/nvim-spectre'
 
 " Task management
 " -----------------------------------------------
