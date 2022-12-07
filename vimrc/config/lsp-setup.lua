@@ -94,6 +94,7 @@ local function optionally_install_and_setup_servers()
     'tsserver', -- typescript
     'dockerls',
     'yamlls',
+    'clangd', -- C lang
   }
 
   for _, lsp_server in pairs(lsp_servers) do
