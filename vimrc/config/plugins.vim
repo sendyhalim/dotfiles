@@ -44,8 +44,9 @@ Plug 'windwp/nvim-spectre'
 " -----------------------------------------------
 Plug 'vim-scripts/utl.vim'
 
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim' " Helps to bridge mason with nvim-lspconfig
 Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/nvim-lsp-installer'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'

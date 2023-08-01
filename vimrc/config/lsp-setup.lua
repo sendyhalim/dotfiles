@@ -1,10 +1,14 @@
 local lsp_status = require('lsp-status')
-local lsp_installer = require('nvim-lsp-installer')
-local lsp_installer_servers = require('nvim-lsp-installer.servers')
+local lsp_installer = require('mason')
+local mason = require('mason')
+local mason_lsp_config = require('mason-lspconfig')
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
--- Add additional capabilities supported by nvim-cmp
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+-- The following example advertise capabilities to `clangd`.
+require('lspconfig').clangd.setup {
+  capabilities = capabilities,
+}
+
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
@@ -65,60 +69,20 @@ lsp_status.config({
   indicator_hint = '💡'
 })
 
-
-
----------------------------------
--- Install & setup language servers
----------------------------------
-lsp_installer.on_server_ready(function(server)
-  local opts = {}
-
-  -- (optional) Customize the options passed to the server
-  -- if server.name == "tsserver" then
-  --     opts.root_dir = function() ... end
-  -- end
-
-  -- This setup() function is exactly the same as lspconfig's setup function.
-  -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-  server:setup(opts)
-end)
-
-local function optionally_install_and_setup_servers()
-  -- Now we're going to hardcode the installations for each LSPs
-  -- NOTE for rust we're using https://github.com/simrat39/rust-tools.nvim which
-  -- will configure lsp server automatically so we cannot set it up manually here
-  -- since it'll cause conflict.
-  local lsp_servers = {
+mason.setup()
+mason_lsp_config.setup {
+  ensure_installed = {
     'intelephense', -- php
-    'sumneko_lua',
+    'lua_ls',
     'tsserver', -- typescript
-    'dockerls',
     'yamlls',
+    'dockerls',
     'clangd', -- C lang
-  }
-
-  for _, lsp_server in pairs(lsp_servers) do
-    local server_available, requested_server = lsp_installer_servers.get_server(lsp_server)
-
-    if server_available then
-      requested_server:on_ready(function ()
-        local opts = {} -- Assumes empty option for each lsp as of now
-
-        requested_server:setup(opts)
-      end)
-
-      if not requested_server:is_installed() then
-        -- Queue the server to be installed
-        requested_server:install()
-      end
-    end
-  end
-end
-
-optionally_install_and_setup_servers()
+  },
+}
 
 -- Rust
--- Setup rust tool
+-- Setup rust tool, you need to install rust-analyzer manually
 -------------------------------------------------------
 local rustTools = require('rust-tools')
 
