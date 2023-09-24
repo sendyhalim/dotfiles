@@ -86,3 +86,4 @@
   tdr  = push --delete origin
   delete-remote-tag = push --delete origin
   undo = reset --soft HEAD^
+  unstage = restore --staged
