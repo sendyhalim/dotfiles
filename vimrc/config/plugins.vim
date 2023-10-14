@@ -323,6 +323,7 @@ let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/config/ultisnips']
 
 " Vim markdown
 let g:vim_markdown_conceal = 0
+let g:vim_markdown_conceal_code_blocks = 0
 
 inoremap <c-x><c-k> <c-x><c-k>
 
