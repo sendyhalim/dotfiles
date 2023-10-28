@@ -69,17 +69,29 @@ lsp_status.config({
   indicator_hint = '💡'
 })
 
+local lsp_servers = {
+  'clangd', -- C lang
+  'dockerls',
+  'intelephense', -- php
+  'lua_ls',
+  'rust_analyzer',
+  'tsserver', -- typescript
+  'yamlls',
+}
+
 mason.setup()
 mason_lsp_config.setup {
-  ensure_installed = {
-    'intelephense', -- php
-    'lua_ls',
-    'tsserver', -- typescript
-    'yamlls',
-    'dockerls',
-    'clangd', -- C lang
-  },
+  ensure_installed = lsp_servers,
+  automatic_installation = true
 }
+
+require('lspconfig').clangd.setup {}
+require('lspconfig').dockerls.setup {}
+require('lspconfig').intelephense.setup {}
+require('lspconfig').lua_ls.setup {}
+require('lspconfig').rust_analyzer.setup {}
+require('lspconfig').tsserver.setup {}
+require('lspconfig').yamlls.setup {}
 
 -- Rust
 -- Setup rust tool, you need to install rust-analyzer manually
