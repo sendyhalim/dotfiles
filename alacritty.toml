@@ -1,0 +1,54 @@
+live_config_reload = true
+
+[colors.cursor]
+cursor = "#f1c66d"
+text = "#333333"
+
+[colors.primary]
+background = "#252625"
+
+[cursor]
+style = "Block"
+
+[font]
+size = 11.0
+
+[font.glyph_offset]
+x = 0
+y = 2
+
+[font.normal]
+family = "SF Mono Powerline"
+style = "Regular"
+
+[font.offset]
+x = 1
+y = 2
+
+[[keyboard.bindings]]
+chars = "\u001E"
+key = "Key6"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0011"
+key = "Q"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "F"
+mods = "Control|Shift"
+
+[shell]
+args = ["--login"]
+program = "zsh"
+
+[window]
+decorations = "buttonless"
+dynamic_padding = true
+startup_mode = "Windowed"
+
+[window.padding]
+x = 4
+y = 1

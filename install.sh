@@ -59,7 +59,7 @@ ln "$ln_flags" "$PWD/vimrc/vimrc" ~/.neovimrc
 ln "$ln_flags" "$PWD/vimrc/vimrc" ~/.vimrc
 ln "$ln_flags" "$PWD/vimrc/ideavimrc" ~/.ideavimrc
 ln "$ln_flags" "$PWD/vimrc/xvimrc" ~/.xvimrc
-ln "$ln_flags" "$PWD/alacritty.yml" ~/.alacritty.yml
+ln "$ln_flags" "$PWD/alacritty.toml" ~/.alacritty.toml
 ln "$ln_flags" "$PWD/vimrc/coc-settings.json" $NEOVIM_DIR/coc-settings.json
 ln "$ln_flags" "$PWD/vimrc/config/ultisnips" ~/.config/coc/ultisnips
 
