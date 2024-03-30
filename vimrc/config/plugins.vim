@@ -53,6 +53,7 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+Plug 'github/copilot.vim'
 
 " Lua
 " -----------------------------------------------
