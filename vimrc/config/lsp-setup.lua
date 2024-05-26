@@ -77,6 +77,7 @@ local lsp_servers = {
   'rust_analyzer',
   'tsserver', -- typescript
   'yamlls',
+  -- 'vuels', -- Vue language server
 }
 
 mason.setup()
@@ -92,6 +93,7 @@ require('lspconfig').lua_ls.setup {}
 require('lspconfig').rust_analyzer.setup {}
 require('lspconfig').tsserver.setup {}
 require('lspconfig').yamlls.setup {}
+-- require('lspconfig').vuels.setup {}
 
 -- Rust
 -- Setup rust tool, you need to install rust-analyzer manually

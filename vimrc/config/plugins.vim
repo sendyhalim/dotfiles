@@ -31,7 +31,6 @@ Plug 'tpope/vim-surround'                     " Insert text in surrounding selec
 Plug 'itchyny/lightline.vim'
 Plug 'nvim-lua/lsp-status.nvim'               " Utility functions to get  lsp statuses
 Plug 'Chiel92/vim-autoformat'
-Plug 'tomasiser/vim-code-dark'
 Plug 'mhinz/vim-sayonara'                     " Smart buffer/window deletion
 Plug 'plasticboy/vim-markdown'                " Markdown syntax highlighting
 Plug 'RRethy/vim-illuminate'                  " Highlight same variable under cursor
@@ -43,7 +42,6 @@ Plug 'windwp/nvim-spectre'
 " Task management
 " -----------------------------------------------
 Plug 'vim-scripts/utl.vim'
-
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim' " Helps to bridge mason with nvim-lspconfig
 Plug 'neovim/nvim-lspconfig'
@@ -62,7 +60,6 @@ Plug 'tbastos/vim-lua'
 " Haskell
 " -----------------------------------------------
 Plug 'neovimhaskell/haskell-vim'        " Syntax highlighting and indentation for Haskell and Cabal
-Plug 'nbouscal/vim-stylish-haskell', { 'do': 'stack install stylish-haskell' }
 
 " Toml
 " -----------------------------------------------
@@ -86,6 +83,7 @@ Plug 'mfussenegger/nvim-dap'
 Plug 'pangloss/vim-javascript'          " Javascript indentation + Syntax
 Plug 'elzr/vim-json'
 Plug 'hjson/vim-hjson'                  " Highlight hjson filetype
+Plug 'neoclide/vim-jsx-improve'
 
 " PHP
 " -----------------------------------------------
@@ -103,11 +101,7 @@ Plug 'mattn/emmet-vim'                  " Emmet plugin
 " Colorschemes
 " ------------------------------------------------
 Plug 'flazz/vim-colorschemes'
-Plug 'gosukiwi/vim-atom-dark'
-Plug 'cseelus/vim-colors-clearance'
-Plug 'mhartington/oceanic-next'
 Plug 'jacoborus/tender.vim'
-Plug 'chriskempson/base16-vim'
 
 " Force vim to change working dir nearest to git repo
 Plug 'airblade/vim-rooter'
@@ -233,10 +227,13 @@ nmap <Leader>w <Plug>(easymotion-overwin-w)
 " --------------------
 let g:indentLine_color_term = 238
 let g:indentLine_color_gui = '#373737'
-let g:indentLine_leadingSpaceEnabled = 1
-let g:indentLine_leadingSpaceChar = '·'
 let g:indentLine_enabled = 1
 let g:indentLine_char = '┊'
+
+" Leading space disabled for a bit better rendering performance
+let g:indentLine_leadingSpaceEnabled = 0
+let g:indentLine_leadingSpaceChar = '·'
+
 
 " Vim Bookmarks
 " --------------------
