@@ -75,7 +75,6 @@ local lsp_servers = {
   'intelephense', -- php
   'lua_ls',
   'rust_analyzer',
-  'tsserver', -- typescript
   'yamlls',
   -- 'vuels', -- Vue language server
 }
@@ -91,7 +90,6 @@ require('lspconfig').dockerls.setup {}
 require('lspconfig').intelephense.setup {}
 require('lspconfig').lua_ls.setup {}
 require('lspconfig').rust_analyzer.setup {}
-require('lspconfig').tsserver.setup {}
 require('lspconfig').yamlls.setup {}
 -- require('lspconfig').vuels.setup {}
 
