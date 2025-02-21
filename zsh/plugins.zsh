@@ -1,9 +1,16 @@
-ANTIBODY_SOURCEABLES=$ZSH_CONFIG/sourceables.sh
+zsh_plugins=${ZDOTDIR:-$HOME}/.zsh_plugins
+zsh_plugin_spec=${ZSH_CONFIG}/plugins.txt
 
+source ${zsh_plugins}.zsh
 
 function register_zsh_plugins {
-  # Brew install antibody
-  antibody bundle < "$ZSH_CONFIG/plugins.txt" > $ANTIBODY_SOURCEABLES
+  # INSTALL FIRST: brew install antidote
+  if [[ ! ${zsh_plugins}.zsh -nt ${zsh_plugin_spec}.txt ]]; then
+    (
+      source ${ZDOTDIR:-$HOME}/.antidote/antidote.zsh
+      antidote bundle <${zsh_plugin_spec} >${zsh_plugins}.zsh
+    )
+  fi
 }
 
 # https://github.com/lukechilds/zsh-nvm#lazy-loading
@@ -29,6 +36,3 @@ export FZF_DEFAULT_OPTS='
   --color fg:188,bg:235,hl:103,fg+:222,bg+:236,hl+:104
   --color info:183,prompt:110,spinner:107,pointer:167,marker:215
 '
-
-# This should be at the end of the file
-source $ANTIBODY_SOURCEABLES
