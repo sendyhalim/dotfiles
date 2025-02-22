@@ -12,61 +12,61 @@ local function cmd_str(cmd)
   return string.format('<cmd>%s<cr>', cmd);
 end
 
-wk.register({
-  g = {
-    name  = 'Git',
-    c =  {cmd_str('Git commit'), 'Git Commit'},
-    w = {cmd_str('Git write'), 'Git Write'},
-    b =  {cmd_str('Git blame'), 'Git Blame'},
-    s = {cmd_str('Git status'), 'Git Status'}
-  },
-  f = {
-    name = 'file', -- optional group name
-    t = {cmd_str('call NERDTreeToggleInCurrentDirectory()'), 'Toggle Nerd Tree'},
-    f = {cmd_str('NERDTreeFind'), 'Find current buffer'},
-    p = {cmd_str('let @+ = expand("%")'), 'Copy current buffer filepath into clipboard'}
-  },
-  i = {
-    name = 'IDE',
-    r = {
-      name = 'Refactor',
-      r = { vim.lsp.buf.rename, 'Rename symbol'},
-      f = { require('spectre').open_visual, 'Find and replace in all files' }
-    },
-    g = {
-      name = 'Find',
-      r = { vim.lsp.buf.references, 'Find references' },
-      i = { vim.lsp.buf.implementation, 'Find implementation' },
-      d = { vim.lsp.buf.definition, 'Find definition' },
-      D = { vim.lsp.buf.declaration, 'Find declaration' },
-    },
-    d = {
-      name = 'Diagnostic',
-      n = { vim.diagnostic.goto_next, 'Next diagnostic' },
-      p = { vim.diagnostic.goto_prev, 'Previous diagnostic' },
-    }
-  },
-  l = {
-    name = 'language',
-    p = {
-      name = 'php',
-      b = {cmd_str('call phpactor#ClassExpand()'), 'ExpandClass'},
-      c = {cmd_str('call phpactor#CopyFile()'), 'Copy file'},
-      d = {cmd_str('call phpactor#GotoDefinition()'), 'Go to definition'},
-      e = {cmd_str('call phpactor#mxtractMethod()'), 'Extract method'},
-      f = {cmd_str('call phpactor#FindReferences()'), 'Find references'},
-      k = {cmd_str('call phpactor#ContextMenu()'), 'Menu'},
-      h = {cmd_str('call phpactor#Hover()'), 'Hover'},
-      i = {cmd_str('call phpactor#ImportMissingClasses()'), 'Import missing classes'},
-      l = {cmd_str('call phpactor#ClassNew()'), 'New class'},
-      m = {cmd_str('call phpactor#MoveFile()'), 'Move file'},
-      n = {cmd_str('call phpactor#Navigate()'), 'Navigate'},
-      t = {cmd_str('call phpactor#Transform()'), 'Complete implementation'},
-      u = {cmd_str('call phpactor#UseAdd()'), 'Import class/trait under cursor'},
-    },
-    r = {
-      name = 'rust',
-      h = { require('rust-tools').inlay_hints.set, 'Show inlay hints' }
-    }
-  }
-}, { prefix = "<leader>" })
+wk.add({
+  ---------------------------------
+  -- Git
+  ---------------------------------
+  { "<leader>g", group = "Git" },
+  { "<leader>gc", cmd_str("Git commit"), desc = "Git Commit", mode = "n" },
+  { "<leader>gw", cmd_str("Git write"), desc = "Git Write", mode = "n" },
+  { "<leader>gb", cmd_str("Git blame"), desc = "Git Blame", mode = "n" },
+  { "<leader>gs", cmd_str("Git status"), desc = "Git Status", mode = "n" },
+
+  ---------------------------------
+  -- File
+  ---------------------------------
+  { "<leader>f", group = "File" },
+  { "<leader>ft", cmd_str("lua vim.fn.call('NERDTreeToggleInCurrentDirectory', {})"), desc = "Toggle Nerd Tree", mode = "n" },
+  { "<leader>ff", cmd_str("NERDTreeFind"), desc = "Find Current Buffer", mode = "n" },
+  { "<leader>fp", cmd_str("let @+ = expand('%')"), desc = "Copy Filepath to Clipboard", mode = "n" },
+
+  ---------------------------------
+  -- IDE
+  ---------------------------------
+  { "<leader>i", group = "IDE" },
+  { "<leader>ir", group = "Refactor" },
+  { "<leader>irr", vim.lsp.buf.rename, desc = "Rename Symbol", mode = "n" },
+  { "<leader>irf", require("spectre").open_visual, desc = "Find & Replace in All Files", mode = "n" },
+
+  { "<leader>ig", group = "Find" },
+  { "<leader>igr", vim.lsp.buf.references, desc = "Find References", mode = "n" },
+  { "<leader>igi", vim.lsp.buf.implementation, desc = "Find Implementation", mode = "n" },
+  { "<leader>igd", vim.lsp.buf.definition, desc = "Find Definition", mode = "n" },
+  { "<leader>igD", vim.lsp.buf.declaration, desc = "Find Declaration", mode = "n" },
+
+  { "<leader>id", group = "Diagnostic" },
+  { "<leader>idn", vim.diagnostic.goto_next, desc = "Next Diagnostic", mode = "n" },
+  { "<leader>idp", vim.diagnostic.goto_prev, desc = "Previous Diagnostic", mode = "n" },
+
+  ---------------------------------
+  -- Language
+  ---------------------------------
+  { "<leader>l", group = "Language" },
+  { "<leader>lp", group = "PHP" },
+  { "<leader>lpb", cmd_str("call phpactor#ClassExpand()"), desc = "Expand Class", mode = "n" },
+  { "<leader>lpc", cmd_str("call phpactor#CopyFile()"), desc = "Copy File", mode = "n" },
+  { "<leader>lpd", cmd_str("call phpactor#GotoDefinition()"), desc = "Go To Definition", mode = "n" },
+  { "<leader>lpe", cmd_str("call phpactor#ExtractMethod()"), desc = "Extract Method", mode = "n" },
+  { "<leader>lpf", cmd_str("call phpactor#FindReferences()"), desc = "Find References", mode = "n" },
+  { "<leader>lpk", cmd_str("call phpactor#ContextMenu()"), desc = "Menu", mode = "n" },
+  { "<leader>lph", cmd_str("call phpactor#Hover()"), desc = "Hover", mode = "n" },
+  { "<leader>lpi", cmd_str("call phpactor#ImportMissingClasses()"), desc = "Import Missing Classes", mode = "n" },
+  { "<leader>lpl", cmd_str("call phpactor#ClassNew()"), desc = "New Class", mode = "n" },
+  { "<leader>lpm", cmd_str("call phpactor#MoveFile()"), desc = "Move File", mode = "n" },
+  { "<leader>lpn", cmd_str("call phpactor#Navigate()"), desc = "Navigate", mode = "n" },
+  { "<leader>lpt", cmd_str("call phpactor#Transform()"), desc = "Complete Implementation", mode = "n" },
+  { "<leader>lpu", cmd_str("call phpactor#UseAdd()"), desc = "Import Class/Trait Under Cursor", mode = "n" },
+
+  { "<leader>lr", group = "Rust" },
+  { "<leader>lrh", require("rust-tools").inlay_hints.set, desc = "Show Inlay Hints", mode = "n" },
+})
