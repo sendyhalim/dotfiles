@@ -22,7 +22,7 @@ Plug 'mileszs/ack.vim'                        " For searching, install http://be
 Plug 'myusuf3/numbers.vim'                    " Relative number line
 Plug 'scrooloose/nerdcommenter'               " Commenter
 Plug 'scrooloose/nerdtree'                    " Plugin for listing directory structure
-Plug 'mg979/vim-visual-multi', { 'branch': 'test' }
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'tmhedberg/matchit'                      " Jump between matched tags
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-fugitive'                     " Plugin for git inside vim
