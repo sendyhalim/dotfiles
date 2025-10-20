@@ -14,7 +14,7 @@ Plug 'editorconfig/editorconfig-vim'          " Vim will read .editorconfig and 
 Plug 'fholgado/minibufexpl.vim'               " Using it for deleting buffer
 Plug 'godlygeek/tabular'                      " Automatic alignment
 Plug 'gregsexton/MatchTag'                    " Highlight matched tag
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Fuzzy file finder
 Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'                      " Plugin for showing functions and vars description
