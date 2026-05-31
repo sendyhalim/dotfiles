@@ -38,18 +38,25 @@
   diffFilter = delta --color-only
 
 [delta]
-  navigate = true  # use n and N to move between diff sections
-  file-style = "bold green"
-  line-numbers = true
-  true-color = always
-  plus-style = "bold white" "#0055cc"
-  plus-emph-style = "bold white" "#0077ff"
-  line-numbers-plus-style = "bold white" "#0055cc"
-  line-numbers-left-style = "#aaaaaa"
-  line-numbers-right-style = "#aaaaaa"
-  file-decoration-style = "#aaaaaa ul"
-  hunk-header-line-number-style = "#aaaaaa"
-  hunk-header-decoration-style = "#aaaaaa box"
+  navigate = true                                    # use n and N to move between diff sections
+  true-color = always                                # force 24-bit color
+  line-numbers = true                                # show line numbers
+  file-style = "bold green"                          # filename header color
+  file-decoration-style = "#aaaaaa ul"               # underline below filename
+  hunk-header-line-number-style = "#aaaaaa"          # line number in hunk header
+  hunk-header-decoration-style = "#aaaaaa box"       # box around hunk header
+
+  # Added lines: purely new line = green bg
+  plus-style = "bold white" "#007700"
+  # Changed lines: unchanged words = blue bg
+  plus-non-emph-style = "bold white" "#0055cc"
+  # Changed lines: the specific changed words = green bg
+  plus-emph-style = "bold white" "#007700"
+
+  # Line number gutter colors
+  line-numbers-plus-style = "bold white" "#007700"   # added line numbers = green
+  line-numbers-left-style = "#aaaaaa"                # left gutter (old)
+  line-numbers-right-style = "#aaaaaa"               # right gutter (new)
 
 [merge]
   conflictStyle = zdiff3
