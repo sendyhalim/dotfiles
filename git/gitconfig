@@ -58,9 +58,6 @@
   line-numbers-left-style = "#aaaaaa"                # left gutter (old)
   line-numbers-right-style = "#aaaaaa"               # right gutter (new)
 
-[merge]
-  conflictStyle = zdiff3
-
 [difftool]
   prompt = false
 
