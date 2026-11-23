@@ -1,17 +1,18 @@
 zsh_plugins=${ZDOTDIR:-$HOME}/.zsh_plugins
 zsh_plugin_spec=${ZSH_CONFIG}/plugins.txt
 
-source ${zsh_plugins}.zsh
+antidote_home=${ZDOTDIR:-$HOME}/.antidote
 
-function register_zsh_plugins {
-  # INSTALL FIRST: brew install antidote
-  if [[ ! ${zsh_plugins}.zsh -nt ${zsh_plugin_spec}.txt ]]; then
-    (
-      source ${ZDOTDIR:-$HOME}/.antidote/antidote.zsh
-      antidote bundle <${zsh_plugin_spec} >${zsh_plugins}.zsh
-    )
-  fi
-}
+# Rebuild the static plugin bundle when plugins.txt is newer than it.
+# Antidote is installed by install.sh.
+if [[ -f ${antidote_home}/antidote.zsh && ! ${zsh_plugins}.zsh -nt ${zsh_plugin_spec} ]]; then
+  (
+    source ${antidote_home}/antidote.zsh
+    antidote bundle <${zsh_plugin_spec} >${zsh_plugins}.zsh
+  )
+fi
+
+[[ -f ${zsh_plugins}.zsh ]] && source ${zsh_plugins}.zsh
 
 # https://github.com/lukechilds/zsh-nvm#lazy-loading
 # `lukechilds/zsh-nvm` plugin will auto install nvm in $HOME/.nvm
